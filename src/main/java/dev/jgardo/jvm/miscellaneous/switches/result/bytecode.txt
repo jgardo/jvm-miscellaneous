@@ -1,0 +1,1310 @@
+Classfile /home/gardziol/repository/jvm-miscellaneous/target/classes/dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark.class
+  Last modified 3 wrz 2019; size 5682 bytes
+  MD5 checksum 46ba2d0a491781646f26334a2b75efa9
+  Compiled from "SwitchBenchmark.java"
+public class dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark
+  minor version: 0
+  major version: 52
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #4                          // dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark
+  super_class: #24                        // java/lang/Object
+  interfaces: 0, fields: 0, methods: 6, attributes: 2
+Constant pool:
+    #1 = Methodref          #24.#68       // java/lang/Object."<init>":()V
+    #2 = Class              #69           // org/openjdk/jmh/runner/options/OptionsBuilder
+    #3 = Methodref          #2.#68        // org/openjdk/jmh/runner/options/OptionsBuilder."<init>":()V
+    #4 = Class              #70           // dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark
+    #5 = Methodref          #71.#72       // java/lang/Class.getSimpleName:()Ljava/lang/String;
+    #6 = Methodref          #2.#73        // org/openjdk/jmh/runner/options/OptionsBuilder.include:(Ljava/lang/String;)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+    #7 = InterfaceMethodref #74.#75       // org/openjdk/jmh/runner/options/ChainedOptionsBuilder.forks:(I)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+    #8 = Methodref          #76.#77       // org/openjdk/jmh/runner/options/TimeValue.seconds:(J)Lorg/openjdk/jmh/runner/options/TimeValue;
+    #9 = InterfaceMethodref #74.#78       // org/openjdk/jmh/runner/options/ChainedOptionsBuilder.warmupTime:(Lorg/openjdk/jmh/runner/options/TimeValue;)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+   #10 = InterfaceMethodref #74.#79       // org/openjdk/jmh/runner/options/ChainedOptionsBuilder.warmupIterations:(I)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+   #11 = InterfaceMethodref #74.#80       // org/openjdk/jmh/runner/options/ChainedOptionsBuilder.measurementIterations:(I)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+   #12 = InterfaceMethodref #74.#81       // org/openjdk/jmh/runner/options/ChainedOptionsBuilder.measurementTime:(Lorg/openjdk/jmh/runner/options/TimeValue;)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+   #13 = InterfaceMethodref #74.#82       // org/openjdk/jmh/runner/options/ChainedOptionsBuilder.threads:(I)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+   #14 = Fieldref           #83.#84       // org/openjdk/jmh/annotations/Mode.Throughput:Lorg/openjdk/jmh/annotations/Mode;
+   #15 = InterfaceMethodref #74.#85       // org/openjdk/jmh/runner/options/ChainedOptionsBuilder.mode:(Lorg/openjdk/jmh/annotations/Mode;)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+   #16 = Class              #86           // org/openjdk/jmh/profile/LinuxPerfNormProfiler
+   #17 = InterfaceMethodref #74.#87       // org/openjdk/jmh/runner/options/ChainedOptionsBuilder.addProfiler:(Ljava/lang/Class;)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+   #18 = InterfaceMethodref #74.#88       // org/openjdk/jmh/runner/options/ChainedOptionsBuilder.build:()Lorg/openjdk/jmh/runner/options/Options;
+   #19 = Class              #89           // org/openjdk/jmh/runner/Runner
+   #20 = Methodref          #19.#90       // org/openjdk/jmh/runner/Runner."<init>":(Lorg/openjdk/jmh/runner/options/Options;)V
+   #21 = Methodref          #19.#91       // org/openjdk/jmh/runner/Runner.run:()Ljava/util/Collection;
+   #22 = Methodref          #28.#92       // dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToNine.access$000:(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToNine;)I
+   #23 = Methodref          #25.#93       // dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToThirtyThree.access$100:(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToThirtyThree;)I
+   #24 = Class              #94           // java/lang/Object
+   #25 = Class              #95           // dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToThirtyThree
+   #26 = Utf8               CountToThirtyThree
+   #27 = Utf8               InnerClasses
+   #28 = Class              #96           // dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToNine
+   #29 = Utf8               CountToNine
+   #30 = Utf8               <init>
+   #31 = Utf8               ()V
+   #32 = Utf8               Code
+   #33 = Utf8               LineNumberTable
+   #34 = Utf8               LocalVariableTable
+   #35 = Utf8               this
+   #36 = Utf8               Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark;
+   #37 = Utf8               main
+   #38 = Utf8               ([Ljava/lang/String;)V
+   #39 = Utf8               args
+   #40 = Utf8               [Ljava/lang/String;
+   #41 = Utf8               opt
+   #42 = Utf8               Lorg/openjdk/jmh/runner/options/Options;
+   #43 = Utf8               Exceptions
+   #44 = Class              #97           // org/openjdk/jmh/runner/RunnerException
+   #45 = Utf8               switchInt9
+   #46 = Utf8               (Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToNine;)I
+   #47 = Utf8               countToNine
+   #48 = Utf8               Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToNine;
+   #49 = Utf8               i
+   #50 = Utf8               I
+   #51 = Utf8               StackMapTable
+   #52 = Utf8               RuntimeVisibleAnnotations
+   #53 = Utf8               Lorg/openjdk/jmh/annotations/Benchmark;
+   #54 = Utf8               Lorg/openjdk/jmh/annotations/CompilerControl;
+   #55 = Utf8               value
+   #56 = Class              #99           // org/openjdk/jmh/annotations/CompilerControl$Mode
+   #57 = Utf8               Mode
+   #58 = Utf8               Lorg/openjdk/jmh/annotations/CompilerControl$Mode;
+   #59 = Utf8               PRINT
+   #60 = Utf8               ifInt9
+   #61 = Utf8               switchInt33
+   #62 = Utf8               (Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToThirtyThree;)I
+   #63 = Utf8               count
+   #64 = Utf8               Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToThirtyThree;
+   #65 = Utf8               ifInt33
+   #66 = Utf8               SourceFile
+   #67 = Utf8               SwitchBenchmark.java
+   #68 = NameAndType        #30:#31       // "<init>":()V
+   #69 = Utf8               org/openjdk/jmh/runner/options/OptionsBuilder
+   #70 = Utf8               dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark
+   #71 = Class              #100          // java/lang/Class
+   #72 = NameAndType        #101:#102     // getSimpleName:()Ljava/lang/String;
+   #73 = NameAndType        #103:#104     // include:(Ljava/lang/String;)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+   #74 = Class              #105          // org/openjdk/jmh/runner/options/ChainedOptionsBuilder
+   #75 = NameAndType        #106:#107     // forks:(I)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+   #76 = Class              #108          // org/openjdk/jmh/runner/options/TimeValue
+   #77 = NameAndType        #109:#110     // seconds:(J)Lorg/openjdk/jmh/runner/options/TimeValue;
+   #78 = NameAndType        #111:#112     // warmupTime:(Lorg/openjdk/jmh/runner/options/TimeValue;)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+   #79 = NameAndType        #113:#107     // warmupIterations:(I)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+   #80 = NameAndType        #114:#107     // measurementIterations:(I)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+   #81 = NameAndType        #115:#112     // measurementTime:(Lorg/openjdk/jmh/runner/options/TimeValue;)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+   #82 = NameAndType        #116:#107     // threads:(I)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+   #83 = Class              #117          // org/openjdk/jmh/annotations/Mode
+   #84 = NameAndType        #118:#119     // Throughput:Lorg/openjdk/jmh/annotations/Mode;
+   #85 = NameAndType        #120:#121     // mode:(Lorg/openjdk/jmh/annotations/Mode;)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+   #86 = Utf8               org/openjdk/jmh/profile/LinuxPerfNormProfiler
+   #87 = NameAndType        #122:#123     // addProfiler:(Ljava/lang/Class;)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+   #88 = NameAndType        #124:#125     // build:()Lorg/openjdk/jmh/runner/options/Options;
+   #89 = Utf8               org/openjdk/jmh/runner/Runner
+   #90 = NameAndType        #30:#126      // "<init>":(Lorg/openjdk/jmh/runner/options/Options;)V
+   #91 = NameAndType        #127:#128     // run:()Ljava/util/Collection;
+   #92 = NameAndType        #129:#46      // access$000:(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToNine;)I
+   #93 = NameAndType        #130:#62      // access$100:(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToThirtyThree;)I
+   #94 = Utf8               java/lang/Object
+   #95 = Utf8               dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToThirtyThree
+   #96 = Utf8               dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToNine
+   #97 = Utf8               org/openjdk/jmh/runner/RunnerException
+   #98 = Class              #131          // org/openjdk/jmh/annotations/CompilerControl
+   #99 = Utf8               org/openjdk/jmh/annotations/CompilerControl$Mode
+  #100 = Utf8               java/lang/Class
+  #101 = Utf8               getSimpleName
+  #102 = Utf8               ()Ljava/lang/String;
+  #103 = Utf8               include
+  #104 = Utf8               (Ljava/lang/String;)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+  #105 = Utf8               org/openjdk/jmh/runner/options/ChainedOptionsBuilder
+  #106 = Utf8               forks
+  #107 = Utf8               (I)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+  #108 = Utf8               org/openjdk/jmh/runner/options/TimeValue
+  #109 = Utf8               seconds
+  #110 = Utf8               (J)Lorg/openjdk/jmh/runner/options/TimeValue;
+  #111 = Utf8               warmupTime
+  #112 = Utf8               (Lorg/openjdk/jmh/runner/options/TimeValue;)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+  #113 = Utf8               warmupIterations
+  #114 = Utf8               measurementIterations
+  #115 = Utf8               measurementTime
+  #116 = Utf8               threads
+  #117 = Utf8               org/openjdk/jmh/annotations/Mode
+  #118 = Utf8               Throughput
+  #119 = Utf8               Lorg/openjdk/jmh/annotations/Mode;
+  #120 = Utf8               mode
+  #121 = Utf8               (Lorg/openjdk/jmh/annotations/Mode;)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+  #122 = Utf8               addProfiler
+  #123 = Utf8               (Ljava/lang/Class;)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+  #124 = Utf8               build
+  #125 = Utf8               ()Lorg/openjdk/jmh/runner/options/Options;
+  #126 = Utf8               (Lorg/openjdk/jmh/runner/options/Options;)V
+  #127 = Utf8               run
+  #128 = Utf8               ()Ljava/util/Collection;
+  #129 = Utf8               access$000
+  #130 = Utf8               access$100
+  #131 = Utf8               org/openjdk/jmh/annotations/CompilerControl
+{
+  public dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 11: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark;
+
+  public static void main(java.lang.String[]) throws org.openjdk.jmh.runner.RunnerException;
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=2, args_size=1
+         0: new           #2                  // class org/openjdk/jmh/runner/options/OptionsBuilder
+         3: dup
+         4: invokespecial #3                  // Method org/openjdk/jmh/runner/options/OptionsBuilder."<init>":()V
+         7: ldc           #4                  // class dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark
+         9: invokevirtual #5                  // Method java/lang/Class.getSimpleName:()Ljava/lang/String;
+        12: invokevirtual #6                  // Method org/openjdk/jmh/runner/options/OptionsBuilder.include:(Ljava/lang/String;)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+        15: iconst_1
+        16: invokeinterface #7,  2            // InterfaceMethod org/openjdk/jmh/runner/options/ChainedOptionsBuilder.forks:(I)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+        21: lconst_1
+        22: invokestatic  #8                  // Method org/openjdk/jmh/runner/options/TimeValue.seconds:(J)Lorg/openjdk/jmh/runner/options/TimeValue;
+        25: invokeinterface #9,  2            // InterfaceMethod org/openjdk/jmh/runner/options/ChainedOptionsBuilder.warmupTime:(Lorg/openjdk/jmh/runner/options/TimeValue;)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+        30: iconst_2
+        31: invokeinterface #10,  2           // InterfaceMethod org/openjdk/jmh/runner/options/ChainedOptionsBuilder.warmupIterations:(I)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+        36: bipush        10
+        38: invokeinterface #11,  2           // InterfaceMethod org/openjdk/jmh/runner/options/ChainedOptionsBuilder.measurementIterations:(I)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+        43: lconst_1
+        44: invokestatic  #8                  // Method org/openjdk/jmh/runner/options/TimeValue.seconds:(J)Lorg/openjdk/jmh/runner/options/TimeValue;
+        47: invokeinterface #12,  2           // InterfaceMethod org/openjdk/jmh/runner/options/ChainedOptionsBuilder.measurementTime:(Lorg/openjdk/jmh/runner/options/TimeValue;)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+        52: iconst_1
+        53: invokeinterface #13,  2           // InterfaceMethod org/openjdk/jmh/runner/options/ChainedOptionsBuilder.threads:(I)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+        58: getstatic     #14                 // Field org/openjdk/jmh/annotations/Mode.Throughput:Lorg/openjdk/jmh/annotations/Mode;
+        61: invokeinterface #15,  2           // InterfaceMethod org/openjdk/jmh/runner/options/ChainedOptionsBuilder.mode:(Lorg/openjdk/jmh/annotations/Mode;)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+        66: ldc           #16                 // class org/openjdk/jmh/profile/LinuxPerfNormProfiler
+        68: invokeinterface #17,  2           // InterfaceMethod org/openjdk/jmh/runner/options/ChainedOptionsBuilder.addProfiler:(Ljava/lang/Class;)Lorg/openjdk/jmh/runner/options/ChainedOptionsBuilder;
+        73: invokeinterface #18,  1           // InterfaceMethod org/openjdk/jmh/runner/options/ChainedOptionsBuilder.build:()Lorg/openjdk/jmh/runner/options/Options;
+        78: astore_1
+        79: new           #19                 // class org/openjdk/jmh/runner/Runner
+        82: dup
+        83: aload_1
+        84: invokespecial #20                 // Method org/openjdk/jmh/runner/Runner."<init>":(Lorg/openjdk/jmh/runner/options/Options;)V
+        87: invokevirtual #21                 // Method org/openjdk/jmh/runner/Runner.run:()Ljava/util/Collection;
+        90: pop
+        91: return
+      LineNumberTable:
+        line 14: 0
+        line 15: 9
+        line 16: 16
+        line 17: 22
+        line 18: 31
+        line 19: 38
+        line 20: 44
+        line 21: 53
+        line 22: 61
+        line 23: 68
+        line 24: 73
+        line 26: 79
+        line 27: 91
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      92     0  args   [Ljava/lang/String;
+           79      13     1   opt   Lorg/openjdk/jmh/runner/options/Options;
+    Exceptions:
+      throws org.openjdk.jmh.runner.RunnerException
+
+  public int switchInt9(dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark$CountToNine);
+    descriptor: (Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToNine;)I
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=3, args_size=2
+         0: aload_1
+         1: invokestatic  #22                 // Method dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToNine.access$000:(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToNine;)I
+         4: istore_2
+         5: iload_2
+         6: tableswitch   { // 0 to 7
+                       0: 52
+                       1: 54
+                       2: 57
+                       3: 60
+                       4: 63
+                       5: 66
+                       6: 69
+                       7: 72
+                 default: 75
+            }
+        52: iconst_0
+        53: ireturn
+        54: bipush        8
+        56: ireturn
+        57: bipush        16
+        59: ireturn
+        60: bipush        24
+        62: ireturn
+        63: bipush        32
+        65: ireturn
+        66: bipush        40
+        68: ireturn
+        69: bipush        48
+        71: ireturn
+        72: bipush        56
+        74: ireturn
+        75: bipush        64
+        77: ireturn
+      LineNumberTable:
+        line 52: 0
+        line 53: 5
+        line 54: 52
+        line 55: 54
+        line 56: 57
+        line 57: 60
+        line 58: 63
+        line 59: 66
+        line 60: 69
+        line 61: 72
+        line 63: 75
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      78     0  this   Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark;
+            0      78     1 countToNine   Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToNine;
+            5      73     2     i   I
+      StackMapTable: number_of_entries = 9
+        frame_type = 252 /* append */
+          offset_delta = 52
+          locals = [ int ]
+        frame_type = 1 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+    RuntimeVisibleAnnotations:
+      0: #53()
+        org.openjdk.jmh.annotations.Benchmark
+      1: #54(#55=e#58.#59)
+        org.openjdk.jmh.annotations.CompilerControl(
+          value=Lorg/openjdk/jmh/annotations/CompilerControl$Mode;.PRINT
+        )
+
+  public int ifInt9(dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark$CountToNine);
+    descriptor: (Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToNine;)I
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=2
+         0: aload_1
+         1: invokestatic  #22                 // Method dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToNine.access$000:(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToNine;)I
+         4: istore_2
+         5: iload_2
+         6: ifne          11
+         9: iconst_0
+        10: ireturn
+        11: iload_2
+        12: iconst_1
+        13: if_icmpne     19
+        16: bipush        8
+        18: ireturn
+        19: iload_2
+        20: iconst_2
+        21: if_icmpne     27
+        24: bipush        16
+        26: ireturn
+        27: iload_2
+        28: iconst_3
+        29: if_icmpne     35
+        32: bipush        24
+        34: ireturn
+        35: iload_2
+        36: iconst_4
+        37: if_icmpne     43
+        40: bipush        32
+        42: ireturn
+        43: iload_2
+        44: iconst_5
+        45: if_icmpne     51
+        48: bipush        40
+        50: ireturn
+        51: iload_2
+        52: bipush        6
+        54: if_icmpne     60
+        57: bipush        48
+        59: ireturn
+        60: iload_2
+        61: bipush        7
+        63: if_icmpne     69
+        66: bipush        56
+        68: ireturn
+        69: bipush        64
+        71: ireturn
+      LineNumberTable:
+        line 70: 0
+        line 71: 5
+        line 72: 9
+        line 73: 11
+        line 74: 16
+        line 75: 19
+        line 76: 24
+        line 77: 27
+        line 78: 32
+        line 79: 35
+        line 80: 40
+        line 81: 43
+        line 82: 48
+        line 83: 51
+        line 84: 57
+        line 85: 60
+        line 86: 66
+        line 88: 69
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      72     0  this   Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark;
+            0      72     1 countToNine   Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToNine;
+            5      67     2     i   I
+      StackMapTable: number_of_entries = 8
+        frame_type = 252 /* append */
+          offset_delta = 11
+          locals = [ int ]
+        frame_type = 7 /* same */
+        frame_type = 7 /* same */
+        frame_type = 7 /* same */
+        frame_type = 7 /* same */
+        frame_type = 7 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+    RuntimeVisibleAnnotations:
+      0: #53()
+        org.openjdk.jmh.annotations.Benchmark
+      1: #54(#55=e#58.#59)
+        org.openjdk.jmh.annotations.CompilerControl(
+          value=Lorg/openjdk/jmh/annotations/CompilerControl$Mode;.PRINT
+        )
+
+  public int switchInt33(dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark$CountToThirtyThree);
+    descriptor: (Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToThirtyThree;)I
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=3, args_size=2
+         0: aload_1
+         1: invokestatic  #23                 // Method dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToThirtyThree.access$100:(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToThirtyThree;)I
+         4: istore_2
+         5: iload_2
+         6: tableswitch   { // 0 to 65
+                       0: 284
+                       1: 286
+                       2: 289
+                       3: 292
+                       4: 295
+                       5: 298
+                       6: 301
+                       7: 304
+                       8: 307
+                       9: 309
+                      10: 312
+                      11: 315
+                      12: 318
+                      13: 321
+                      14: 324
+                      15: 327
+                      16: 330
+                      17: 332
+                      18: 335
+                      19: 338
+                      20: 341
+                      21: 344
+                      22: 347
+                      23: 350
+                      24: 353
+                      25: 355
+                      26: 358
+                      27: 361
+                      28: 364
+                      29: 367
+                      30: 370
+                      31: 373
+                      32: 376
+                      33: 379
+                      34: 381
+                      35: 384
+                      36: 387
+                      37: 390
+                      38: 393
+                      39: 396
+                      40: 399
+                      41: 402
+                      42: 404
+                      43: 407
+                      44: 410
+                      45: 413
+                      46: 416
+                      47: 419
+                      48: 422
+                      49: 425
+                      50: 427
+                      51: 430
+                      52: 433
+                      53: 436
+                      54: 439
+                      55: 442
+                      56: 445
+                      57: 448
+                      58: 450
+                      59: 453
+                      60: 456
+                      61: 459
+                      62: 462
+                      63: 465
+                      64: 468
+                      65: 471
+                 default: 474
+            }
+       284: iconst_0
+       285: ireturn
+       286: bipush        8
+       288: ireturn
+       289: bipush        16
+       291: ireturn
+       292: bipush        24
+       294: ireturn
+       295: bipush        32
+       297: ireturn
+       298: bipush        40
+       300: ireturn
+       301: bipush        48
+       303: ireturn
+       304: bipush        56
+       306: ireturn
+       307: iconst_0
+       308: ireturn
+       309: bipush        8
+       311: ireturn
+       312: bipush        16
+       314: ireturn
+       315: bipush        24
+       317: ireturn
+       318: bipush        32
+       320: ireturn
+       321: bipush        40
+       323: ireturn
+       324: bipush        48
+       326: ireturn
+       327: bipush        56
+       329: ireturn
+       330: iconst_0
+       331: ireturn
+       332: bipush        8
+       334: ireturn
+       335: bipush        16
+       337: ireturn
+       338: bipush        24
+       340: ireturn
+       341: bipush        32
+       343: ireturn
+       344: bipush        40
+       346: ireturn
+       347: bipush        48
+       349: ireturn
+       350: bipush        56
+       352: ireturn
+       353: iconst_0
+       354: ireturn
+       355: bipush        8
+       357: ireturn
+       358: bipush        16
+       360: ireturn
+       361: bipush        24
+       363: ireturn
+       364: bipush        32
+       366: ireturn
+       367: bipush        40
+       369: ireturn
+       370: bipush        48
+       372: ireturn
+       373: bipush        56
+       375: ireturn
+       376: bipush        56
+       378: ireturn
+       379: iconst_0
+       380: ireturn
+       381: bipush        8
+       383: ireturn
+       384: bipush        16
+       386: ireturn
+       387: bipush        24
+       389: ireturn
+       390: bipush        32
+       392: ireturn
+       393: bipush        40
+       395: ireturn
+       396: bipush        48
+       398: ireturn
+       399: bipush        56
+       401: ireturn
+       402: iconst_0
+       403: ireturn
+       404: bipush        8
+       406: ireturn
+       407: bipush        16
+       409: ireturn
+       410: bipush        24
+       412: ireturn
+       413: bipush        32
+       415: ireturn
+       416: bipush        40
+       418: ireturn
+       419: bipush        48
+       421: ireturn
+       422: bipush        56
+       424: ireturn
+       425: iconst_0
+       426: ireturn
+       427: bipush        8
+       429: ireturn
+       430: bipush        16
+       432: ireturn
+       433: bipush        24
+       435: ireturn
+       436: bipush        32
+       438: ireturn
+       439: bipush        40
+       441: ireturn
+       442: bipush        48
+       444: ireturn
+       445: bipush        56
+       447: ireturn
+       448: iconst_0
+       449: ireturn
+       450: bipush        8
+       452: ireturn
+       453: bipush        16
+       455: ireturn
+       456: bipush        24
+       458: ireturn
+       459: bipush        32
+       461: ireturn
+       462: bipush        40
+       464: ireturn
+       465: bipush        48
+       467: ireturn
+       468: bipush        56
+       470: ireturn
+       471: bipush        56
+       473: ireturn
+       474: bipush        64
+       476: ireturn
+      LineNumberTable:
+        line 95: 0
+        line 96: 5
+        line 97: 284
+        line 98: 286
+        line 99: 289
+        line 100: 292
+        line 101: 295
+        line 102: 298
+        line 103: 301
+        line 104: 304
+        line 105: 307
+        line 106: 309
+        line 107: 312
+        line 108: 315
+        line 109: 318
+        line 110: 321
+        line 111: 324
+        line 112: 327
+        line 113: 330
+        line 114: 332
+        line 115: 335
+        line 116: 338
+        line 117: 341
+        line 118: 344
+        line 119: 347
+        line 120: 350
+        line 121: 353
+        line 122: 355
+        line 123: 358
+        line 124: 361
+        line 125: 364
+        line 126: 367
+        line 127: 370
+        line 128: 373
+        line 129: 376
+        line 130: 379
+        line 131: 381
+        line 132: 384
+        line 133: 387
+        line 134: 390
+        line 135: 393
+        line 136: 396
+        line 137: 399
+        line 138: 402
+        line 139: 404
+        line 140: 407
+        line 141: 410
+        line 142: 413
+        line 143: 416
+        line 144: 419
+        line 145: 422
+        line 146: 425
+        line 147: 427
+        line 148: 430
+        line 149: 433
+        line 150: 436
+        line 151: 439
+        line 152: 442
+        line 153: 445
+        line 154: 448
+        line 155: 450
+        line 156: 453
+        line 157: 456
+        line 158: 459
+        line 159: 462
+        line 160: 465
+        line 161: 468
+        line 162: 471
+        line 164: 474
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0     477     0  this   Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark;
+            0     477     1 count   Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToThirtyThree;
+            5     472     2     i   I
+      StackMapTable: number_of_entries = 67
+        frame_type = 252 /* append */
+          offset_delta = 284
+          locals = [ int ]
+        frame_type = 1 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 1 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 1 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 1 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 1 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 1 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 1 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 1 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+    RuntimeVisibleAnnotations:
+      0: #53()
+        org.openjdk.jmh.annotations.Benchmark
+      1: #54(#55=e#58.#59)
+        org.openjdk.jmh.annotations.CompilerControl(
+          value=Lorg/openjdk/jmh/annotations/CompilerControl$Mode;.PRINT
+        )
+
+  public int ifInt33(dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark$CountToThirtyThree);
+    descriptor: (Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToThirtyThree;)I
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=2
+         0: aload_1
+         1: invokestatic  #23                 // Method dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToThirtyThree.access$100:(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToThirtyThree;)I
+         4: istore_2
+         5: iload_2
+         6: ifne          11
+         9: iconst_0
+        10: ireturn
+        11: iload_2
+        12: iconst_1
+        13: if_icmpne     19
+        16: bipush        8
+        18: ireturn
+        19: iload_2
+        20: iconst_2
+        21: if_icmpne     27
+        24: bipush        16
+        26: ireturn
+        27: iload_2
+        28: iconst_3
+        29: if_icmpne     35
+        32: bipush        24
+        34: ireturn
+        35: iload_2
+        36: iconst_4
+        37: if_icmpne     43
+        40: bipush        32
+        42: ireturn
+        43: iload_2
+        44: iconst_5
+        45: if_icmpne     51
+        48: bipush        40
+        50: ireturn
+        51: iload_2
+        52: bipush        6
+        54: if_icmpne     60
+        57: bipush        48
+        59: ireturn
+        60: iload_2
+        61: bipush        7
+        63: if_icmpne     69
+        66: bipush        56
+        68: ireturn
+        69: iload_2
+        70: bipush        8
+        72: if_icmpne     78
+        75: bipush        8
+        77: ireturn
+        78: iload_2
+        79: bipush        9
+        81: if_icmpne     87
+        84: bipush        16
+        86: ireturn
+        87: iload_2
+        88: bipush        10
+        90: if_icmpne     96
+        93: bipush        24
+        95: ireturn
+        96: iload_2
+        97: bipush        11
+        99: if_icmpne     105
+       102: bipush        32
+       104: ireturn
+       105: iload_2
+       106: bipush        12
+       108: if_icmpne     114
+       111: bipush        40
+       113: ireturn
+       114: iload_2
+       115: bipush        13
+       117: if_icmpne     123
+       120: bipush        48
+       122: ireturn
+       123: iload_2
+       124: bipush        14
+       126: if_icmpne     132
+       129: bipush        56
+       131: ireturn
+       132: iload_2
+       133: bipush        15
+       135: if_icmpne     141
+       138: bipush        8
+       140: ireturn
+       141: iload_2
+       142: bipush        16
+       144: if_icmpne     150
+       147: bipush        16
+       149: ireturn
+       150: iload_2
+       151: bipush        17
+       153: if_icmpne     159
+       156: bipush        24
+       158: ireturn
+       159: iload_2
+       160: bipush        18
+       162: if_icmpne     168
+       165: bipush        32
+       167: ireturn
+       168: iload_2
+       169: bipush        19
+       171: if_icmpne     177
+       174: bipush        40
+       176: ireturn
+       177: iload_2
+       178: bipush        20
+       180: if_icmpne     186
+       183: bipush        48
+       185: ireturn
+       186: iload_2
+       187: bipush        21
+       189: if_icmpne     195
+       192: bipush        56
+       194: ireturn
+       195: iload_2
+       196: bipush        22
+       198: if_icmpne     204
+       201: bipush        8
+       203: ireturn
+       204: iload_2
+       205: bipush        23
+       207: if_icmpne     213
+       210: bipush        16
+       212: ireturn
+       213: iload_2
+       214: bipush        24
+       216: if_icmpne     222
+       219: bipush        24
+       221: ireturn
+       222: iload_2
+       223: bipush        25
+       225: if_icmpne     231
+       228: bipush        32
+       230: ireturn
+       231: iload_2
+       232: bipush        26
+       234: if_icmpne     240
+       237: bipush        40
+       239: ireturn
+       240: iload_2
+       241: bipush        27
+       243: if_icmpne     249
+       246: bipush        48
+       248: ireturn
+       249: iload_2
+       250: bipush        28
+       252: if_icmpne     258
+       255: bipush        56
+       257: ireturn
+       258: iload_2
+       259: bipush        29
+       261: if_icmpne     267
+       264: bipush        40
+       266: ireturn
+       267: iload_2
+       268: bipush        30
+       270: if_icmpne     276
+       273: bipush        48
+       275: ireturn
+       276: iload_2
+       277: bipush        31
+       279: if_icmpne     285
+       282: bipush        56
+       284: ireturn
+       285: iload_2
+       286: bipush        32
+       288: if_icmpne     294
+       291: bipush        40
+       293: ireturn
+       294: iload_2
+       295: bipush        33
+       297: if_icmpne     303
+       300: bipush        8
+       302: ireturn
+       303: iload_2
+       304: bipush        34
+       306: if_icmpne     312
+       309: bipush        16
+       311: ireturn
+       312: iload_2
+       313: bipush        35
+       315: if_icmpne     321
+       318: bipush        24
+       320: ireturn
+       321: iload_2
+       322: bipush        36
+       324: if_icmpne     330
+       327: bipush        32
+       329: ireturn
+       330: iload_2
+       331: bipush        37
+       333: if_icmpne     339
+       336: bipush        40
+       338: ireturn
+       339: iload_2
+       340: bipush        38
+       342: if_icmpne     348
+       345: bipush        48
+       347: ireturn
+       348: iload_2
+       349: bipush        39
+       351: if_icmpne     357
+       354: bipush        56
+       356: ireturn
+       357: iload_2
+       358: bipush        40
+       360: if_icmpne     366
+       363: bipush        8
+       365: ireturn
+       366: iload_2
+       367: bipush        41
+       369: if_icmpne     375
+       372: bipush        16
+       374: ireturn
+       375: iload_2
+       376: bipush        42
+       378: if_icmpne     384
+       381: bipush        24
+       383: ireturn
+       384: iload_2
+       385: bipush        43
+       387: if_icmpne     393
+       390: bipush        32
+       392: ireturn
+       393: iload_2
+       394: bipush        44
+       396: if_icmpne     402
+       399: bipush        40
+       401: ireturn
+       402: iload_2
+       403: bipush        45
+       405: if_icmpne     411
+       408: bipush        48
+       410: ireturn
+       411: iload_2
+       412: bipush        46
+       414: if_icmpne     420
+       417: bipush        56
+       419: ireturn
+       420: iload_2
+       421: bipush        47
+       423: if_icmpne     429
+       426: bipush        8
+       428: ireturn
+       429: iload_2
+       430: bipush        48
+       432: if_icmpne     438
+       435: bipush        16
+       437: ireturn
+       438: iload_2
+       439: bipush        49
+       441: if_icmpne     447
+       444: bipush        24
+       446: ireturn
+       447: iload_2
+       448: bipush        50
+       450: if_icmpne     456
+       453: bipush        32
+       455: ireturn
+       456: iload_2
+       457: bipush        51
+       459: if_icmpne     465
+       462: bipush        40
+       464: ireturn
+       465: iload_2
+       466: bipush        52
+       468: if_icmpne     474
+       471: bipush        48
+       473: ireturn
+       474: iload_2
+       475: bipush        53
+       477: if_icmpne     483
+       480: bipush        56
+       482: ireturn
+       483: iload_2
+       484: bipush        54
+       486: if_icmpne     492
+       489: bipush        8
+       491: ireturn
+       492: iload_2
+       493: bipush        55
+       495: if_icmpne     501
+       498: bipush        16
+       500: ireturn
+       501: iload_2
+       502: bipush        56
+       504: if_icmpne     510
+       507: bipush        24
+       509: ireturn
+       510: iload_2
+       511: bipush        57
+       513: if_icmpne     519
+       516: bipush        32
+       518: ireturn
+       519: iload_2
+       520: bipush        58
+       522: if_icmpne     528
+       525: bipush        40
+       527: ireturn
+       528: iload_2
+       529: bipush        59
+       531: if_icmpne     537
+       534: bipush        48
+       536: ireturn
+       537: iload_2
+       538: bipush        60
+       540: if_icmpne     546
+       543: bipush        56
+       545: ireturn
+       546: iload_2
+       547: bipush        61
+       549: if_icmpne     555
+       552: bipush        40
+       554: ireturn
+       555: iload_2
+       556: bipush        62
+       558: if_icmpne     564
+       561: bipush        48
+       563: ireturn
+       564: iload_2
+       565: bipush        63
+       567: if_icmpne     573
+       570: bipush        56
+       572: ireturn
+       573: iload_2
+       574: bipush        64
+       576: if_icmpne     582
+       579: bipush        40
+       581: ireturn
+       582: iload_2
+       583: bipush        65
+       585: if_icmpne     591
+       588: bipush        40
+       590: ireturn
+       591: bipush        64
+       593: ireturn
+      LineNumberTable:
+        line 171: 0
+        line 172: 5
+        line 173: 9
+        line 174: 11
+        line 175: 16
+        line 176: 19
+        line 177: 24
+        line 178: 27
+        line 179: 32
+        line 180: 35
+        line 181: 40
+        line 182: 43
+        line 183: 48
+        line 184: 51
+        line 185: 57
+        line 186: 60
+        line 187: 66
+        line 188: 69
+        line 189: 75
+        line 190: 78
+        line 191: 84
+        line 192: 87
+        line 193: 93
+        line 194: 96
+        line 195: 102
+        line 196: 105
+        line 197: 111
+        line 198: 114
+        line 199: 120
+        line 200: 123
+        line 201: 129
+        line 202: 132
+        line 203: 138
+        line 204: 141
+        line 205: 147
+        line 206: 150
+        line 207: 156
+        line 208: 159
+        line 209: 165
+        line 210: 168
+        line 211: 174
+        line 212: 177
+        line 213: 183
+        line 214: 186
+        line 215: 192
+        line 216: 195
+        line 217: 201
+        line 218: 204
+        line 219: 210
+        line 220: 213
+        line 221: 219
+        line 222: 222
+        line 223: 228
+        line 224: 231
+        line 225: 237
+        line 226: 240
+        line 227: 246
+        line 228: 249
+        line 229: 255
+        line 230: 258
+        line 231: 264
+        line 232: 267
+        line 233: 273
+        line 234: 276
+        line 235: 282
+        line 236: 285
+        line 237: 291
+        line 238: 294
+        line 239: 300
+        line 240: 303
+        line 241: 309
+        line 242: 312
+        line 243: 318
+        line 244: 321
+        line 245: 327
+        line 246: 330
+        line 247: 336
+        line 248: 339
+        line 249: 345
+        line 250: 348
+        line 251: 354
+        line 252: 357
+        line 253: 363
+        line 254: 366
+        line 255: 372
+        line 256: 375
+        line 257: 381
+        line 258: 384
+        line 259: 390
+        line 260: 393
+        line 261: 399
+        line 262: 402
+        line 263: 408
+        line 264: 411
+        line 265: 417
+        line 266: 420
+        line 267: 426
+        line 268: 429
+        line 269: 435
+        line 270: 438
+        line 271: 444
+        line 272: 447
+        line 273: 453
+        line 274: 456
+        line 275: 462
+        line 276: 465
+        line 277: 471
+        line 278: 474
+        line 279: 480
+        line 280: 483
+        line 281: 489
+        line 282: 492
+        line 283: 498
+        line 284: 501
+        line 285: 507
+        line 286: 510
+        line 287: 516
+        line 288: 519
+        line 289: 525
+        line 290: 528
+        line 291: 534
+        line 292: 537
+        line 293: 543
+        line 294: 546
+        line 295: 552
+        line 296: 555
+        line 297: 561
+        line 298: 564
+        line 299: 570
+        line 300: 573
+        line 301: 579
+        line 302: 582
+        line 303: 588
+        line 305: 591
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0     594     0  this   Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark;
+            0     594     1 count   Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToThirtyThree;
+            5     589     2     i   I
+      StackMapTable: number_of_entries = 66
+        frame_type = 252 /* append */
+          offset_delta = 11
+          locals = [ int ]
+        frame_type = 7 /* same */
+        frame_type = 7 /* same */
+        frame_type = 7 /* same */
+        frame_type = 7 /* same */
+        frame_type = 7 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+        frame_type = 8 /* same */
+    RuntimeVisibleAnnotations:
+      0: #53()
+        org.openjdk.jmh.annotations.Benchmark
+      1: #54(#55=e#58.#59)
+        org.openjdk.jmh.annotations.CompilerControl(
+          value=Lorg/openjdk/jmh/annotations/CompilerControl$Mode;.PRINT
+        )
+}
+SourceFile: "SwitchBenchmark.java"
+InnerClasses:
+  public static #26= #25 of #4;           // CountToThirtyThree=class dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToThirtyThree of class dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark
+  public static #29= #28 of #4;           // CountToNine=class dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$CountToNine of class dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark
+  public static final #57= #56 of #98;    // Mode=class org/openjdk/jmh/annotations/CompilerControl$Mode of class org/openjdk/jmh/annotations/CompilerControl

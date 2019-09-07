@@ -1,0 +1,438 @@
+Compiled method (c1)     871  583       3       dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt (72 bytes)
+ total in heap  [0x00007f3b8c79a110,0x00007f3b8c79a918] = 2056
+ relocation     [0x00007f3b8c79a288,0x00007f3b8c79a2d8] = 80
+ main code      [0x00007f3b8c79a2e0,0x00007f3b8c79a660] = 896
+ stub code      [0x00007f3b8c79a660,0x00007f3b8c79a6f0] = 144
+ oops           [0x00007f3b8c79a6f0,0x00007f3b8c79a6f8] = 8
+ metadata       [0x00007f3b8c79a6f8,0x00007f3b8c79a708] = 16
+ scopes data    [0x00007f3b8c79a708,0x00007f3b8c79a7a0] = 152
+ scopes pcs     [0x00007f3b8c79a7a0,0x00007f3b8c79a900] = 352
+ dependencies   [0x00007f3b8c79a900,0x00007f3b8c79a908] = 8
+ nul chk table  [0x00007f3b8c79a908,0x00007f3b8c79a918] = 16
+Loaded disassembler from hsdis-amd64.so
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark.ifInt(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param;)I  [0x00007f3b8c79a2e0, 0x00007f3b8c79a6f0]  1040 bytes
+Argument 0 is unknown.RIP: 0x7f3b8c79a2e0 Code size: 0x00000410
+[Disassembling for mach='amd64']
+[Entry Point]
+[Constants]
+  # {method} {0x00007f3b77a9ebf8} 'ifInt' '(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param;)I' in 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark'
+  # this:     rsi:rsi   = 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark'
+  # parm0:    rdx:rdx   = 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param'
+  #           [sp+0x40]  (sp of caller)
+  0x00007f3b8c79a2e0: mov     0x8(%rsi),%r10d
+  0x00007f3b8c79a2e4: shl     $0x3,%r10
+  0x00007f3b8c79a2e8: movabs  $0x800000000,%r12
+  0x00007f3b8c79a2f2: add     %r12,%r10
+  0x00007f3b8c79a2f5: xor     %r12,%r12
+  0x00007f3b8c79a2f8: cmp     %rax,%r10
+  0x00007f3b8c79a2fb: jne     0x7f3b8c142d00    ;   {runtime_call ic_miss_stub}
+  0x00007f3b8c79a301: nopw    0x0(%rax,%rax)
+  0x00007f3b8c79a30c: nop
+  0x00007f3b8c79a310: nopw    0x0(%rax,%rax)
+  0x00007f3b8c79a31b: nop
+  0x00007f3b8c79a31f: nop
+[Verified Entry Point]
+  0x00007f3b8c79a320: mov     %eax,0xfffffffffffec000(%rsp)
+  0x00007f3b8c79a327: push    %rbp
+  0x00007f3b8c79a328: sub     $0x30,%rsp
+  0x00007f3b8c79a32c: movabs  $0x7f3b77ac6e50,%rax  ;   {metadata(method data for {method} {0x00007f3b77a9ebf8} 'ifInt' '(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param;)I' in 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark')}
+  0x00007f3b8c79a336: mov     0x104(%rax),%edi
+  0x00007f3b8c79a33c: add     $0x8,%edi
+  0x00007f3b8c79a33f: mov     %edi,0x104(%rax)
+  0x00007f3b8c79a345: and     $0x1ff8,%edi
+  0x00007f3b8c79a34b: cmp     $0x0,%edi
+  0x00007f3b8c79a34e: je      0x7f3b8c79a5ee    ;*aload_1 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@0 (line 60)
+
+  0x00007f3b8c79a354: movabs  $0x7f3b77ac6e50,%rax  ;   {metadata(method data for {method} {0x00007f3b77a9ebf8} 'ifInt' '(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param;)I' in 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark')}
+  0x00007f3b8c79a35e: addq    $0x1,0x140(%rax)
+  0x00007f3b8c79a366: mov     0xc(%rdx),%eax    ;*getfield i {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark$CountToNine::access$000@1 (line 29)
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@1 (line 60)
+                                                ; implicit exception: dispatches to 0x00007f3b8c79a60f
+  0x00007f3b8c79a369: cmp     $0x0,%eax
+  0x00007f3b8c79a36c: movabs  $0x7f3b77ac6e50,%rsi  ;   {metadata(method data for {method} {0x00007f3b77a9ebf8} 'ifInt' '(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param;)I' in 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark')}
+  0x00007f3b8c79a376: movabs  $0x160,%rdi
+  0x00007f3b8c79a380: je      0x7f3b8c79a390
+  0x00007f3b8c79a386: movabs  $0x150,%rdi
+  0x00007f3b8c79a390: mov     (%rsi,%rdi),%rbx
+  0x00007f3b8c79a394: lea     0x1(%rbx),%rbx
+  0x00007f3b8c79a398: mov     %rbx,(%rsi,%rdi)
+  0x00007f3b8c79a39c: je      0x7f3b8c79a5d9    ;*ifne {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@6 (line 61)
+
+  0x00007f3b8c79a3a2: cmp     $0x1,%eax
+  0x00007f3b8c79a3a5: movabs  $0x7f3b77ac6e50,%rsi  ;   {metadata(method data for {method} {0x00007f3b77a9ebf8} 'ifInt' '(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param;)I' in 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark')}
+  0x00007f3b8c79a3af: movabs  $0x180,%rdi
+  0x00007f3b8c79a3b9: je      0x7f3b8c79a3c9
+  0x00007f3b8c79a3bf: movabs  $0x170,%rdi
+  0x00007f3b8c79a3c9: mov     (%rsi,%rdi),%rbx
+  0x00007f3b8c79a3cd: lea     0x1(%rbx),%rbx
+  0x00007f3b8c79a3d1: mov     %rbx,(%rsi,%rdi)
+  0x00007f3b8c79a3d5: je      0x7f3b8c79a5c4    ;*if_icmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@13 (line 63)
+
+  0x00007f3b8c79a3db: cmp     $0x2,%eax
+  0x00007f3b8c79a3de: movabs  $0x7f3b77ac6e50,%rsi  ;   {metadata(method data for {method} {0x00007f3b77a9ebf8} 'ifInt' '(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param;)I' in 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark')}
+  0x00007f3b8c79a3e8: movabs  $0x1a0,%rdi
+  0x00007f3b8c79a3f2: je      0x7f3b8c79a402
+  0x00007f3b8c79a3f8: movabs  $0x190,%rdi
+  0x00007f3b8c79a402: mov     (%rsi,%rdi),%rbx
+  0x00007f3b8c79a406: lea     0x1(%rbx),%rbx
+  0x00007f3b8c79a40a: mov     %rbx,(%rsi,%rdi)
+  0x00007f3b8c79a40e: je      0x7f3b8c79a5af    ;*if_icmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@21 (line 65)
+
+  0x00007f3b8c79a414: cmp     $0x3,%eax
+  0x00007f3b8c79a417: movabs  $0x7f3b77ac6e50,%rsi  ;   {metadata(method data for {method} {0x00007f3b77a9ebf8} 'ifInt' '(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param;)I' in 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark')}
+  0x00007f3b8c79a421: movabs  $0x1c0,%rdi
+  0x00007f3b8c79a42b: je      0x7f3b8c79a43b
+  0x00007f3b8c79a431: movabs  $0x1b0,%rdi
+  0x00007f3b8c79a43b: mov     (%rsi,%rdi),%rbx
+  0x00007f3b8c79a43f: lea     0x1(%rbx),%rbx
+  0x00007f3b8c79a443: mov     %rbx,(%rsi,%rdi)
+  0x00007f3b8c79a447: je      0x7f3b8c79a59a    ;*if_icmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@29 (line 67)
+
+  0x00007f3b8c79a44d: cmp     $0x4,%eax
+  0x00007f3b8c79a450: movabs  $0x7f3b77ac6e50,%rsi  ;   {metadata(method data for {method} {0x00007f3b77a9ebf8} 'ifInt' '(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param;)I' in 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark')}
+  0x00007f3b8c79a45a: movabs  $0x1e0,%rdi
+  0x00007f3b8c79a464: je      0x7f3b8c79a474
+  0x00007f3b8c79a46a: movabs  $0x1d0,%rdi
+  0x00007f3b8c79a474: mov     (%rsi,%rdi),%rbx
+  0x00007f3b8c79a478: lea     0x1(%rbx),%rbx
+  0x00007f3b8c79a47c: mov     %rbx,(%rsi,%rdi)
+  0x00007f3b8c79a480: je      0x7f3b8c79a585    ;*if_icmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@37 (line 69)
+
+  0x00007f3b8c79a486: cmp     $0x5,%eax
+  0x00007f3b8c79a489: movabs  $0x7f3b77ac6e50,%rsi  ;   {metadata(method data for {method} {0x00007f3b77a9ebf8} 'ifInt' '(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param;)I' in 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark')}
+  0x00007f3b8c79a493: movabs  $0x200,%rdi
+  0x00007f3b8c79a49d: je      0x7f3b8c79a4ad
+  0x00007f3b8c79a4a3: movabs  $0x1f0,%rdi
+  0x00007f3b8c79a4ad: mov     (%rsi,%rdi),%rbx
+  0x00007f3b8c79a4b1: lea     0x1(%rbx),%rbx
+  0x00007f3b8c79a4b5: mov     %rbx,(%rsi,%rdi)
+  0x00007f3b8c79a4b9: je      0x7f3b8c79a570    ;*if_icmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@45 (line 71)
+
+  0x00007f3b8c79a4bf: cmp     $0x6,%eax
+  0x00007f3b8c79a4c2: movabs  $0x7f3b77ac6e50,%rsi  ;   {metadata(method data for {method} {0x00007f3b77a9ebf8} 'ifInt' '(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param;)I' in 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark')}
+  0x00007f3b8c79a4cc: movabs  $0x220,%rdi
+  0x00007f3b8c79a4d6: je      0x7f3b8c79a4e6
+  0x00007f3b8c79a4dc: movabs  $0x210,%rdi
+  0x00007f3b8c79a4e6: mov     (%rsi,%rdi),%rbx
+  0x00007f3b8c79a4ea: lea     0x1(%rbx),%rbx
+  0x00007f3b8c79a4ee: mov     %rbx,(%rsi,%rdi)
+  0x00007f3b8c79a4f2: je      0x7f3b8c79a55b    ;*if_icmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@54 (line 73)
+
+  0x00007f3b8c79a4f8: cmp     $0x7,%eax
+  0x00007f3b8c79a4fb: movabs  $0x7f3b77ac6e50,%rax  ;   {metadata(method data for {method} {0x00007f3b77a9ebf8} 'ifInt' '(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param;)I' in 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark')}
+  0x00007f3b8c79a505: movabs  $0x230,%rsi
+  0x00007f3b8c79a50f: jne     0x7f3b8c79a51f
+  0x00007f3b8c79a515: movabs  $0x240,%rsi
+  0x00007f3b8c79a51f: mov     (%rax,%rsi),%rdi
+  0x00007f3b8c79a523: lea     0x1(%rdi),%rdi
+  0x00007f3b8c79a527: mov     %rdi,(%rax,%rsi)
+  0x00007f3b8c79a52b: jne     0x7f3b8c79a546    ;*if_icmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@63 (line 75)
+
+  0x00007f3b8c79a531: mov     $0x38,%eax
+  0x00007f3b8c79a536: add     $0x30,%rsp
+  0x00007f3b8c79a53a: pop     %rbp
+  0x00007f3b8c79a53b: mov     0x108(%r15),%r10
+  0x00007f3b8c79a542: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f3b8c79a545: retq                      ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@68 (line 76)
+
+  0x00007f3b8c79a546: mov     $0x40,%eax
+  0x00007f3b8c79a54b: add     $0x30,%rsp
+  0x00007f3b8c79a54f: pop     %rbp
+  0x00007f3b8c79a550: mov     0x108(%r15),%r10
+  0x00007f3b8c79a557: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f3b8c79a55a: retq                      ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@71 (line 78)
+
+  0x00007f3b8c79a55b: mov     $0x30,%eax
+  0x00007f3b8c79a560: add     $0x30,%rsp
+  0x00007f3b8c79a564: pop     %rbp
+  0x00007f3b8c79a565: mov     0x108(%r15),%r10
+  0x00007f3b8c79a56c: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f3b8c79a56f: retq                      ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@59 (line 74)
+
+  0x00007f3b8c79a570: mov     $0x28,%eax
+  0x00007f3b8c79a575: add     $0x30,%rsp
+  0x00007f3b8c79a579: pop     %rbp
+  0x00007f3b8c79a57a: mov     0x108(%r15),%r10
+  0x00007f3b8c79a581: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f3b8c79a584: retq                      ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@50 (line 72)
+
+  0x00007f3b8c79a585: mov     $0x20,%eax
+  0x00007f3b8c79a58a: add     $0x30,%rsp
+  0x00007f3b8c79a58e: pop     %rbp
+  0x00007f3b8c79a58f: mov     0x108(%r15),%r10
+  0x00007f3b8c79a596: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f3b8c79a599: retq                      ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@42 (line 70)
+
+  0x00007f3b8c79a59a: mov     $0x18,%eax
+  0x00007f3b8c79a59f: add     $0x30,%rsp
+  0x00007f3b8c79a5a3: pop     %rbp
+  0x00007f3b8c79a5a4: mov     0x108(%r15),%r10
+  0x00007f3b8c79a5ab: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f3b8c79a5ae: retq                      ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@34 (line 68)
+
+  0x00007f3b8c79a5af: mov     $0x10,%eax
+  0x00007f3b8c79a5b4: add     $0x30,%rsp
+  0x00007f3b8c79a5b8: pop     %rbp
+  0x00007f3b8c79a5b9: mov     0x108(%r15),%r10
+  0x00007f3b8c79a5c0: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f3b8c79a5c3: retq                      ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@26 (line 66)
+
+  0x00007f3b8c79a5c4: mov     $0x8,%eax
+  0x00007f3b8c79a5c9: add     $0x30,%rsp
+  0x00007f3b8c79a5cd: pop     %rbp
+  0x00007f3b8c79a5ce: mov     0x108(%r15),%r10
+  0x00007f3b8c79a5d5: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f3b8c79a5d8: retq                      ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@18 (line 64)
+
+  0x00007f3b8c79a5d9: mov     $0x0,%eax
+  0x00007f3b8c79a5de: add     $0x30,%rsp
+  0x00007f3b8c79a5e2: pop     %rbp
+  0x00007f3b8c79a5e3: mov     0x108(%r15),%r10
+  0x00007f3b8c79a5ea: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f3b8c79a5ed: retq
+  0x00007f3b8c79a5ee: movabs  $0x7f3b77a9ebf8,%r10  ;   {metadata({method} {0x00007f3b77a9ebf8} 'ifInt' '(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param;)I' in 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark')}
+  0x00007f3b8c79a5f8: mov     %r10,0x8(%rsp)
+  0x00007f3b8c79a5fd: movq    $0xffffffffffffffff,(%rsp)
+  0x00007f3b8c79a605: callq   0x7f3b8c20cc80    ; ImmutableOopMap{rsi=Oop rdx=Oop }
+                                                ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@-1 (line 60)
+                                                ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00007f3b8c79a60a: jmpq    0x7f3b8c79a354
+  0x00007f3b8c79a60f: callq   0x7f3b8c17e320    ; ImmutableOopMap{}
+                                                ;*getfield i {reexecute=1 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark$CountToNine::access$000@1 (line 29)
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@1 (line 60)
+                                                ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00007f3b8c79a614: nop
+  0x00007f3b8c79a615: nop
+  0x00007f3b8c79a616: mov     0x420(%r15),%rax
+  0x00007f3b8c79a61d: movabs  $0x0,%r10
+  0x00007f3b8c79a627: mov     %r10,0x420(%r15)
+  0x00007f3b8c79a62e: movabs  $0x0,%r10
+  0x00007f3b8c79a638: mov     %r10,0x428(%r15)
+  0x00007f3b8c79a63f: add     $0x30,%rsp
+  0x00007f3b8c79a643: pop     %rbp
+  0x00007f3b8c79a644: jmpq    0x7f3b8c17f000    ;   {runtime_call unwind_exception Runtime1 stub}
+  0x00007f3b8c79a649: hlt
+  0x00007f3b8c79a64a: hlt
+  0x00007f3b8c79a64b: hlt
+  0x00007f3b8c79a64c: hlt
+  0x00007f3b8c79a64d: hlt
+  0x00007f3b8c79a64e: hlt
+  0x00007f3b8c79a64f: hlt
+  0x00007f3b8c79a650: hlt
+  0x00007f3b8c79a651: hlt
+  0x00007f3b8c79a652: hlt
+  0x00007f3b8c79a653: hlt
+  0x00007f3b8c79a654: hlt
+  0x00007f3b8c79a655: hlt
+  0x00007f3b8c79a656: hlt
+  0x00007f3b8c79a657: hlt
+  0x00007f3b8c79a658: hlt
+  0x00007f3b8c79a659: hlt
+  0x00007f3b8c79a65a: hlt
+  0x00007f3b8c79a65b: hlt
+  0x00007f3b8c79a65c: hlt
+  0x00007f3b8c79a65d: hlt
+  0x00007f3b8c79a65e: hlt
+  0x00007f3b8c79a65f: hlt
+[Exception Handler]
+[Stub Code]
+  0x00007f3b8c79a660: callq   0x7f3b8c17c680    ;   {no_reloc}
+  0x00007f3b8c79a665: mov     %rsp,0xffffffffffffffd8(%rsp)
+  0x00007f3b8c79a66a: sub     $0x80,%rsp
+  0x00007f3b8c79a671: mov     %rax,0x78(%rsp)
+  0x00007f3b8c79a676: mov     %rcx,0x70(%rsp)
+  0x00007f3b8c79a67b: mov     %rdx,0x68(%rsp)
+  0x00007f3b8c79a680: mov     %rbx,0x60(%rsp)
+  0x00007f3b8c79a685: mov     %rbp,0x50(%rsp)
+  0x00007f3b8c79a68a: mov     %rsi,0x48(%rsp)
+  0x00007f3b8c79a68f: mov     %rdi,0x40(%rsp)
+  0x00007f3b8c79a694: mov     %r8,0x38(%rsp)
+  0x00007f3b8c79a699: mov     %r9,0x30(%rsp)
+  0x00007f3b8c79a69e: mov     %r10,0x28(%rsp)
+  0x00007f3b8c79a6a3: mov     %r11,0x20(%rsp)
+  0x00007f3b8c79a6a8: mov     %r12,0x18(%rsp)
+  0x00007f3b8c79a6ad: mov     %r13,0x10(%rsp)
+  0x00007f3b8c79a6b2: mov     %r14,0x8(%rsp)
+  0x00007f3b8c79a6b7: mov     %r15,(%rsp)
+  0x00007f3b8c79a6bb: movabs  $0x7f3baa5525e2,%rdi  ;   {external_word}
+  0x00007f3b8c79a6c5: movabs  $0x7f3b8c79a665,%rsi  ;   {internal_word}
+  0x00007f3b8c79a6cf: mov     %rsp,%rdx
+  0x00007f3b8c79a6d2: and     $0xfffffffffffffff0,%rsp
+  0x00007f3b8c79a6d6: callq   0x7f3baa16eaa0    ;   {runtime_call}
+  0x00007f3b8c79a6db: hlt
+[Deopt Handler Code]
+  0x00007f3b8c79a6dc: movabs  $0x7f3b8c79a6dc,%r10  ;   {section_word}
+  0x00007f3b8c79a6e6: push    %r10
+  0x00007f3b8c79a6e8: jmpq    0x7f3b8c1445a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007f3b8c79a6ed: hlt
+  0x00007f3b8c79a6ee: hlt
+  0x00007f3b8c79a6ef: hlt
+
+ImmutableOopMap{rsi=Oop rdx=Oop }pc offsets: 810 
+ImmutableOopMap{}pc offsets: 820 Compiled method (c2)     897  589       4       dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt (72 bytes)
+ total in heap  [0x00007f3b93c1d090,0x00007f3b93c1d498] = 1032
+ relocation     [0x00007f3b93c1d208,0x00007f3b93c1d218] = 16
+ main code      [0x00007f3b93c1d220,0x00007f3b93c1d300] = 224
+ stub code      [0x00007f3b93c1d300,0x00007f3b93c1d318] = 24
+ oops           [0x00007f3b93c1d318,0x00007f3b93c1d320] = 8
+ metadata       [0x00007f3b93c1d320,0x00007f3b93c1d330] = 16
+ scopes data    [0x00007f3b93c1d330,0x00007f3b93c1d390] = 96
+ scopes pcs     [0x00007f3b93c1d390,0x00007f3b93c1d480] = 240
+ dependencies   [0x00007f3b93c1d480,0x00007f3b93c1d488] = 8
+ nul chk table  [0x00007f3b93c1d488,0x00007f3b93c1d498] = 16
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark.ifInt(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param;)I  [0x00007f3b93c1d220, 0x00007f3b93c1d318]  248 bytes
+Argument 0 is unknown.RIP: 0x7f3b93c1d220 Code size: 0x000000f8
+[Entry Point]
+[Constants]
+  # {method} {0x00007f3b77a9ebf8} 'ifInt' '(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param;)I' in 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark'
+  # this:     rsi:rsi   = 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark'
+  # parm0:    rdx:rdx   = 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param'
+  #           [sp+0x20]  (sp of caller)
+  0x00007f3b93c1d220: mov     0x8(%rsi),%r10d
+  0x00007f3b93c1d224: shl     $0x3,%r10
+  0x00007f3b93c1d228: movabs  $0x800000000,%r12
+  0x00007f3b93c1d232: add     %r12,%r10
+  0x00007f3b93c1d235: xor     %r12,%r12
+  0x00007f3b93c1d238: cmp     %r10,%rax
+  0x00007f3b93c1d23b: jne     0x7f3b8c142d00    ;   {runtime_call ic_miss_stub}
+  0x00007f3b93c1d241: nop
+  0x00007f3b93c1d244: nopl    0x0(%rax,%rax)
+  0x00007f3b93c1d24c: nop
+[Verified Entry Point]
+  0x00007f3b93c1d250: mov     %eax,0xfffffffffffec000(%rsp)
+  0x00007f3b93c1d257: push    %rbp
+  0x00007f3b93c1d258: sub     $0x10,%rsp        ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@-1 (line 60)
+
+  0x00007f3b93c1d25c: mov     0xc(%rdx),%r11d   ;*getfield i {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark$CountToNine::access$000@1 (line 29)
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@1 (line 60)
+                                                ; implicit exception: dispatches to 0x00007f3b93c1d2d9
+  0x00007f3b93c1d260: test    %r11d,%r11d
+  0x00007f3b93c1d263: je      0x7f3b93c1d2b2    ;*ifne {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@6 (line 61)
+
+  0x00007f3b93c1d265: cmp     $0x1,%r11d
+  0x00007f3b93c1d269: je      0x7f3b93c1d2cb    ;*if_icmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@13 (line 63)
+
+  0x00007f3b93c1d26b: cmp     $0x2,%r11d
+  0x00007f3b93c1d26f: je      0x7f3b93c1d2d2    ;*if_icmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@21 (line 65)
+
+  0x00007f3b93c1d271: cmp     $0x3,%r11d
+  0x00007f3b93c1d275: je      0x7f3b93c1d2c4    ;*if_icmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@29 (line 67)
+
+  0x00007f3b93c1d277: cmp     $0x4,%r11d
+  0x00007f3b93c1d27b: jne     0x7f3b93c1d284    ;*if_icmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@37 (line 69)
+
+  0x00007f3b93c1d27d: mov     $0x20,%eax
+  0x00007f3b93c1d282: jmp     0x7f3b93c1d2b4
+  0x00007f3b93c1d284: cmp     $0x5,%r11d
+  0x00007f3b93c1d288: jne     0x7f3b93c1d291    ;*if_icmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@45 (line 71)
+
+  0x00007f3b93c1d28a: mov     $0x28,%eax
+  0x00007f3b93c1d28f: jmp     0x7f3b93c1d2b4
+  0x00007f3b93c1d291: cmp     $0x6,%r11d
+  0x00007f3b93c1d295: jne     0x7f3b93c1d29e    ;*if_icmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@54 (line 73)
+
+  0x00007f3b93c1d297: mov     $0x30,%eax
+  0x00007f3b93c1d29c: jmp     0x7f3b93c1d2b4
+  0x00007f3b93c1d29e: cmp     $0x7,%r11d
+  0x00007f3b93c1d2a2: jne     0x7f3b93c1d2ab    ;*if_icmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@63 (line 75)
+
+  0x00007f3b93c1d2a4: mov     $0x38,%eax
+  0x00007f3b93c1d2a9: jmp     0x7f3b93c1d2b4
+  0x00007f3b93c1d2ab: mov     $0x40,%eax
+  0x00007f3b93c1d2b0: jmp     0x7f3b93c1d2b4
+  0x00007f3b93c1d2b2: xor     %eax,%eax         ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@-1 (line 60)
+
+  0x00007f3b93c1d2b4: add     $0x10,%rsp
+  0x00007f3b93c1d2b8: pop     %rbp
+  0x00007f3b93c1d2b9: mov     0x108(%r15),%r10
+  0x00007f3b93c1d2c0: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f3b93c1d2c3: retq
+  0x00007f3b93c1d2c4: mov     $0x18,%eax
+  0x00007f3b93c1d2c9: jmp     0x7f3b93c1d2b4
+  0x00007f3b93c1d2cb: mov     $0x8,%eax
+  0x00007f3b93c1d2d0: jmp     0x7f3b93c1d2b4
+  0x00007f3b93c1d2d2: mov     $0x10,%eax
+  0x00007f3b93c1d2d7: jmp     0x7f3b93c1d2b4
+  0x00007f3b93c1d2d9: mov     $0xfffffff6,%esi
+  0x00007f3b93c1d2de: nop
+  0x00007f3b93c1d2df: callq   0x7f3b8c144980    ; ImmutableOopMap{}
+                                                ;*getfield i {reexecute=1 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark$CountToNine::access$000@1 (line 29)
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@1 (line 60)
+                                                ;   {runtime_call UncommonTrapBlob}
+  0x00007f3b93c1d2e4: ud2                       ;*getfield i {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark$CountToNine::access$000@1 (line 29)
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::ifInt@1 (line 60)
+
+  0x00007f3b93c1d2e6: hlt
+  0x00007f3b93c1d2e7: hlt
+  0x00007f3b93c1d2e8: hlt
+  0x00007f3b93c1d2e9: hlt
+  0x00007f3b93c1d2ea: hlt
+  0x00007f3b93c1d2eb: hlt
+  0x00007f3b93c1d2ec: hlt
+  0x00007f3b93c1d2ed: hlt
+  0x00007f3b93c1d2ee: hlt
+  0x00007f3b93c1d2ef: hlt
+  0x00007f3b93c1d2f0: hlt
+  0x00007f3b93c1d2f1: hlt
+  0x00007f3b93c1d2f2: hlt
+  0x00007f3b93c1d2f3: hlt
+  0x00007f3b93c1d2f4: hlt
+  0x00007f3b93c1d2f5: hlt
+  0x00007f3b93c1d2f6: hlt
+  0x00007f3b93c1d2f7: hlt
+  0x00007f3b93c1d2f8: hlt
+  0x00007f3b93c1d2f9: hlt
+  0x00007f3b93c1d2fa: hlt
+  0x00007f3b93c1d2fb: hlt
+  0x00007f3b93c1d2fc: hlt
+  0x00007f3b93c1d2fd: hlt
+  0x00007f3b93c1d2fe: hlt
+  0x00007f3b93c1d2ff: hlt
+[Exception Handler]
+[Stub Code]
+  0x00007f3b93c1d300: jmpq    0x7f3b8c17c480    ;   {no_reloc}
+[Deopt Handler Code]
+  0x00007f3b93c1d305: callq   0x7f3b93c1d30a
+  0x00007f3b93c1d30a: subq    $0x5,(%rsp)
+  0x00007f3b93c1d30f: jmpq    0x7f3b8c1445a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007f3b93c1d314: hlt
+  0x00007f3b93c1d315: hlt
+  0x00007f3b93c1d316: hlt
+  0x00007f3b93c1d317: hlt
+
+ImmutableOopMap{}pc offsets: 196

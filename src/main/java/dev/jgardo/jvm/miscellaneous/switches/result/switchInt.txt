@@ -1,0 +1,378 @@
+Compiled method (c1)     426  601       3       dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::switchInt (78 bytes)
+ total in heap  [0x00007f6528394f90,0x00007f6528395640] = 1712
+ relocation     [0x00007f6528395108,0x00007f6528395148] = 64
+ main code      [0x00007f6528395160,0x00007f6528395420] = 704
+ stub code      [0x00007f6528395420,0x00007f65283954b0] = 144
+ oops           [0x00007f65283954b0,0x00007f65283954b8] = 8
+ metadata       [0x00007f65283954b8,0x00007f65283954c8] = 16
+ scopes data    [0x00007f65283954c8,0x00007f6528395538] = 112
+ scopes pcs     [0x00007f6528395538,0x00007f6528395628] = 240
+ dependencies   [0x00007f6528395628,0x00007f6528395630] = 8
+ nul chk table  [0x00007f6528395630,0x00007f6528395640] = 16
+Loaded disassembler from hsdis-amd64.so
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark.switchInt(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param;)I  [0x00007f6528395160, 0x00007f65283954b0]  848 bytes
+Argument 0 is unknown.RIP: 0x7f6528395160 Code size: 0x00000350
+[Disassembling for mach='amd64']
+[Entry Point]
+[Constants]
+  # {method} {0x00007f652536eaa8} 'switchInt' '(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param;)I' in 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark'
+  # this:     rsi:rsi   = 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark'
+  # parm0:    rdx:rdx   = 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param'
+  #           [sp+0x40]  (sp of caller)
+  0x00007f6528395160: mov     0x8(%rsi),%r10d
+  0x00007f6528395164: shl     $0x3,%r10
+  0x00007f6528395168: movabs  $0x800000000,%r12
+  0x00007f6528395172: add     %r12,%r10
+  0x00007f6528395175: xor     %r12,%r12
+  0x00007f6528395178: cmp     %rax,%r10
+  0x00007f652839517b: jne     0x7f6527d2cd00    ;   {runtime_call ic_miss_stub}
+  0x00007f6528395181: nopw    0x0(%rax,%rax)
+  0x00007f652839518c: nop
+  0x00007f6528395190: nopw    0x0(%rax,%rax)
+  0x00007f652839519b: nop
+  0x00007f652839519f: nop
+[Verified Entry Point]
+  0x00007f65283951a0: mov     %eax,0xfffffffffffec000(%rsp)
+  0x00007f65283951a7: push    %rbp
+  0x00007f65283951a8: sub     $0x30,%rsp
+  0x00007f65283951ac: movabs  $0x7f6525396e50,%rax  ;   {metadata(method data for {method} {0x00007f652536eaa8} 'switchInt' '(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param;)I' in 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark')}
+  0x00007f65283951b6: mov     0x104(%rax),%edi
+  0x00007f65283951bc: add     $0x8,%edi
+  0x00007f65283951bf: mov     %edi,0x104(%rax)
+  0x00007f65283951c5: and     $0x1ff8,%edi
+  0x00007f65283951cb: cmp     $0x0,%edi
+  0x00007f65283951ce: je      0x7f65283953b7    ;*aload_1 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::switchInt@0 (line 42)
+
+  0x00007f65283951d4: movabs  $0x7f6525396e50,%rax  ;   {metadata(method data for {method} {0x00007f652536eaa8} 'switchInt' '(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param;)I' in 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark')}
+  0x00007f65283951de: addq    $0x1,0x140(%rax)
+  0x00007f65283951e6: mov     0xc(%rdx),%eax    ;*getfield i {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark$CountToNine::access$000@1 (line 29)
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::switchInt@1 (line 42)
+                                                ; implicit exception: dispatches to 0x00007f65283953d8
+  0x00007f65283951e9: movabs  $0x7f6525396e50,%rsi  ;   {metadata(method data for {method} {0x00007f652536eaa8} 'switchInt' '(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param;)I' in 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark')}
+  0x00007f65283951f3: movabs  $0x158,%rdi
+  0x00007f65283951fd: cmp     $0x0,%eax
+  0x00007f6528395200: mov     %rdi,%rbx
+  0x00007f6528395203: movabs  $0x168,%rdi
+  0x00007f652839520d: cmovne  %rbx,%rdi
+  0x00007f6528395211: cmp     $0x1,%eax
+  0x00007f6528395214: mov     %rdi,%rbx
+  0x00007f6528395217: movabs  $0x178,%rdi
+  0x00007f6528395221: cmovne  %rbx,%rdi
+  0x00007f6528395225: cmp     $0x2,%eax
+  0x00007f6528395228: mov     %rdi,%rbx
+  0x00007f652839522b: movabs  $0x188,%rdi
+  0x00007f6528395235: cmovne  %rbx,%rdi
+  0x00007f6528395239: cmp     $0x3,%eax
+  0x00007f652839523c: mov     %rdi,%rbx
+  0x00007f652839523f: movabs  $0x198,%rdi
+  0x00007f6528395249: cmovne  %rbx,%rdi
+  0x00007f652839524d: cmp     $0x4,%eax
+  0x00007f6528395250: mov     %rdi,%rbx
+  0x00007f6528395253: movabs  $0x1a8,%rdi
+  0x00007f652839525d: cmovne  %rbx,%rdi
+  0x00007f6528395261: cmp     $0x5,%eax
+  0x00007f6528395264: mov     %rdi,%rbx
+  0x00007f6528395267: movabs  $0x1b8,%rdi
+  0x00007f6528395271: cmovne  %rbx,%rdi
+  0x00007f6528395275: cmp     $0x6,%eax
+  0x00007f6528395278: mov     %rdi,%rbx
+  0x00007f652839527b: movabs  $0x1c8,%rdi
+  0x00007f6528395285: cmovne  %rbx,%rdi
+  0x00007f6528395289: cmp     $0x7,%eax
+  0x00007f652839528c: mov     %rdi,%rbx
+  0x00007f652839528f: movabs  $0x1d8,%rdi
+  0x00007f6528395299: cmovne  %rbx,%rdi
+  0x00007f652839529d: mov     (%rsi,%rdi),%rbx
+  0x00007f65283952a1: movabs  $0x1,%r10
+  0x00007f65283952ab: add     %r10,%rbx
+  0x00007f65283952ae: mov     %rbx,(%rsi,%rdi)
+  0x00007f65283952b2: cmp     $0x0,%eax
+  0x00007f65283952b5: je      0x7f65283953a2
+  0x00007f65283952bb: cmp     $0x1,%eax
+  0x00007f65283952be: je      0x7f652839538d
+  0x00007f65283952c4: cmp     $0x2,%eax
+  0x00007f65283952c7: je      0x7f6528395378
+  0x00007f65283952cd: cmp     $0x3,%eax
+  0x00007f65283952d0: je      0x7f6528395363
+  0x00007f65283952d6: cmp     $0x4,%eax
+  0x00007f65283952d9: je      0x7f652839534e
+  0x00007f65283952df: cmp     $0x5,%eax
+  0x00007f65283952e2: je      0x7f6528395339
+  0x00007f65283952e8: cmp     $0x6,%eax
+  0x00007f65283952eb: je      0x7f6528395324
+  0x00007f65283952f1: cmp     $0x7,%eax
+  0x00007f65283952f4: je      0x7f652839530f    ;*tableswitch {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::switchInt@6 (line 43)
+
+  0x00007f65283952fa: mov     $0x40,%eax
+  0x00007f65283952ff: add     $0x30,%rsp
+  0x00007f6528395303: pop     %rbp
+  0x00007f6528395304: mov     0x108(%r15),%r10
+  0x00007f652839530b: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f652839530e: retq                      ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::switchInt@77 (line 53)
+
+  0x00007f652839530f: mov     $0x38,%eax
+  0x00007f6528395314: add     $0x30,%rsp
+  0x00007f6528395318: pop     %rbp
+  0x00007f6528395319: mov     0x108(%r15),%r10
+  0x00007f6528395320: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f6528395323: retq                      ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::switchInt@74 (line 51)
+
+  0x00007f6528395324: mov     $0x30,%eax
+  0x00007f6528395329: add     $0x30,%rsp
+  0x00007f652839532d: pop     %rbp
+  0x00007f652839532e: mov     0x108(%r15),%r10
+  0x00007f6528395335: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f6528395338: retq                      ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::switchInt@71 (line 50)
+
+  0x00007f6528395339: mov     $0x28,%eax
+  0x00007f652839533e: add     $0x30,%rsp
+  0x00007f6528395342: pop     %rbp
+  0x00007f6528395343: mov     0x108(%r15),%r10
+  0x00007f652839534a: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f652839534d: retq                      ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::switchInt@68 (line 49)
+
+  0x00007f652839534e: mov     $0x20,%eax
+  0x00007f6528395353: add     $0x30,%rsp
+  0x00007f6528395357: pop     %rbp
+  0x00007f6528395358: mov     0x108(%r15),%r10
+  0x00007f652839535f: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f6528395362: retq                      ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::switchInt@65 (line 48)
+
+  0x00007f6528395363: mov     $0x18,%eax
+  0x00007f6528395368: add     $0x30,%rsp
+  0x00007f652839536c: pop     %rbp
+  0x00007f652839536d: mov     0x108(%r15),%r10
+  0x00007f6528395374: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f6528395377: retq                      ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::switchInt@62 (line 47)
+
+  0x00007f6528395378: mov     $0x10,%eax
+  0x00007f652839537d: add     $0x30,%rsp
+  0x00007f6528395381: pop     %rbp
+  0x00007f6528395382: mov     0x108(%r15),%r10
+  0x00007f6528395389: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f652839538c: retq                      ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::switchInt@59 (line 46)
+
+  0x00007f652839538d: mov     $0x8,%eax
+  0x00007f6528395392: add     $0x30,%rsp
+  0x00007f6528395396: pop     %rbp
+  0x00007f6528395397: mov     0x108(%r15),%r10
+  0x00007f652839539e: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f65283953a1: retq                      ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::switchInt@56 (line 45)
+
+  0x00007f65283953a2: mov     $0x0,%eax
+  0x00007f65283953a7: add     $0x30,%rsp
+  0x00007f65283953ab: pop     %rbp
+  0x00007f65283953ac: mov     0x108(%r15),%r10
+  0x00007f65283953b3: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f65283953b6: retq
+  0x00007f65283953b7: movabs  $0x7f652536eaa8,%r10  ;   {metadata({method} {0x00007f652536eaa8} 'switchInt' '(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param;)I' in 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark')}
+  0x00007f65283953c1: mov     %r10,0x8(%rsp)
+  0x00007f65283953c6: movq    $0xffffffffffffffff,(%rsp)
+  0x00007f65283953ce: callq   0x7f6527df8600    ; ImmutableOopMap{rsi=Oop rdx=Oop }
+                                                ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::switchInt@-1 (line 42)
+                                                ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00007f65283953d3: jmpq    0x7f65283951d4
+  0x00007f65283953d8: callq   0x7f6527df3920    ; ImmutableOopMap{}
+                                                ;*getfield i {reexecute=1 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark$CountToNine::access$000@1 (line 29)
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::switchInt@1 (line 42)
+                                                ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00007f65283953dd: nop
+  0x00007f65283953de: nop
+  0x00007f65283953df: mov     0x420(%r15),%rax
+  0x00007f65283953e6: movabs  $0x0,%r10
+  0x00007f65283953f0: mov     %r10,0x420(%r15)
+  0x00007f65283953f7: movabs  $0x0,%r10
+  0x00007f6528395401: mov     %r10,0x428(%r15)
+  0x00007f6528395408: add     $0x30,%rsp
+  0x00007f652839540c: pop     %rbp
+  0x00007f652839540d: jmpq    0x7f6527d66100    ;   {runtime_call unwind_exception Runtime1 stub}
+  0x00007f6528395412: hlt
+  0x00007f6528395413: hlt
+  0x00007f6528395414: hlt
+  0x00007f6528395415: hlt
+  0x00007f6528395416: hlt
+  0x00007f6528395417: hlt
+  0x00007f6528395418: hlt
+  0x00007f6528395419: hlt
+  0x00007f652839541a: hlt
+  0x00007f652839541b: hlt
+  0x00007f652839541c: hlt
+  0x00007f652839541d: hlt
+  0x00007f652839541e: hlt
+  0x00007f652839541f: hlt
+[Exception Handler]
+[Stub Code]
+  0x00007f6528395420: callq   0x7f6527df5500    ;   {no_reloc}
+  0x00007f6528395425: mov     %rsp,0xffffffffffffffd8(%rsp)
+  0x00007f652839542a: sub     $0x80,%rsp
+  0x00007f6528395431: mov     %rax,0x78(%rsp)
+  0x00007f6528395436: mov     %rcx,0x70(%rsp)
+  0x00007f652839543b: mov     %rdx,0x68(%rsp)
+  0x00007f6528395440: mov     %rbx,0x60(%rsp)
+  0x00007f6528395445: mov     %rbp,0x50(%rsp)
+  0x00007f652839544a: mov     %rsi,0x48(%rsp)
+  0x00007f652839544f: mov     %rdi,0x40(%rsp)
+  0x00007f6528395454: mov     %r8,0x38(%rsp)
+  0x00007f6528395459: mov     %r9,0x30(%rsp)
+  0x00007f652839545e: mov     %r10,0x28(%rsp)
+  0x00007f6528395463: mov     %r11,0x20(%rsp)
+  0x00007f6528395468: mov     %r12,0x18(%rsp)
+  0x00007f652839546d: mov     %r13,0x10(%rsp)
+  0x00007f6528395472: mov     %r14,0x8(%rsp)
+  0x00007f6528395477: mov     %r15,(%rsp)
+  0x00007f652839547b: movabs  $0x7f65460605e2,%rdi  ;   {external_word}
+  0x00007f6528395485: movabs  $0x7f6528395425,%rsi  ;   {internal_word}
+  0x00007f652839548f: mov     %rsp,%rdx
+  0x00007f6528395492: and     $0xfffffffffffffff0,%rsp
+  0x00007f6528395496: callq   0x7f6545c7caa0    ;   {runtime_call}
+  0x00007f652839549b: hlt
+[Deopt Handler Code]
+  0x00007f652839549c: movabs  $0x7f652839549c,%r10  ;   {section_word}
+  0x00007f65283954a6: push    %r10
+  0x00007f65283954a8: jmpq    0x7f6527d2e5a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007f65283954ad: hlt
+  0x00007f65283954ae: hlt
+  0x00007f65283954af: hlt
+
+ImmutableOopMap{rsi=Oop rdx=Oop }pc offsets: 627
+ImmutableOopMap{}pc offsets: 637 Compiled method (c2)     441  606       4       dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::switchInt (78 bytes)
+ total in heap  [0x00007f652f807790,0x00007f652f807b40] = 944
+ relocation     [0x00007f652f807908,0x00007f652f807928] = 32
+ constants      [0x00007f652f807940,0x00007f652f807980] = 64
+ main code      [0x00007f652f807980,0x00007f652f807a40] = 192
+ stub code      [0x00007f652f807a40,0x00007f652f807a58] = 24
+ oops           [0x00007f652f807a58,0x00007f652f807a60] = 8
+ metadata       [0x00007f652f807a60,0x00007f652f807a70] = 16
+ scopes data    [0x00007f652f807a70,0x00007f652f807aa8] = 56
+ scopes pcs     [0x00007f652f807aa8,0x00007f652f807b28] = 128
+ dependencies   [0x00007f652f807b28,0x00007f652f807b30] = 8
+ nul chk table  [0x00007f652f807b30,0x00007f652f807b40] = 16
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark.switchInt(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param;)I  [0x00007f652f807980, 0x00007f652f807a58]  216 bytes
+[Constants]
+  0x00007f652f807940 (offset:    0): 0x2f807a13   0x00007f652f807a13
+  0x00007f652f807944 (offset:    4): 0x00007f65
+  0x00007f652f807948 (offset:    8): 0x2f807a0c   0x00007f652f807a0c
+  0x00007f652f80794c (offset:   12): 0x00007f65
+  0x00007f652f807950 (offset:   16): 0x2f807a05   0x00007f652f807a05
+  0x00007f652f807954 (offset:   20): 0x00007f65
+  0x00007f652f807958 (offset:   24): 0x2f8079fe   0x00007f652f8079fe
+  0x00007f652f80795c (offset:   28): 0x00007f65
+  0x00007f652f807960 (offset:   32): 0x2f8079f7   0x00007f652f8079f7
+  0x00007f652f807964 (offset:   36): 0x00007f65
+  0x00007f652f807968 (offset:   40): 0x2f8079e9   0x00007f652f8079e9
+  0x00007f652f80796c (offset:   44): 0x00007f65
+  0x00007f652f807970 (offset:   48): 0x2f8079e2   0x00007f652f8079e2
+  0x00007f652f807974 (offset:   52): 0x00007f65
+  0x00007f652f807978 (offset:   56): 0x2f8079f0   0x00007f652f8079f0
+  0x00007f652f80797c (offset:   60): 0x00007f65
+Argument 0 is unknown.RIP: 0x7f652f807980 Code size: 0x000000d8
+[Entry Point]
+  # {method} {0x00007f652536eaa8} 'switchInt' '(Ldev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param;)I' in 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark'
+  # this:     rsi:rsi   = 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark'
+  # parm0:    rdx:rdx   = 'dev/jgardo/jvm/miscellaneous/switches/SwitchBenchmark$Param'
+  #           [sp+0x20]  (sp of caller)
+  0x00007f652f807980: mov     0x8(%rsi),%r10d   ;   {no_reloc}
+  0x00007f652f807984: shl     $0x3,%r10
+  0x00007f652f807988: movabs  $0x800000000,%r12
+  0x00007f652f807992: add     %r12,%r10
+  0x00007f652f807995: xor     %r12,%r12
+  0x00007f652f807998: cmp     %r10,%rax
+  0x00007f652f80799b: jne     0x7f6527d2cd00    ;   {runtime_call ic_miss_stub}
+  0x00007f652f8079a1: nop
+  0x00007f652f8079a4: nopl    0x0(%rax,%rax)
+  0x00007f652f8079ac: nop
+[Verified Entry Point]
+  0x00007f652f8079b0: mov     %eax,0xfffffffffffec000(%rsp)
+  0x00007f652f8079b7: push    %rbp
+  0x00007f652f8079b8: sub     $0x10,%rsp        ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::switchInt@-1 (line 42)
+
+  0x00007f652f8079bc: mov     0xc(%rdx),%r11d   ;*getfield i {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark$CountToNine::access$000@1 (line 29)
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::switchInt@1 (line 42)
+                                                ; implicit exception: dispatches to 0x00007f652f807a25
+  0x00007f652f8079c0: cmp     $0x8,%r11d
+  0x00007f652f8079c4: jnb     0x7f652f8079db
+  0x00007f652f8079c6: movsxd  %r11d,%r10
+  0x00007f652f8079c9: shl     $0x3,%r10
+  0x00007f652f8079cd: movabs  $0x7f652f807940,%r11  ;   {section_word}
+  0x00007f652f8079d7: jmpq    *(%r11,%r10)      ;*tableswitch {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::switchInt@6 (line 43)
+
+  0x00007f652f8079db: mov     $0x40,%eax
+  0x00007f652f8079e0: jmp     0x7f652f807a15
+  0x00007f652f8079e2: mov     $0x30,%eax
+  0x00007f652f8079e7: jmp     0x7f652f807a15
+  0x00007f652f8079e9: mov     $0x28,%eax
+  0x00007f652f8079ee: jmp     0x7f652f807a15
+  0x00007f652f8079f0: mov     $0x38,%eax
+  0x00007f652f8079f5: jmp     0x7f652f807a15
+  0x00007f652f8079f7: mov     $0x20,%eax
+  0x00007f652f8079fc: jmp     0x7f652f807a15
+  0x00007f652f8079fe: mov     $0x18,%eax
+  0x00007f652f807a03: jmp     0x7f652f807a15
+  0x00007f652f807a05: mov     $0x10,%eax
+  0x00007f652f807a0a: jmp     0x7f652f807a15
+  0x00007f652f807a0c: mov     $0x8,%eax
+  0x00007f652f807a11: jmp     0x7f652f807a15
+  0x00007f652f807a13: xor     %eax,%eax         ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::switchInt@-1 (line 42)
+
+  0x00007f652f807a15: add     $0x10,%rsp
+  0x00007f652f807a19: pop     %rbp
+  0x00007f652f807a1a: mov     0x108(%r15),%r10
+  0x00007f652f807a21: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f652f807a24: retq
+  0x00007f652f807a25: mov     $0xfffffff6,%esi
+  0x00007f652f807a2a: nop
+  0x00007f652f807a2b: callq   0x7f6527d2e980    ; ImmutableOopMap{}
+                                                ;*getfield i {reexecute=1 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark$CountToNine::access$000@1 (line 29)
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::switchInt@1 (line 42)
+                                                ;   {runtime_call UncommonTrapBlob}
+  0x00007f652f807a30: ud2                       ;*getfield i {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark$CountToNine::access$000@1 (line 29)
+                                                ; - dev.jgardo.jvm.miscellaneous.switches.SwitchBenchmark::switchInt@1 (line 42)
+
+  0x00007f652f807a32: hlt
+  0x00007f652f807a33: hlt
+  0x00007f652f807a34: hlt
+  0x00007f652f807a35: hlt
+  0x00007f652f807a36: hlt
+  0x00007f652f807a37: hlt
+  0x00007f652f807a38: hlt
+  0x00007f652f807a39: hlt
+  0x00007f652f807a3a: hlt
+  0x00007f652f807a3b: hlt
+  0x00007f652f807a3c: hlt
+  0x00007f652f807a3d: hlt
+  0x00007f652f807a3e: hlt
+  0x00007f652f807a3f: hlt
+[Exception Handler]
+[Stub Code]
+  0x00007f652f807a40: jmpq    0x7f6527d66480    ;   {no_reloc}
+[Deopt Handler Code]
+  0x00007f652f807a45: callq   0x7f652f807a4a
+  0x00007f652f807a4a: subq    $0x5,(%rsp)
+  0x00007f652f807a4f: jmpq    0x7f6527d2e5a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007f652f807a54: hlt
+  0x00007f652f807a55: hlt
+  0x00007f652f807a56: hlt
+  0x00007f652f807a57: hlt
+
+ImmutableOopMap{}pc offsets: 176
