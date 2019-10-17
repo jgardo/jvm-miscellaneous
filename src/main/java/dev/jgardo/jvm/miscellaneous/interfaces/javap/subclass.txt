@@ -1,0 +1,61 @@
+Classfile /home/gardziol/repository/jvm-miscellaneous/target/classes/dev/jgardo/jvm/miscellaneous/interfaces/SubClass.class
+  Last modified 15 paź 2019; size 457 bytes
+  MD5 checksum a9a27dc4f1a8474fa64e8b03c0f42703
+  Compiled from "SubClass.java"
+public class dev.jgardo.jvm.miscellaneous.interfaces.SubClass extends dev.jgardo.jvm.miscellaneous.interfaces.AbstractClass
+  minor version: 0
+  major version: 55
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #2                          // dev/jgardo/jvm/miscellaneous/interfaces/SubClass
+  super_class: #3                         // dev/jgardo/jvm/miscellaneous/interfaces/AbstractClass
+  interfaces: 0, fields: 0, methods: 2, attributes: 1
+Constant pool:
+   #1 = Methodref          #3.#17         // dev/jgardo/jvm/miscellaneous/interfaces/AbstractClass."<init>":()V
+   #2 = Class              #18            // dev/jgardo/jvm/miscellaneous/interfaces/SubClass
+   #3 = Class              #19            // dev/jgardo/jvm/miscellaneous/interfaces/AbstractClass
+   #4 = Utf8               <init>
+   #5 = Utf8               ()V
+   #6 = Utf8               Code
+   #7 = Utf8               LineNumberTable
+   #8 = Utf8               LocalVariableTable
+   #9 = Utf8               this
+  #10 = Utf8               Ldev/jgardo/jvm/miscellaneous/interfaces/SubClass;
+  #11 = Utf8               doSth
+  #12 = Utf8               (I)I
+  #13 = Utf8               a
+  #14 = Utf8               I
+  #15 = Utf8               SourceFile
+  #16 = Utf8               SubClass.java
+  #17 = NameAndType        #4:#5          // "<init>":()V
+  #18 = Utf8               dev/jgardo/jvm/miscellaneous/interfaces/SubClass
+  #19 = Utf8               dev/jgardo/jvm/miscellaneous/interfaces/AbstractClass
+{
+  public dev.jgardo.jvm.miscellaneous.interfaces.SubClass();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method dev/jgardo/jvm/miscellaneous/interfaces/AbstractClass."<init>":()V
+         4: return
+      LineNumberTable:
+        line 3: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Ldev/jgardo/jvm/miscellaneous/interfaces/SubClass;
+
+  public int doSth(int);
+    descriptor: (I)I
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=2, args_size=2
+         0: iconst_0
+         1: ireturn
+      LineNumberTable:
+        line 6: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       2     0  this   Ldev/jgardo/jvm/miscellaneous/interfaces/SubClass;
+            0       2     1     a   I
+}
+SourceFile: "SubClass.java"

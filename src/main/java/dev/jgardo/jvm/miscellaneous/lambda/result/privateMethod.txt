@@ -1,0 +1,197 @@
+Compiled method (c1)     442  615       3       dev.jgardo.jvm.miscellaneous.lambda.LambdaBenchmark::method (6 bytes)
+ total in heap  [0x00007f7494ff1710,0x00007f7494ff1b28] = 1048
+ relocation     [0x00007f7494ff1888,0x00007f7494ff18b8] = 48
+ main code      [0x00007f7494ff18c0,0x00007f7494ff1a00] = 320
+ stub code      [0x00007f7494ff1a00,0x00007f7494ff1a90] = 144
+ oops           [0x00007f7494ff1a90,0x00007f7494ff1a98] = 8
+ metadata       [0x00007f7494ff1a98,0x00007f7494ff1aa8] = 16
+ scopes data    [0x00007f7494ff1aa8,0x00007f7494ff1ad0] = 40
+ scopes pcs     [0x00007f7494ff1ad0,0x00007f7494ff1b20] = 80
+ dependencies   [0x00007f7494ff1b20,0x00007f7494ff1b28] = 8
+Loaded disassembler from hsdis-amd64.so
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/lambda/LambdaBenchmark.method()I  [0x00007f7494ff18c0, 0x00007f7494ff1a90]  464 bytes
+Argument 0 is unknown.RIP: 0x7f7494ff18c0 Code size: 0x000001d0
+[Disassembling for mach='amd64']
+[Entry Point]
+[Constants]
+  # {method} {0x00007f74945f9888} 'method' '()I' in 'dev/jgardo/jvm/miscellaneous/lambda/LambdaBenchmark'
+  #           [sp+0x50]  (sp of caller)
+  0x00007f7494ff18c0: mov     0x8(%rsi),%r10d
+  0x00007f7494ff18c4: shl     $0x3,%r10
+  0x00007f7494ff18c8: movabs  $0x800000000,%r12
+  0x00007f7494ff18d2: add     %r12,%r10
+  0x00007f7494ff18d5: xor     %r12,%r12
+  0x00007f7494ff18d8: cmp     %rax,%r10
+  0x00007f7494ff18db: jne     0x7f749497cd00    ;   {runtime_call ic_miss_stub}
+  0x00007f7494ff18e1: nopw    0x0(%rax,%rax)
+  0x00007f7494ff18ec: nop
+  0x00007f7494ff18f0: nopw    0x0(%rax,%rax)
+  0x00007f7494ff18fb: nop
+  0x00007f7494ff18ff: nop
+[Verified Entry Point]
+  0x00007f7494ff1900: mov     %eax,0xfffffffffffec000(%rsp)
+  0x00007f7494ff1907: push    %rbp
+  0x00007f7494ff1908: sub     $0x40,%rsp
+  0x00007f7494ff190c: movabs  $0x7f7494621228,%rax  ;   {metadata(method data for {method} {0x00007f74945f9888} 'method' '()I' in 'dev/jgardo/jvm/miscellaneous/lambda/LambdaBenchmark')}
+  0x00007f7494ff1916: mov     0x104(%rax),%edi
+  0x00007f7494ff191c: add     $0x8,%edi
+  0x00007f7494ff191f: mov     %edi,0x104(%rax)
+  0x00007f7494ff1925: and     $0x1ff8,%edi
+  0x00007f7494ff192b: cmp     $0x0,%edi
+  0x00007f7494ff192e: je      0x7f7494ff1983    ;*aload_0 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.lambda.LambdaBenchmark::method@0 (line 33)
+
+  0x00007f7494ff1934: movabs  $0x7f7494621228,%rax  ;   {metadata(method data for {method} {0x00007f74945f9888} 'method' '()I' in 'dev/jgardo/jvm/miscellaneous/lambda/LambdaBenchmark')}
+  0x00007f7494ff193e: addq    $0x1,0x140(%rax)
+  0x00007f7494ff1946: movabs  $0x7f74946213e0,%rax  ;   {metadata(method data for {method} {0x00007f74945f9958} 'privateMethod' '(I)I' in 'dev/jgardo/jvm/miscellaneous/lambda/LambdaBenchmark')}
+  0x00007f7494ff1950: mov     0x104(%rax),%esi
+  0x00007f7494ff1956: add     $0x8,%esi
+  0x00007f7494ff1959: mov     %esi,0x104(%rax)
+  0x00007f7494ff195f: and     $0x7ffff8,%esi
+  0x00007f7494ff1965: cmp     $0x0,%esi
+  0x00007f7494ff1968: je      0x7f7494ff19a1
+  0x00007f7494ff196e: mov     $0xa,%eax
+  0x00007f7494ff1973: add     $0x40,%rsp
+  0x00007f7494ff1977: pop     %rbp
+  0x00007f7494ff1978: mov     0x108(%r15),%r10
+  0x00007f7494ff197f: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f7494ff1982: retq
+  0x00007f7494ff1983: movabs  $0x7f74945f9888,%r10  ;   {metadata({method} {0x00007f74945f9888} 'method' '()I' in 'dev/jgardo/jvm/miscellaneous/lambda/LambdaBenchmark')}
+  0x00007f7494ff198d: mov     %r10,0x8(%rsp)
+  0x00007f7494ff1992: movq    $0xffffffffffffffff,(%rsp)
+  0x00007f7494ff199a: callq   0x7f7494a49b00    ; ImmutableOopMap{rsi=Oop }
+                                                ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.lambda.LambdaBenchmark::method@-1 (line 33)
+                                                ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00007f7494ff199f: jmp     0x7f7494ff1934
+  0x00007f7494ff19a1: movabs  $0x7f74945f9958,%r10  ;   {metadata({method} {0x00007f74945f9958} 'privateMethod' '(I)I' in 'dev/jgardo/jvm/miscellaneous/lambda/LambdaBenchmark')}
+  0x00007f7494ff19ab: mov     %r10,0x8(%rsp)
+  0x00007f7494ff19b0: movq    $0xffffffffffffffff,(%rsp)
+  0x00007f7494ff19b8: callq   0x7f7494a49b00    ; ImmutableOopMap{}
+                                                ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.lambda.LambdaBenchmark::privateMethod@-1 (line 37)
+                                                ; - dev.jgardo.jvm.miscellaneous.lambda.LambdaBenchmark::method@2 (line 33)
+                                                ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00007f7494ff19bd: jmp     0x7f7494ff196e
+  0x00007f7494ff19bf: nop
+  0x00007f7494ff19c0: nop
+  0x00007f7494ff19c1: mov     0x420(%r15),%rax
+  0x00007f7494ff19c8: movabs  $0x0,%r10
+  0x00007f7494ff19d2: mov     %r10,0x420(%r15)
+  0x00007f7494ff19d9: movabs  $0x0,%r10
+  0x00007f7494ff19e3: mov     %r10,0x428(%r15)
+  0x00007f7494ff19ea: add     $0x40,%rsp
+  0x00007f7494ff19ee: pop     %rbp
+  0x00007f7494ff19ef: jmpq    0x7f74949b6100    ;   {runtime_call unwind_exception Runtime1 stub}
+  0x00007f7494ff19f4: hlt
+  0x00007f7494ff19f5: hlt
+  0x00007f7494ff19f6: hlt
+  0x00007f7494ff19f7: hlt
+  0x00007f7494ff19f8: hlt
+  0x00007f7494ff19f9: hlt
+  0x00007f7494ff19fa: hlt
+  0x00007f7494ff19fb: hlt
+  0x00007f7494ff19fc: hlt
+  0x00007f7494ff19fd: hlt
+  0x00007f7494ff19fe: hlt
+  0x00007f7494ff19ff: hlt
+[Exception Handler]
+[Stub Code]
+  0x00007f7494ff1a00: callq   0x7f7494a45800    ;   {no_reloc}
+  0x00007f7494ff1a05: mov     %rsp,0xffffffffffffffd8(%rsp)
+  0x00007f7494ff1a0a: sub     $0x80,%rsp
+  0x00007f7494ff1a11: mov     %rax,0x78(%rsp)
+  0x00007f7494ff1a16: mov     %rcx,0x70(%rsp)
+  0x00007f7494ff1a1b: mov     %rdx,0x68(%rsp)
+  0x00007f7494ff1a20: mov     %rbx,0x60(%rsp)
+  0x00007f7494ff1a25: mov     %rbp,0x50(%rsp)
+  0x00007f7494ff1a2a: mov     %rsi,0x48(%rsp)
+  0x00007f7494ff1a2f: mov     %rdi,0x40(%rsp)
+  0x00007f7494ff1a34: mov     %r8,0x38(%rsp)
+  0x00007f7494ff1a39: mov     %r9,0x30(%rsp)
+  0x00007f7494ff1a3e: mov     %r10,0x28(%rsp)
+  0x00007f7494ff1a43: mov     %r11,0x20(%rsp)
+  0x00007f7494ff1a48: mov     %r12,0x18(%rsp)
+  0x00007f7494ff1a4d: mov     %r13,0x10(%rsp)
+  0x00007f7494ff1a52: mov     %r14,0x8(%rsp)
+  0x00007f7494ff1a57: mov     %r15,(%rsp)
+  0x00007f7494ff1a5b: movabs  $0x7f74b550e5e2,%rdi  ;   {external_word}
+  0x00007f7494ff1a65: movabs  $0x7f7494ff1a05,%rsi  ;   {internal_word}
+  0x00007f7494ff1a6f: mov     %rsp,%rdx
+  0x00007f7494ff1a72: and     $0xfffffffffffffff0,%rsp
+  0x00007f7494ff1a76: callq   0x7f74b512aaa0    ;   {runtime_call}
+  0x00007f7494ff1a7b: hlt
+[Deopt Handler Code]
+  0x00007f7494ff1a7c: movabs  $0x7f7494ff1a7c,%r10  ;   {section_word}
+  0x00007f7494ff1a86: push    %r10
+  0x00007f7494ff1a88: jmpq    0x7f749497e5a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007f7494ff1a8d: hlt
+  0x00007f7494ff1a8e: hlt
+  0x00007f7494ff1a8f: hlt
+
+ImmutableOopMap{rsi=Oop }pc offsets: 223
+ImmutableOopMap{}pc offsets: 253 Compiled method (c2)     458  619       4       dev.jgardo.jvm.miscellaneous.lambda.LambdaBenchmark::method (6 bytes)
+ total in heap  [0x00007f749c456e90,0x00007f749c4570e8] = 600
+ relocation     [0x00007f749c457008,0x00007f749c457018] = 16
+ main code      [0x00007f749c457020,0x00007f749c457080] = 96
+ stub code      [0x00007f749c457080,0x00007f749c457098] = 24
+ oops           [0x00007f749c457098,0x00007f749c4570a0] = 8
+ metadata       [0x00007f749c4570a0,0x00007f749c4570a8] = 8
+ scopes data    [0x00007f749c4570a8,0x00007f749c4570b0] = 8
+ scopes pcs     [0x00007f749c4570b0,0x00007f749c4570e0] = 48
+ dependencies   [0x00007f749c4570e0,0x00007f749c4570e8] = 8
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/lambda/LambdaBenchmark.method()I  [0x00007f749c457020, 0x00007f749c457098]  120 bytes
+Argument 0 is unknown.RIP: 0x7f749c457020 Code size: 0x00000078
+[Entry Point]
+[Constants]
+  # {method} {0x00007f74945f9888} 'method' '()I' in 'dev/jgardo/jvm/miscellaneous/lambda/LambdaBenchmark'
+  #           [sp+0x20]  (sp of caller)
+  0x00007f749c457020: mov     0x8(%rsi),%r10d
+  0x00007f749c457024: shl     $0x3,%r10
+  0x00007f749c457028: movabs  $0x800000000,%r12
+  0x00007f749c457032: add     %r12,%r10
+  0x00007f749c457035: xor     %r12,%r12
+  0x00007f749c457038: cmp     %r10,%rax
+  0x00007f749c45703b: jne     0x7f749497cd00    ;   {runtime_call ic_miss_stub}
+  0x00007f749c457041: nop
+  0x00007f749c457044: nopl    0x0(%rax,%rax)
+  0x00007f749c45704c: nop
+[Verified Entry Point]
+  0x00007f749c457050: sub     $0x18,%rsp
+  0x00007f749c457057: mov     %rbp,0x10(%rsp)   ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.lambda.LambdaBenchmark::method@-1 (line 33)
+
+  0x00007f749c45705c: mov     $0xa,%eax
+  0x00007f749c457061: add     $0x10,%rsp
+  0x00007f749c457065: pop     %rbp
+  0x00007f749c457066: mov     0x108(%r15),%r10
+  0x00007f749c45706d: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f749c457070: retq
+  0x00007f749c457071: hlt
+  0x00007f749c457072: hlt
+  0x00007f749c457073: hlt
+  0x00007f749c457074: hlt
+  0x00007f749c457075: hlt
+  0x00007f749c457076: hlt
+  0x00007f749c457077: hlt
+  0x00007f749c457078: hlt
+  0x00007f749c457079: hlt
+  0x00007f749c45707a: hlt
+  0x00007f749c45707b: hlt
+  0x00007f749c45707c: hlt
+  0x00007f749c45707d: hlt
+  0x00007f749c45707e: hlt
+  0x00007f749c45707f: hlt
+[Exception Handler]
+[Stub Code]
+  0x00007f749c457080: jmpq    0x7f7494a43200    ;   {no_reloc}
+[Deopt Handler Code]
+  0x00007f749c457085: callq   0x7f749c45708a
+  0x00007f749c45708a: subq    $0x5,(%rsp)
+  0x00007f749c45708f: jmpq    0x7f749497e5a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007f749c457094: hlt
+  0x00007f749c457095: hlt
+  0x00007f749c457096: hlt
+  0x00007f749c457097: hlt

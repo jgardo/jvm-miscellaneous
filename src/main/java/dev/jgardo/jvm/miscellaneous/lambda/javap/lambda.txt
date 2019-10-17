@@ -1,0 +1,142 @@
+public static void main(String[] args) {
+    Function<String, String> lambda = s -> s.toUpperCase();
+    lambda.apply("String");
+}
+
+Classfile /home/gardziol/repository/jvm-miscellaneous/target/classes/dev/jgardo/jvm/miscellaneous/lambda/LambdaExperiment.class
+  Last modified 27 wrz 2019; size 1461 bytes
+  MD5 checksum f165faff2e94d85a93129e64e8cd7403
+  Compiled from "LambdaExperiment.java"
+public class dev.jgardo.jvm.miscellaneous.lambda.LambdaExperiment
+  minor version: 0
+  major version: 55
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #6                          // dev/jgardo/jvm/miscellaneous/lambda/LambdaExperiment
+  super_class: #7                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 3, attributes: 3
+Constant pool:
+   #1 = Methodref          #7.#29         // java/lang/Object."<init>":()V
+   #2 = InvokeDynamic      #0:#35         // #0:apply:()Ljava/util/function/Function;
+   #3 = String             #36            // String
+   #4 = InterfaceMethodref #37.#38        // java/util/function/Function.apply:(Ljava/lang/Object;)Ljava/lang/Object;
+   #5 = Methodref          #39.#40        // java/lang/String.toUpperCase:()Ljava/lang/String;
+   #6 = Class              #41            // dev/jgardo/jvm/miscellaneous/lambda/LambdaExperiment
+   #7 = Class              #42            // java/lang/Object
+   #8 = Utf8               <init>
+   #9 = Utf8               ()V
+  #10 = Utf8               Code
+  #11 = Utf8               LineNumberTable
+  #12 = Utf8               LocalVariableTable
+  #13 = Utf8               this
+  #14 = Utf8               Ldev/jgardo/jvm/miscellaneous/lambda/LambdaExperiment;
+  #15 = Utf8               main
+  #16 = Utf8               ([Ljava/lang/String;)V
+  #17 = Utf8               args
+  #18 = Utf8               [Ljava/lang/String;
+  #19 = Utf8               lambda
+  #20 = Utf8               Ljava/util/function/Function;
+  #21 = Utf8               LocalVariableTypeTable
+  #22 = Utf8               Ljava/util/function/Function<Ljava/lang/String;Ljava/lang/String;>;
+  #23 = Utf8               lambda$main$0
+  #24 = Utf8               (Ljava/lang/String;)Ljava/lang/String;
+  #25 = Utf8               s
+  #26 = Utf8               Ljava/lang/String;
+  #27 = Utf8               SourceFile
+  #28 = Utf8               LambdaExperiment.java
+  #29 = NameAndType        #8:#9          // "<init>":()V
+  #30 = Utf8               BootstrapMethods
+  #31 = MethodHandle       6:#43          // REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #32 = MethodType         #44            //  (Ljava/lang/Object;)Ljava/lang/Object;
+  #33 = MethodHandle       6:#45          // REF_invokeStatic dev/jgardo/jvm/miscellaneous/lambda/LambdaExperiment.lambda$main$0:(Ljava/lang/String;)Ljava/lang/String;
+  #34 = MethodType         #24            //  (Ljava/lang/String;)Ljava/lang/String;
+  #35 = NameAndType        #46:#47        // apply:()Ljava/util/function/Function;
+  #36 = Utf8               String
+  #37 = Class              #48            // java/util/function/Function
+  #38 = NameAndType        #46:#44        // apply:(Ljava/lang/Object;)Ljava/lang/Object;
+  #39 = Class              #49            // java/lang/String
+  #40 = NameAndType        #50:#51        // toUpperCase:()Ljava/lang/String;
+  #41 = Utf8               dev/jgardo/jvm/miscellaneous/lambda/LambdaExperiment
+  #42 = Utf8               java/lang/Object
+  #43 = Methodref          #52.#53        // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #44 = Utf8               (Ljava/lang/Object;)Ljava/lang/Object;
+  #45 = Methodref          #6.#54         // dev/jgardo/jvm/miscellaneous/lambda/LambdaExperiment.lambda$main$0:(Ljava/lang/String;)Ljava/lang/String;
+  #46 = Utf8               apply
+  #47 = Utf8               ()Ljava/util/function/Function;
+  #48 = Utf8               java/util/function/Function
+  #49 = Utf8               java/lang/String
+  #50 = Utf8               toUpperCase
+  #51 = Utf8               ()Ljava/lang/String;
+  #52 = Class              #55            // java/lang/invoke/LambdaMetafactory
+  #53 = NameAndType        #56:#60        // metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #54 = NameAndType        #23:#24        // lambda$main$0:(Ljava/lang/String;)Ljava/lang/String;
+  #55 = Utf8               java/lang/invoke/LambdaMetafactory
+  #56 = Utf8               metafactory
+  #57 = Class              #62            // java/lang/invoke/MethodHandles$Lookup
+  #58 = Utf8               Lookup
+  #59 = Utf8               InnerClasses
+  #60 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #61 = Class              #63            // java/lang/invoke/MethodHandles
+  #62 = Utf8               java/lang/invoke/MethodHandles$Lookup
+  #63 = Utf8               java/lang/invoke/MethodHandles
+{
+  public dev.jgardo.jvm.miscellaneous.lambda.LambdaExperiment();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 5: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Ldev/jgardo/jvm/miscellaneous/lambda/LambdaExperiment;
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=2, args_size=1
+         0: invokedynamic #2,  0              // InvokeDynamic #0:apply:()Ljava/util/function/Function;
+         5: astore_1
+         6: aload_1
+         7: ldc           #3                  // String String
+         9: invokeinterface #4,  2            // InterfaceMethod java/util/function/Function.apply:(Ljava/lang/Object;)Ljava/lang/Object;
+        14: pop
+        15: return
+      LineNumberTable:
+        line 7: 0
+        line 8: 6
+        line 9: 15
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      16     0  args   [Ljava/lang/String;
+            6      10     1 lambda   Ljava/util/function/Function;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            6      10     1 lambda   Ljava/util/function/Function<Ljava/lang/String;Ljava/lang/String;>;
+
+  private static java.lang.String lambda$main$0(java.lang.String);
+    descriptor: (Ljava/lang/String;)Ljava/lang/String;
+    flags: (0x100a) ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokevirtual #5                  // Method java/lang/String.toUpperCase:()Ljava/lang/String;
+         4: areturn
+      LineNumberTable:
+        line 7: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0     s   Ljava/lang/String;
+}
+SourceFile: "LambdaExperiment.java"
+InnerClasses:
+  public static final #58= #57 of #61;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+BootstrapMethods:
+  0: #31 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #32 (Ljava/lang/Object;)Ljava/lang/Object;
+      #33 REF_invokeStatic dev/jgardo/jvm/miscellaneous/lambda/LambdaExperiment.lambda$main$0:(Ljava/lang/String;)Ljava/lang/String;
+      #34 (Ljava/lang/String;)Ljava/lang/String;

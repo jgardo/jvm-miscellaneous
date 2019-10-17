@@ -1,0 +1,16 @@
+public class LambdaExperiment {
+    public static void main(String[] args) {
+        System.out.println("Hashcode: " + invocation().hashCode());
+        System.out.println("Hashcode: " + invocation().hashCode());
+
+        System.out.println("Equal: " + (invocation() == invocation()));
+    }
+
+    private static Function<String, Void> invocation() {
+        return s -> { throw new RuntimeException(s); };
+    }
+}
+
+Hashcode: 1927950199
+Hashcode: 1927950199
+Equal: true

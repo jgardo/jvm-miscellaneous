@@ -1,0 +1,52 @@
+Classfile /home/gardziol/repository/jvm-miscellaneous/target/classes/dev/jgardo/jvm/miscellaneous/interfaces/Interface.class
+  Last modified 15 paź 2019; size 376 bytes
+  MD5 checksum ebc6caa73cf48753b9f0589c0b410bd2
+  Compiled from "Interface.java"
+public interface dev.jgardo.jvm.miscellaneous.interfaces.Interface
+  minor version: 0
+  major version: 55
+  flags: (0x0601) ACC_PUBLIC, ACC_INTERFACE, ACC_ABSTRACT
+  this_class: #2                          // dev/jgardo/jvm/miscellaneous/interfaces/Interface
+  super_class: #3                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 2, attributes: 1
+Constant pool:
+   #1 = InterfaceMethodref #2.#16         // dev/jgardo/jvm/miscellaneous/interfaces/Interface.doSth:(I)I
+   #2 = Class              #17            // dev/jgardo/jvm/miscellaneous/interfaces/Interface
+   #3 = Class              #18            // java/lang/Object
+   #4 = Utf8               doSth
+   #5 = Utf8               (I)I
+   #6 = Utf8               defaultDoSth
+   #7 = Utf8               Code
+   #8 = Utf8               LineNumberTable
+   #9 = Utf8               LocalVariableTable
+  #10 = Utf8               this
+  #11 = Utf8               Ldev/jgardo/jvm/miscellaneous/interfaces/Interface;
+  #12 = Utf8               a
+  #13 = Utf8               I
+  #14 = Utf8               SourceFile
+  #15 = Utf8               Interface.java
+  #16 = NameAndType        #4:#5          // doSth:(I)I
+  #17 = Utf8               dev/jgardo/jvm/miscellaneous/interfaces/Interface
+  #18 = Utf8               java/lang/Object
+{
+  public abstract int doSth(int);
+    descriptor: (I)I
+    flags: (0x0401) ACC_PUBLIC, ACC_ABSTRACT
+
+  public int defaultDoSth(int);
+    descriptor: (I)I
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0
+         1: iload_1
+         2: invokeinterface #1,  2            // InterfaceMethod doSth:(I)I
+         7: ireturn
+      LineNumberTable:
+        line 7: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Ldev/jgardo/jvm/miscellaneous/interfaces/Interface;
+            0       8     1     a   I
+}
+SourceFile: "Interface.java"
