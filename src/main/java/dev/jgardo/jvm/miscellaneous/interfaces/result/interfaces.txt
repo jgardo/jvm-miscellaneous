@@ -1,0 +1,416 @@
+Compiled method (c1)     374  538       2       dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark (31 bytes)
+ total in heap  [0x00007f0cf8dcf110,0x00007f0cf8dcf6b8] = 1448
+ relocation     [0x00007f0cf8dcf288,0x00007f0cf8dcf2d0] = 72
+ main code      [0x00007f0cf8dcf2e0,0x00007f0cf8dcf480] = 416
+ stub code      [0x00007f0cf8dcf480,0x00007f0cf8dcf528] = 168
+ oops           [0x00007f0cf8dcf528,0x00007f0cf8dcf530] = 8
+ metadata       [0x00007f0cf8dcf530,0x00007f0cf8dcf538] = 8
+ scopes data    [0x00007f0cf8dcf538,0x00007f0cf8dcf598] = 96
+ scopes pcs     [0x00007f0cf8dcf598,0x00007f0cf8dcf698] = 256
+ dependencies   [0x00007f0cf8dcf698,0x00007f0cf8dcf6a0] = 8
+ nul chk table  [0x00007f0cf8dcf6a0,0x00007f0cf8dcf6b8] = 24
+Loaded disassembler from hsdis-amd64.so
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/interfaces/InterfaceJitCompiledBenchmark.interfacesBenchmark()I  [0x00007f0cf8dcf2e0, 0x00007f0cf8dcf528]  584 bytes
+Argument 0 is unknown.RIP: 0x7f0cf8dcf2e0 Code size: 0x00000248
+[Disassembling for mach='amd64']
+[Entry Point]
+[Constants]
+  # {method} {0x00007f0cdbc97fd0} 'interfacesBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/interfaces/InterfaceJitCompiledBenchmark'
+  #           [sp+0x40]  (sp of caller)
+  0x00007f0cf8dcf2e0: mov     0x8(%rsi),%r10d
+  0x00007f0cf8dcf2e4: shl     $0x3,%r10
+  0x00007f0cf8dcf2e8: movabs  $0x800000000,%r12
+  0x00007f0cf8dcf2f2: add     %r12,%r10
+  0x00007f0cf8dcf2f5: xor     %r12,%r12
+  0x00007f0cf8dcf2f8: cmp     %rax,%r10
+  0x00007f0cf8dcf2fb: jne     0x7f0cf8776d00    ;   {runtime_call ic_miss_stub}
+  0x00007f0cf8dcf301: nopw    0x0(%rax,%rax)
+  0x00007f0cf8dcf30c: nop
+  0x00007f0cf8dcf310: nopw    0x0(%rax,%rax)
+  0x00007f0cf8dcf31b: nop
+  0x00007f0cf8dcf31f: nop
+[Verified Entry Point]
+  0x00007f0cf8dcf320: mov     %eax,0xfffffffffffec000(%rsp)
+  0x00007f0cf8dcf327: push    %rbp
+  0x00007f0cf8dcf328: sub     $0x30,%rsp
+  0x00007f0cf8dcf32c: movabs  $0x7f0cdbcd2a98,%rdx
+  0x00007f0cf8dcf336: mov     0x18(%rdx),%edi
+  0x00007f0cf8dcf339: add     $0x8,%edi
+  0x00007f0cf8dcf33c: mov     %edi,0x18(%rdx)
+  0x00007f0cf8dcf33f: and     $0x3ff8,%edi
+  0x00007f0cf8dcf345: cmp     $0x0,%edi
+  0x00007f0cf8dcf348: je      0x7f0cf8dcf3ed    ;*iconst_0 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@0 (line 68)
+
+  0x00007f0cf8dcf34e: mov     $0x0,%edi
+  0x00007f0cf8dcf353: mov     $0x0,%ebx
+  0x00007f0cf8dcf358: jmpq    0x7f0cf8dcf3cd    ;*iload_2 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@4 (line 69)
+
+  0x00007f0cf8dcf35d: nop
+  0x00007f0cf8dcf360: movabs  $0x7165703a0,%rdx  ;   {oop(a 'dev/jgardo/jvm/miscellaneous/interfaces/Interface'[5] {0x00000007165703a0})}
+  0x00007f0cf8dcf36a: cmp     0xc(%rdx),%edi    ; implicit exception: dispatches to 0x00007f0cf8dcf40e
+  0x00007f0cf8dcf36d: jnb     0x7f0cf8dcf418
+  0x00007f0cf8dcf373: movsxd  %edi,%rsi
+  0x00007f0cf8dcf376: mov     0x10(%rdx,%rsi,4),%esi
+  0x00007f0cf8dcf37a: shl     $0x3,%rsi         ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@14 (line 70)
+
+  0x00007f0cf8dcf37e: mov     %rdi,%rdx         ;*invokeinterface doSth {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@16 (line 70)
+
+  0x00007f0cf8dcf381: mov     %edi,0x24(%rsp)
+  0x00007f0cf8dcf385: movabs  $0xffffffffffffffff,%rax
+  0x00007f0cf8dcf38f: callq   0x7f0cf878d360    ; ImmutableOopMap{}
+                                                ;*invokeinterface doSth {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@16 (line 70)
+                                                ;   {virtual_call}
+  0x00007f0cf8dcf394: add     0x20(%rsp),%eax
+  0x00007f0cf8dcf398: mov     0x24(%rsp),%edi
+  0x00007f0cf8dcf39c: incl    %edi
+  0x00007f0cf8dcf39e: movabs  $0x7f0cdbcd2a98,%rsi
+  0x00007f0cf8dcf3a8: mov     0x1c(%rsi),%ebx
+  0x00007f0cf8dcf3ab: add     $0x8,%ebx
+  0x00007f0cf8dcf3ae: mov     %ebx,0x1c(%rsi)
+  0x00007f0cf8dcf3b1: and     $0x1fff8,%ebx
+  0x00007f0cf8dcf3b7: cmp     $0x0,%ebx
+  0x00007f0cf8dcf3ba: je      0x7f0cf8dcf426    ;*goto {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@26 (line 69)
+
+  0x00007f0cf8dcf3c0: mov     0x108(%r15),%r10  ; ImmutableOopMap{}
+                                                ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@26 (line 69)
+
+  0x00007f0cf8dcf3c7: test    %eax,(%r10)       ;   {poll}
+  0x00007f0cf8dcf3ca: mov     %rax,%rbx         ;*goto {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@26 (line 69)
+
+  0x00007f0cf8dcf3cd: mov     %ebx,0x20(%rsp)
+  0x00007f0cf8dcf3d1: cmp     $0x5,%edi
+  0x00007f0cf8dcf3d4: jl      0x7f0cf8dcf360    ;*if_icmpge {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@6 (line 69)
+
+  0x00007f0cf8dcf3d6: mov     0x20(%rsp),%ebx
+  0x00007f0cf8dcf3da: mov     %rbx,%rax
+  0x00007f0cf8dcf3dd: add     $0x30,%rsp
+  0x00007f0cf8dcf3e1: pop     %rbp
+  0x00007f0cf8dcf3e2: mov     0x108(%r15),%r10
+  0x00007f0cf8dcf3e9: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f0cf8dcf3ec: retq
+  0x00007f0cf8dcf3ed: movabs  $0x7f0cdbc97fd0,%r10  ;   {metadata({method} {0x00007f0cdbc97fd0} 'interfacesBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/interfaces/InterfaceJitCompiledBenchmark')}
+  0x00007f0cf8dcf3f7: mov     %r10,0x8(%rsp)
+  0x00007f0cf8dcf3fc: movq    $0xffffffffffffffff,(%rsp)
+  0x00007f0cf8dcf404: callq   0x7f0cf8842600    ; ImmutableOopMap{rsi=Oop }
+                                                ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@-1 (line 68)
+                                                ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00007f0cf8dcf409: jmpq    0x7f0cf8dcf34e
+  0x00007f0cf8dcf40e: callq   0x7f0cf883d920    ; ImmutableOopMap{rdx=Oop }
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@14 (line 70)
+                                                ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00007f0cf8dcf413: callq   0x7f0cf883d920    ; ImmutableOopMap{rdx=Oop }
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@14 (line 70)
+                                                ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00007f0cf8dcf418: mov     %rdi,(%rsp)
+  0x00007f0cf8dcf41c: mov     %rdx,0x8(%rsp)
+  0x00007f0cf8dcf421: callq   0x7f0cf87afb20    ; ImmutableOopMap{rdx=Oop }
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@14 (line 70)
+                                                ;   {runtime_call throw_range_check_failed Runtime1 stub}
+  0x00007f0cf8dcf426: movabs  $0x7f0cdbc97fd0,%r10  ;   {metadata({method} {0x00007f0cdbc97fd0} 'interfacesBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/interfaces/InterfaceJitCompiledBenchmark')}
+  0x00007f0cf8dcf430: mov     %r10,0x8(%rsp)
+  0x00007f0cf8dcf435: movq    $0x1a,(%rsp)
+  0x00007f0cf8dcf43d: callq   0x7f0cf8842600    ; ImmutableOopMap{}
+                                                ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@26 (line 69)
+                                                ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00007f0cf8dcf442: jmpq    0x7f0cf8dcf3c0
+  0x00007f0cf8dcf447: nop
+  0x00007f0cf8dcf448: nop
+  0x00007f0cf8dcf449: mov     0x420(%r15),%rax
+  0x00007f0cf8dcf450: movabs  $0x0,%r10
+  0x00007f0cf8dcf45a: mov     %r10,0x420(%r15)
+  0x00007f0cf8dcf461: movabs  $0x0,%r10
+  0x00007f0cf8dcf46b: mov     %r10,0x428(%r15)
+  0x00007f0cf8dcf472: add     $0x30,%rsp
+  0x00007f0cf8dcf476: pop     %rbp
+  0x00007f0cf8dcf477: jmpq    0x7f0cf87b0100    ;   {runtime_call unwind_exception Runtime1 stub}
+  0x00007f0cf8dcf47c: hlt
+  0x00007f0cf8dcf47d: hlt
+  0x00007f0cf8dcf47e: hlt
+  0x00007f0cf8dcf47f: hlt
+[Stub Code]
+  0x00007f0cf8dcf480: nopl    0x0(%rax,%rax)    ;   {no_reloc}
+  0x00007f0cf8dcf485: movabs  $0x0,%rbx         ;   {static_stub}
+  0x00007f0cf8dcf48f: jmpq    0x7f0cf8dcf48f    ;   {runtime_call}
+[Exception Handler]
+  0x00007f0cf8dcf494: callq   0x7f0cf883f500    ;   {runtime_call handle_exception_from_callee Runtime1 stub}
+  0x00007f0cf8dcf499: mov     %rsp,0xffffffffffffffd8(%rsp)
+  0x00007f0cf8dcf49e: sub     $0x80,%rsp
+  0x00007f0cf8dcf4a5: mov     %rax,0x78(%rsp)
+  0x00007f0cf8dcf4aa: mov     %rcx,0x70(%rsp)
+  0x00007f0cf8dcf4af: mov     %rdx,0x68(%rsp)
+  0x00007f0cf8dcf4b4: mov     %rbx,0x60(%rsp)
+  0x00007f0cf8dcf4b9: mov     %rbp,0x50(%rsp)
+  0x00007f0cf8dcf4be: mov     %rsi,0x48(%rsp)
+  0x00007f0cf8dcf4c3: mov     %rdi,0x40(%rsp)
+  0x00007f0cf8dcf4c8: mov     %r8,0x38(%rsp)
+  0x00007f0cf8dcf4cd: mov     %r9,0x30(%rsp)
+  0x00007f0cf8dcf4d2: mov     %r10,0x28(%rsp)
+  0x00007f0cf8dcf4d7: mov     %r11,0x20(%rsp)
+  0x00007f0cf8dcf4dc: mov     %r12,0x18(%rsp)
+  0x00007f0cf8dcf4e1: mov     %r13,0x10(%rsp)
+  0x00007f0cf8dcf4e6: mov     %r14,0x8(%rsp)
+  0x00007f0cf8dcf4eb: mov     %r15,(%rsp)
+  0x00007f0cf8dcf4ef: movabs  $0x7f0d168a25e2,%rdi  ;   {external_word}
+  0x00007f0cf8dcf4f9: movabs  $0x7f0cf8dcf499,%rsi  ;   {internal_word}
+  0x00007f0cf8dcf503: mov     %rsp,%rdx
+  0x00007f0cf8dcf506: and     $0xfffffffffffffff0,%rsp
+  0x00007f0cf8dcf50a: callq   0x7f0d164beaa0    ;   {runtime_call}
+  0x00007f0cf8dcf50f: hlt
+[Deopt Handler Code]
+  0x00007f0cf8dcf510: movabs  $0x7f0cf8dcf510,%r10  ;   {section_word}
+  0x00007f0cf8dcf51a: push    %r10
+  0x00007f0cf8dcf51c: jmpq    0x7f0cf87785a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007f0cf8dcf521: hlt
+  0x00007f0cf8dcf522: hlt
+  0x00007f0cf8dcf523: hlt
+  0x00007f0cf8dcf524: hlt
+  0x00007f0cf8dcf525: hlt
+  0x00007f0cf8dcf526: hlt
+  0x00007f0cf8dcf527: hlt
+
+ImmutableOopMap{}pc offsets: 180 231
+ImmutableOopMap{rsi=Oop }pc offsets: 297
+ImmutableOopMap{rdx=Oop }pc offsets: 307 312 326
+ImmutableOopMap{}pc offsets: 354 Compiled method (c2)     389  540       4       dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark (31 bytes)
+ total in heap  [0x00007f0d00242d10,0x00007f0d00243088] = 888
+ relocation     [0x00007f0d00242e88,0x00007f0d00242ea0] = 24
+ main code      [0x00007f0d00242ea0,0x00007f0d00242f60] = 192
+ stub code      [0x00007f0d00242f60,0x00007f0d00242f78] = 24
+ oops           [0x00007f0d00242f78,0x00007f0d00242f80] = 8
+ metadata       [0x00007f0d00242f80,0x00007f0d00242f88] = 8
+ scopes data    [0x00007f0d00242f88,0x00007f0d00242fc8] = 64
+ scopes pcs     [0x00007f0d00242fc8,0x00007f0d00243068] = 160
+ dependencies   [0x00007f0d00243068,0x00007f0d00243070] = 8
+ handler table  [0x00007f0d00243070,0x00007f0d00243088] = 24
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/interfaces/InterfaceJitCompiledBenchmark.interfacesBenchmark()I  [0x00007f0d00242ea0, 0x00007f0d00242f78]  216 bytes
+Argument 0 is unknown.RIP: 0x7f0d00242ea0 Code size: 0x000000d8
+[Entry Point]
+[Constants]
+  # {method} {0x00007f0cdbc97fd0} 'interfacesBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/interfaces/InterfaceJitCompiledBenchmark'
+  #           [sp+0x30]  (sp of caller)
+  0x00007f0d00242ea0: mov     0x8(%rsi),%r10d
+  0x00007f0d00242ea4: shl     $0x3,%r10
+  0x00007f0d00242ea8: movabs  $0x800000000,%r12
+  0x00007f0d00242eb2: add     %r12,%r10
+  0x00007f0d00242eb5: xor     %r12,%r12
+  0x00007f0d00242eb8: cmp     %r10,%rax
+  0x00007f0d00242ebb: jne     0x7f0cf8776d00    ;   {runtime_call ic_miss_stub}
+  0x00007f0d00242ec1: nop
+  0x00007f0d00242ec4: nopl    0x0(%rax,%rax)
+  0x00007f0d00242ecc: nop
+[Verified Entry Point]
+  0x00007f0d00242ed0: mov     %eax,0xfffffffffffec000(%rsp)
+  0x00007f0d00242ed7: push    %rbp
+  0x00007f0d00242ed8: sub     $0x20,%rsp        ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@-1 (line 68)
+
+  0x00007f0d00242edc: xor     %ebp,%ebp
+  0x00007f0d00242ede: xor     %r8d,%r8d
+  0x00007f0d00242ee1: jmp     0x7f0d00242ee5
+  0x00007f0d00242ee3: mov     %eax,%ebp         ;*iload_1 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@9 (line 70)
+
+  0x00007f0d00242ee5: movabs  $0x7165703a0,%r10  ;   {oop(a 'dev/jgardo/jvm/miscellaneous/interfaces/Interface'[5] {0x00000007165703a0})}
+  0x00007f0d00242eef: mov     0x10(%r10,%r8,4),%r11d
+  0x00007f0d00242ef4: mov     %r8d,(%rsp)
+  0x00007f0d00242ef8: mov     %r11,%rsi
+  0x00007f0d00242efb: shl     $0x3,%rsi         ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@14 (line 70)
+
+  0x00007f0d00242eff: mov     %r8d,%edx
+  0x00007f0d00242f02: nop
+  0x00007f0d00242f05: movabs  $0xffffffffffffffff,%rax
+  0x00007f0d00242f0f: callq   0x7f0cf878d3e0    ; ImmutableOopMap{}
+                                                ;*invokeinterface doSth {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@16 (line 70)
+                                                ;   {virtual_call}
+  0x00007f0d00242f14: mov     %eax,%r11d
+  0x00007f0d00242f17: mov     %ebp,%eax
+  0x00007f0d00242f19: add     %r11d,%eax        ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@21 (line 70)
+
+  0x00007f0d00242f1c: mov     (%rsp),%r8d
+  0x00007f0d00242f20: incl    %r8d              ;*iinc {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@23 (line 69)
+
+  0x00007f0d00242f23: cmp     $0x5,%r8d
+  0x00007f0d00242f27: jl      0x7f0d00242ee3    ;*if_icmpge {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@6 (line 69)
+
+  0x00007f0d00242f29: add     $0x20,%rsp
+  0x00007f0d00242f2d: pop     %rbp
+  0x00007f0d00242f2e: mov     0x108(%r15),%r10
+  0x00007f0d00242f35: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f0d00242f38: retq                      ;*invokeinterface doSth {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@16 (line 70)
+
+  0x00007f0d00242f39: mov     %rax,%rsi
+  0x00007f0d00242f3c: add     $0x20,%rsp
+  0x00007f0d00242f40: pop     %rbp
+  0x00007f0d00242f41: jmpq    0x7f0cf8844980    ;   {runtime_call _rethrow_Java}
+  0x00007f0d00242f46: hlt
+  0x00007f0d00242f47: hlt
+  0x00007f0d00242f48: hlt
+  0x00007f0d00242f49: hlt
+  0x00007f0d00242f4a: hlt
+  0x00007f0d00242f4b: hlt
+  0x00007f0d00242f4c: hlt
+  0x00007f0d00242f4d: hlt
+  0x00007f0d00242f4e: hlt
+  0x00007f0d00242f4f: hlt
+  0x00007f0d00242f50: hlt
+  0x00007f0d00242f51: hlt
+  0x00007f0d00242f52: hlt
+  0x00007f0d00242f53: hlt
+  0x00007f0d00242f54: hlt
+  0x00007f0d00242f55: hlt
+  0x00007f0d00242f56: hlt
+  0x00007f0d00242f57: hlt
+  0x00007f0d00242f58: hlt
+  0x00007f0d00242f59: hlt
+  0x00007f0d00242f5a: hlt
+  0x00007f0d00242f5b: hlt
+  0x00007f0d00242f5c: hlt
+  0x00007f0d00242f5d: hlt
+  0x00007f0d00242f5e: hlt
+  0x00007f0d00242f5f: hlt
+[Exception Handler]
+[Stub Code]
+  0x00007f0d00242f60: jmpq    0x7f0cf883d200    ;   {no_reloc}
+[Deopt Handler Code]
+  0x00007f0d00242f65: callq   0x7f0d00242f6a
+  0x00007f0d00242f6a: subq    $0x5,(%rsp)
+  0x00007f0d00242f6f: jmpq    0x7f0cf87785a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007f0d00242f74: hlt
+  0x00007f0d00242f75: hlt
+  0x00007f0d00242f76: hlt
+  0x00007f0d00242f77: hlt
+
+ImmutableOopMap{}pc offsets: 116 Compiled method (c2)     401  544 %     4       dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark @ 4 (31 bytes)
+ total in heap  [0x00007f0d00246210,0x00007f0d002465a8] = 920
+ relocation     [0x00007f0d00246388,0x00007f0d002463a0] = 24
+ main code      [0x00007f0d002463a0,0x00007f0d00246460] = 192
+ stub code      [0x00007f0d00246460,0x00007f0d00246478] = 24
+ oops           [0x00007f0d00246478,0x00007f0d00246488] = 16
+ metadata       [0x00007f0d00246488,0x00007f0d00246490] = 8
+ scopes data    [0x00007f0d00246490,0x00007f0d002464d8] = 72
+ scopes pcs     [0x00007f0d002464d8,0x00007f0d00246588] = 176
+ dependencies   [0x00007f0d00246588,0x00007f0d00246590] = 8
+ handler table  [0x00007f0d00246590,0x00007f0d002465a8] = 24
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/interfaces/InterfaceJitCompiledBenchmark.interfacesBenchmark()I  [0x00007f0d002463a0, 0x00007f0d00246478]  216 bytes
+Argument 0 is unknown.RIP: 0x7f0d002463a0 Code size: 0x000000d8
+[Entry Point]
+[Verified Entry Point]
+[Constants]
+  # {method} {0x00007f0cdbc97fd0} 'interfacesBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/interfaces/InterfaceJitCompiledBenchmark'
+  0x00007f0d002463a0: callq   0x7f0d165e6490    ;   {runtime_call}
+  0x00007f0d002463a5: nopw    0x0(%rax,%rax)
+  0x00007f0d002463b0: mov     %eax,0xfffffffffffec000(%rsp)
+  0x00007f0d002463b7: push    %rbp
+  0x00007f0d002463b8: sub     $0x20,%rsp
+  0x00007f0d002463bc: mov     (%rsi),%ebp
+  0x00007f0d002463be: mov     0x8(%rsi),%ebx
+  0x00007f0d002463c1: mov     %rsi,%rdi
+  0x00007f0d002463c4: movabs  $0x7f0d166c98a0,%r10
+  0x00007f0d002463ce: callq   %r10
+  0x00007f0d002463d1: mov     %ebx,(%rsp)
+  0x00007f0d002463d4: jmp     0x7f0d00246415
+  0x00007f0d002463d6: nopw    0x0(%rax,%rax)
+  0x00007f0d002463e0: movabs  $0x7165703a0,%r10  ;   {oop(a 'dev/jgardo/jvm/miscellaneous/interfaces/Interface'[5] {0x00000007165703a0})}
+  0x00007f0d002463ea: mov     0x10(%r10,%rbp,4),%r11d  ;*iload_2 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@4 (line 69)
+
+  0x00007f0d002463ef: mov     %r11,%rsi
+  0x00007f0d002463f2: shl     $0x3,%rsi         ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@14 (line 70)
+
+  0x00007f0d002463f6: mov     %ebp,%edx
+  0x00007f0d002463f8: nop
+  0x00007f0d002463f9: movabs  $0xffffffffffffffff,%rax
+  0x00007f0d00246403: callq   0x7f0cf8777200    ; ImmutableOopMap{}
+                                                ;*invokeinterface doSth {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@16 (line 70)
+                                                ;   {virtual_call}
+  0x00007f0d00246408: mov     (%rsp),%r10d
+  0x00007f0d0024640c: add     %eax,%r10d        ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@21 (line 70)
+
+  0x00007f0d0024640f: incl    %ebp              ;*iinc {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@23 (line 69)
+
+  0x00007f0d00246411: mov     %r10d,(%rsp)      ;*iload_2 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@4 (line 69)
+
+  0x00007f0d00246415: cmp     $0x5,%ebp
+  0x00007f0d00246418: jnl     0x7f0d0024642e    ;*if_icmpge {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@6 (line 69)
+
+  0x00007f0d0024641a: cmp     $0x5,%ebp
+  0x00007f0d0024641d: jb      0x7f0d002463e0
+  0x00007f0d0024641f: mov     $0xffffffe4,%esi
+  0x00007f0d00246424: nop
+  0x00007f0d00246427: callq   0x7f0cf8778980    ; ImmutableOopMap{}
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@14 (line 70)
+                                                ;   {runtime_call UncommonTrapBlob}
+  0x00007f0d0024642c: ud2
+  0x00007f0d0024642e: mov     (%rsp),%eax
+  0x00007f0d00246431: add     $0x20,%rsp
+  0x00007f0d00246435: pop     %rbp
+  0x00007f0d00246436: mov     0x108(%r15),%r10
+  0x00007f0d0024643d: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f0d00246440: retq                      ;*invokeinterface doSth {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.interfaces.InterfaceJitCompiledBenchmark::interfacesBenchmark@16 (line 70)
+
+  0x00007f0d00246441: mov     %rax,%rsi
+  0x00007f0d00246444: add     $0x20,%rsp
+  0x00007f0d00246448: pop     %rbp
+  0x00007f0d00246449: jmpq    0x7f0cf8844980    ;   {runtime_call _rethrow_Java}
+  0x00007f0d0024644e: hlt
+  0x00007f0d0024644f: hlt
+  0x00007f0d00246450: hlt
+  0x00007f0d00246451: hlt
+  0x00007f0d00246452: hlt
+  0x00007f0d00246453: hlt
+  0x00007f0d00246454: hlt
+  0x00007f0d00246455: hlt
+  0x00007f0d00246456: hlt
+  0x00007f0d00246457: hlt
+  0x00007f0d00246458: hlt
+  0x00007f0d00246459: hlt
+  0x00007f0d0024645a: hlt
+  0x00007f0d0024645b: hlt
+  0x00007f0d0024645c: hlt
+  0x00007f0d0024645d: hlt
+  0x00007f0d0024645e: hlt
+  0x00007f0d0024645f: hlt
+[Exception Handler]
+[Stub Code]
+  0x00007f0d00246460: jmpq    0x7f0cf883d200    ;   {no_reloc}
+[Deopt Handler Code]
+  0x00007f0d00246465: callq   0x7f0d0024646a
+  0x00007f0d0024646a: subq    $0x5,(%rsp)
+  0x00007f0d0024646f: jmpq    0x7f0cf87785a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007f0d00246474: hlt
+  0x00007f0d00246475: hlt
+  0x00007f0d00246476: hlt
+  0x00007f0d00246477: hlt
+
+ImmutableOopMap{}pc offsets: 104 140
