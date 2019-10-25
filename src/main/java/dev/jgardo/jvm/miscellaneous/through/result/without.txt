@@ -1,0 +1,329 @@
+Compiled method (c1)     434  611   !   3       dev.jgardo.jvm.miscellaneous.through.ThrowBenchmark::withoutthrowBenchmark (21 bytes)
+ total in heap  [0x00007f4f3cffa710,0x00007f4f3cffaca0] = 1424
+ relocation     [0x00007f4f3cffa888,0x00007f4f3cffa8c8] = 64
+ main code      [0x00007f4f3cffa8e0,0x00007f4f3cffaac0] = 480
+ stub code      [0x00007f4f3cffaac0,0x00007f4f3cffab68] = 168
+ oops           [0x00007f4f3cffab68,0x00007f4f3cffab70] = 8
+ metadata       [0x00007f4f3cffab70,0x00007f4f3cffab78] = 8
+ scopes data    [0x00007f4f3cffab78,0x00007f4f3cffabc0] = 72
+ scopes pcs     [0x00007f4f3cffabc0,0x00007f4f3cffac50] = 144
+ dependencies   [0x00007f4f3cffac50,0x00007f4f3cffac58] = 8
+ handler table  [0x00007f4f3cffac58,0x00007f4f3cffaca0] = 72
+Loaded disassembler from hsdis-amd64.so
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/through/ThrowBenchmark.withoutthrowBenchmark()I  [0x00007f4f3cffa8e0, 0x00007f4f3cffab68]  648 bytes
+Argument 0 is unknown.RIP: 0x7f4f3cffa8e0 Code size: 0x00000288
+[Disassembling for mach='amd64']
+[Entry Point]
+[Constants]
+  # {method} {0x00007f4f2c7d9848} 'withoutthrowBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/through/ThrowBenchmark'
+  #           [sp+0x40]  (sp of caller)
+  0x00007f4f3cffa8e0: mov     0x8(%rsi),%r10d
+  0x00007f4f3cffa8e4: shl     $0x3,%r10
+  0x00007f4f3cffa8e8: movabs  $0x800000000,%r12
+  0x00007f4f3cffa8f2: add     %r12,%r10
+  0x00007f4f3cffa8f5: xor     %r12,%r12
+  0x00007f4f3cffa8f8: cmp     %rax,%r10
+  0x00007f4f3cffa8fb: jne     0x7f4f3c97cd00    ;   {runtime_call ic_miss_stub}
+  0x00007f4f3cffa901: nopw    0x0(%rax,%rax)
+  0x00007f4f3cffa90c: nop
+  0x00007f4f3cffa910: nopw    0x0(%rax,%rax)
+  0x00007f4f3cffa91b: nop
+  0x00007f4f3cffa91f: nop
+[Verified Entry Point]
+  0x00007f4f3cffa920: mov     %eax,0xfffffffffffec000(%rsp)
+  0x00007f4f3cffa927: push    %rbp
+  0x00007f4f3cffa928: sub     $0x30,%rsp
+  0x00007f4f3cffa92c: movabs  $0x7f4f2c801588,%rdx  ;   {metadata(method data for {method} {0x00007f4f2c7d9848} 'withoutthrowBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/through/ThrowBenchmark')}
+  0x00007f4f3cffa936: mov     0x104(%rdx),%edi
+  0x00007f4f3cffa93c: add     $0x8,%edi
+  0x00007f4f3cffa93f: mov     %edi,0x104(%rdx)
+  0x00007f4f3cffa945: and     $0x1ff8,%edi
+  0x00007f4f3cffa94b: cmp     $0x0,%edi
+  0x00007f4f3cffa94e: je      0x7f4f3cffaa51
+  0x00007f4f3cffa954: movabs  $0x80030b028,%rdx  ;   {metadata('java/lang/RuntimeException')}
+  0x00007f4f3cffa95e: mov     0x118(%r15),%rax
+  0x00007f4f3cffa965: lea     0x28(%rax),%rdi
+  0x00007f4f3cffa969: cmp     0x128(%r15),%rdi
+  0x00007f4f3cffa970: jnbe    0x7f4f3cffaa72
+  0x00007f4f3cffa976: mov     %rdi,0x118(%r15)
+  0x00007f4f3cffa97d: mov     0xb8(%rdx),%rcx
+  0x00007f4f3cffa984: mov     %rcx,(%rax)
+  0x00007f4f3cffa987: mov     %rdx,%rcx
+  0x00007f4f3cffa98a: movabs  $0x800000000,%r12
+  0x00007f4f3cffa994: sub     %r12,%rcx
+  0x00007f4f3cffa997: shr     $0x3,%rcx
+  0x00007f4f3cffa99b: xor     %r12,%r12
+  0x00007f4f3cffa99e: mov     %ecx,0x8(%rax)
+  0x00007f4f3cffa9a1: xor     %rcx,%rcx
+  0x00007f4f3cffa9a4: mov     %ecx,0xc(%rax)
+  0x00007f4f3cffa9a7: xor     %rcx,%rcx
+  0x00007f4f3cffa9aa: mov     %rcx,0x10(%rax)
+  0x00007f4f3cffa9ae: mov     %rcx,0x18(%rax)
+  0x00007f4f3cffa9b2: mov     %rcx,0x20(%rax)   ;*new {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.ThrowBenchmark::withoutthrowBenchmark@0 (line 43)
+
+  0x00007f4f3cffa9b6: mov     %rax,%rsi
+  0x00007f4f3cffa9b9: movabs  $0x7f4f2c801588,%rdi  ;   {metadata(method data for {method} {0x00007f4f2c7d9848} 'withoutthrowBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/through/ThrowBenchmark')}
+  0x00007f4f3cffa9c3: addq    $0x1,0x140(%rdi)
+  0x00007f4f3cffa9cb: mov     %rax,%rsi         ;*invokespecial <init> {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.ThrowBenchmark::withoutthrowBenchmark@4 (line 43)
+
+  0x00007f4f3cffa9ce: mov     %rax,0x20(%rsp)
+  0x00007f4f3cffa9d3: nopl    0x0(%rax)
+  0x00007f4f3cffa9d7: callq   0x7f4f3cffaac5    ; ImmutableOopMap{[32]=Oop }
+                                                ;*invokespecial <init> {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.ThrowBenchmark::withoutthrowBenchmark@4 (line 43)
+                                                ;   {optimized virtual_call}
+  0x00007f4f3cffa9dc: mov     $0x6,%eax
+  0x00007f4f3cffa9e1: add     $0x30,%rsp
+  0x00007f4f3cffa9e5: pop     %rbp
+  0x00007f4f3cffa9e6: mov     0x108(%r15),%r10
+  0x00007f4f3cffa9ed: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f4f3cffa9f0: retq                      ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.ThrowBenchmark::withoutthrowBenchmark@10 (line 47)
+
+  0x00007f4f3cffa9f1: mov     0x420(%r15),%rax
+  0x00007f4f3cffa9f8: xor     %r10,%r10
+  0x00007f4f3cffa9fb: mov     %r10,0x420(%r15)
+  0x00007f4f3cffaa02: xor     %r10,%r10
+  0x00007f4f3cffaa05: mov     %r10,0x428(%r15)
+  0x00007f4f3cffaa0c: mov     $0x6,%eax
+  0x00007f4f3cffaa11: add     $0x30,%rsp
+  0x00007f4f3cffaa15: pop     %rbp
+  0x00007f4f3cffaa16: mov     0x108(%r15),%r10
+  0x00007f4f3cffaa1d: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f4f3cffaa20: retq                      ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.ThrowBenchmark::withoutthrowBenchmark@20 (line 47)
+
+  0x00007f4f3cffaa21: mov     0x420(%r15),%rax
+  0x00007f4f3cffaa28: xor     %r10,%r10
+  0x00007f4f3cffaa2b: mov     %r10,0x420(%r15)
+  0x00007f4f3cffaa32: xor     %r10,%r10
+  0x00007f4f3cffaa35: mov     %r10,0x428(%r15)
+  0x00007f4f3cffaa3c: mov     $0x6,%eax
+  0x00007f4f3cffaa41: add     $0x30,%rsp
+  0x00007f4f3cffaa45: pop     %rbp
+  0x00007f4f3cffaa46: mov     0x108(%r15),%r10
+  0x00007f4f3cffaa4d: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f4f3cffaa50: retq
+  0x00007f4f3cffaa51: movabs  $0x7f4f2c7d9848,%r10  ;   {metadata({method} {0x00007f4f2c7d9848} 'withoutthrowBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/through/ThrowBenchmark')}
+  0x00007f4f3cffaa5b: mov     %r10,0x8(%rsp)
+  0x00007f4f3cffaa60: movq    $0xffffffffffffffff,(%rsp)
+  0x00007f4f3cffaa68: callq   0x7f4f3ca48600    ; ImmutableOopMap{rsi=Oop }
+                                                ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.through.ThrowBenchmark::withoutthrowBenchmark@-1 (line 43)
+                                                ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00007f4f3cffaa6d: jmpq    0x7f4f3cffa954
+  0x00007f4f3cffaa72: mov     %rdx,%rdx
+  0x00007f4f3cffaa75: callq   0x7f4f3ca44180    ; ImmutableOopMap{}
+                                                ;*new {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.ThrowBenchmark::withoutthrowBenchmark@0 (line 43)
+                                                ;   {runtime_call fast_new_instance Runtime1 stub}
+  0x00007f4f3cffaa7a: jmpq    0x7f4f3cffa9b6
+  0x00007f4f3cffaa7f: nop
+  0x00007f4f3cffaa80: nop
+  0x00007f4f3cffaa81: mov     0x420(%r15),%rax
+  0x00007f4f3cffaa88: movabs  $0x0,%r10
+  0x00007f4f3cffaa92: mov     %r10,0x420(%r15)
+  0x00007f4f3cffaa99: movabs  $0x0,%r10
+  0x00007f4f3cffaaa3: mov     %r10,0x428(%r15)
+  0x00007f4f3cffaaaa: add     $0x30,%rsp
+  0x00007f4f3cffaaae: pop     %rbp
+  0x00007f4f3cffaaaf: jmpq    0x7f4f3c9b6100    ;   {runtime_call unwind_exception Runtime1 stub}
+  0x00007f4f3cffaab4: hlt
+  0x00007f4f3cffaab5: hlt
+  0x00007f4f3cffaab6: hlt
+  0x00007f4f3cffaab7: hlt
+  0x00007f4f3cffaab8: hlt
+  0x00007f4f3cffaab9: hlt
+  0x00007f4f3cffaaba: hlt
+  0x00007f4f3cffaabb: hlt
+  0x00007f4f3cffaabc: hlt
+  0x00007f4f3cffaabd: hlt
+  0x00007f4f3cffaabe: hlt
+  0x00007f4f3cffaabf: hlt
+[Stub Code]
+  0x00007f4f3cffaac0: nopl    0x0(%rax,%rax)    ;   {no_reloc}
+  0x00007f4f3cffaac5: movabs  $0x80030b538,%rbx  ;   {static_stub}
+  0x00007f4f3cffaacf: jmpq    0x7f4f3c97dee0    ;   {runtime_call I2C/C2I adapters}
+[Exception Handler]
+  0x00007f4f3cffaad4: callq   0x7f4f3ca45500    ;   {runtime_call handle_exception_from_callee Runtime1 stub}
+  0x00007f4f3cffaad9: mov     %rsp,0xffffffffffffffd8(%rsp)
+  0x00007f4f3cffaade: sub     $0x80,%rsp
+  0x00007f4f3cffaae5: mov     %rax,0x78(%rsp)
+  0x00007f4f3cffaaea: mov     %rcx,0x70(%rsp)
+  0x00007f4f3cffaaef: mov     %rdx,0x68(%rsp)
+  0x00007f4f3cffaaf4: mov     %rbx,0x60(%rsp)
+  0x00007f4f3cffaaf9: mov     %rbp,0x50(%rsp)
+  0x00007f4f3cffaafe: mov     %rsi,0x48(%rsp)
+  0x00007f4f3cffab03: mov     %rdi,0x40(%rsp)
+  0x00007f4f3cffab08: mov     %r8,0x38(%rsp)
+  0x00007f4f3cffab0d: mov     %r9,0x30(%rsp)
+  0x00007f4f3cffab12: mov     %r10,0x28(%rsp)
+  0x00007f4f3cffab17: mov     %r11,0x20(%rsp)
+  0x00007f4f3cffab1c: mov     %r12,0x18(%rsp)
+  0x00007f4f3cffab21: mov     %r13,0x10(%rsp)
+  0x00007f4f3cffab26: mov     %r14,0x8(%rsp)
+  0x00007f4f3cffab2b: mov     %r15,(%rsp)
+  0x00007f4f3cffab2f: movabs  $0x7f4f5b14c5e2,%rdi  ;   {external_word}
+  0x00007f4f3cffab39: movabs  $0x7f4f3cffaad9,%rsi  ;   {internal_word}
+  0x00007f4f3cffab43: mov     %rsp,%rdx
+  0x00007f4f3cffab46: and     $0xfffffffffffffff0,%rsp
+  0x00007f4f3cffab4a: callq   0x7f4f5ad68aa0    ;   {runtime_call}
+  0x00007f4f3cffab4f: hlt
+[Deopt Handler Code]
+  0x00007f4f3cffab50: movabs  $0x7f4f3cffab50,%r10  ;   {section_word}
+  0x00007f4f3cffab5a: push    %r10
+  0x00007f4f3cffab5c: jmpq    0x7f4f3c97e5a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007f4f3cffab61: hlt
+  0x00007f4f3cffab62: hlt
+  0x00007f4f3cffab63: hlt
+  0x00007f4f3cffab64: hlt
+  0x00007f4f3cffab65: hlt
+  0x00007f4f3cffab66: hlt
+  0x00007f4f3cffab67: hlt
+
+ImmutableOopMap{[32]=Oop }pc offsets: 252
+ImmutableOopMap{rsi=Oop }pc offsets: 397
+ImmutableOopMap{}pc offsets: 410 Compiled method (c2)     465  617   !   4       dev.jgardo.jvm.miscellaneous.through.ThrowBenchmark::withoutthrowBenchmark (21 bytes)
+ total in heap  [0x00007f4f44455510,0x00007f4f44455960] = 1104
+ relocation     [0x00007f4f44455688,0x00007f4f444556b0] = 40
+ main code      [0x00007f4f444556c0,0x00007f4f44455800] = 320
+ stub code      [0x00007f4f44455800,0x00007f4f44455828] = 40
+ oops           [0x00007f4f44455828,0x00007f4f44455830] = 8
+ metadata       [0x00007f4f44455830,0x00007f4f44455848] = 24
+ scopes data    [0x00007f4f44455848,0x00007f4f44455888] = 64
+ scopes pcs     [0x00007f4f44455888,0x00007f4f44455928] = 160
+ dependencies   [0x00007f4f44455928,0x00007f4f44455930] = 8
+ handler table  [0x00007f4f44455930,0x00007f4f44455960] = 48
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/through/ThrowBenchmark.withoutthrowBenchmark()I  [0x00007f4f444556c0, 0x00007f4f44455828]  360 bytes
+Argument 0 is unknown.RIP: 0x7f4f444556c0 Code size: 0x00000168
+[Entry Point]
+[Constants]
+  # {method} {0x00007f4f2c7d9848} 'withoutthrowBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/through/ThrowBenchmark'
+  #           [sp+0x30]  (sp of caller)
+  0x00007f4f444556c0: mov     0x8(%rsi),%r10d
+  0x00007f4f444556c4: shl     $0x3,%r10
+  0x00007f4f444556c8: movabs  $0x800000000,%r12
+  0x00007f4f444556d2: add     %r12,%r10
+  0x00007f4f444556d5: xor     %r12,%r12
+  0x00007f4f444556d8: cmp     %r10,%rax
+  0x00007f4f444556db: jne     0x7f4f3c97cd00    ;   {runtime_call ic_miss_stub}
+  0x00007f4f444556e1: nop
+  0x00007f4f444556e4: nopl    0x0(%rax,%rax)
+  0x00007f4f444556ec: nop
+[Verified Entry Point]
+  0x00007f4f444556f0: mov     %eax,0xfffffffffffec000(%rsp)
+  0x00007f4f444556f7: push    %rbp
+  0x00007f4f444556f8: sub     $0x20,%rsp        ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.through.ThrowBenchmark::withoutthrowBenchmark@-1 (line 43)
+
+  0x00007f4f444556fc: movabs  $0x80030b028,%rbp  ;   {metadata('java/lang/RuntimeException')}
+  0x00007f4f44455706: mov     0x118(%r15),%rax
+  0x00007f4f4445570d: mov     %rax,%r10
+  0x00007f4f44455710: add     $0x28,%r10
+  0x00007f4f44455714: cmp     0x128(%r15),%r10
+  0x00007f4f4445571b: jnb     0x7f4f44455799
+  0x00007f4f4445571d: mov     %r10,0x118(%r15)
+  0x00007f4f44455724: prefetchnta 0xc0(%r10)
+  0x00007f4f4445572c: mov     $0x61605,%r10d    ;   {metadata('java/lang/RuntimeException')}
+  0x00007f4f44455732: shl     $0x3,%r10
+  0x00007f4f44455736: movabs  $0x800000000,%r12
+  0x00007f4f44455740: add     %r12,%r10
+  0x00007f4f44455743: xor     %r12,%r12
+  0x00007f4f44455746: mov     0xb8(%r10),%r10
+  0x00007f4f4445574d: mov     %r10,(%rax)
+  0x00007f4f44455750: movl    $0x61605,0x8(%rax)  ;   {metadata('java/lang/RuntimeException')}
+  0x00007f4f44455757: movl    $0x0,0xc(%rax)
+  0x00007f4f4445575e: movq    $0x0,0x10(%rax)
+  0x00007f4f44455766: movq    $0x0,0x18(%rax)
+  0x00007f4f4445576e: movq    $0x0,0x20(%rax)
+  0x00007f4f44455776: mov     %rax,%rsi         ;*synchronization entry
+                                                ; - java.lang.RuntimeException::<init>@-1 (line 51)
+                                                ; - dev.jgardo.jvm.miscellaneous.through.ThrowBenchmark::withoutthrowBenchmark@4 (line 43)
+
+  0x00007f4f44455779: mov     %rsi,(%rsp)
+  0x00007f4f4445577d: nop
+  0x00007f4f4445577f: callq   0x7f4f3cffaf40    ; ImmutableOopMap{[0]=Oop }
+                                                ;*invokespecial <init> {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - java.lang.RuntimeException::<init>@1 (line 51)
+                                                ; - dev.jgardo.jvm.miscellaneous.through.ThrowBenchmark::withoutthrowBenchmark@4 (line 43)
+                                                ;   {optimized virtual_call}
+  0x00007f4f44455784: mov     $0x6,%eax
+  0x00007f4f44455789: add     $0x20,%rsp
+  0x00007f4f4445578d: pop     %rbp
+  0x00007f4f4445578e: mov     0x108(%r15),%r10
+  0x00007f4f44455795: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f4f44455798: retq
+  0x00007f4f44455799: movabs  $0x80030b028,%rsi  ;   {metadata('java/lang/RuntimeException')}
+  0x00007f4f444557a3: callq   0x7f4f3ca4bd80    ; ImmutableOopMap{}
+                                                ;*new {reexecute=0 rethrow=0 return_oop=1}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.ThrowBenchmark::withoutthrowBenchmark@0 (line 43)
+                                                ;   {runtime_call _new_instance_Java}
+  0x00007f4f444557a8: jmp     0x7f4f44455776    ;*invokespecial <init> {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - java.lang.RuntimeException::<init>@1 (line 51)
+                                                ; - dev.jgardo.jvm.miscellaneous.through.ThrowBenchmark::withoutthrowBenchmark@4 (line 43)
+
+  0x00007f4f444557aa: mov     0x8(%rax),%r10d
+  0x00007f4f444557ae: shl     $0x3,%r10
+  0x00007f4f444557b2: movabs  $0x800000000,%r12
+  0x00007f4f444557bc: add     %r12,%r10
+  0x00007f4f444557bf: xor     %r12,%r12
+  0x00007f4f444557c2: mov     0x48(%r10),%r10
+  0x00007f4f444557c6: cmp     %rbp,%r10
+  0x00007f4f444557c9: je      0x7f4f44455784    ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.through.ThrowBenchmark::withoutthrowBenchmark@-1 (line 43)
+
+  0x00007f4f444557cb: jmp     0x7f4f44455784
+  0x00007f4f444557cd: mov     0x8(%rax),%r11d
+  0x00007f4f444557d1: movabs  $0x800000000,%r10
+  0x00007f4f444557db: lea     (%r10,%r11,8),%r10
+  0x00007f4f444557df: mov     0x48(%r10),%r10
+  0x00007f4f444557e3: cmp     %rbp,%r10
+  0x00007f4f444557e6: je      0x7f4f44455784    ;*new {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.ThrowBenchmark::withoutthrowBenchmark@0 (line 43)
+
+  0x00007f4f444557e8: jmp     0x7f4f44455784    ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.through.ThrowBenchmark::withoutthrowBenchmark@-1 (line 43)
+
+  0x00007f4f444557ea: hlt
+  0x00007f4f444557eb: hlt
+  0x00007f4f444557ec: hlt
+  0x00007f4f444557ed: hlt
+  0x00007f4f444557ee: hlt
+  0x00007f4f444557ef: hlt
+  0x00007f4f444557f0: hlt
+  0x00007f4f444557f1: hlt
+  0x00007f4f444557f2: hlt
+  0x00007f4f444557f3: hlt
+  0x00007f4f444557f4: hlt
+  0x00007f4f444557f5: hlt
+  0x00007f4f444557f6: hlt
+  0x00007f4f444557f7: hlt
+  0x00007f4f444557f8: hlt
+  0x00007f4f444557f9: hlt
+  0x00007f4f444557fa: hlt
+  0x00007f4f444557fb: hlt
+  0x00007f4f444557fc: hlt
+  0x00007f4f444557fd: hlt
+  0x00007f4f444557fe: hlt
+  0x00007f4f444557ff: hlt
+[Stub Code]
+  0x00007f4f44455800: movabs  $0x0,%rbx         ;   {no_reloc}
+  0x00007f4f4445580a: jmpq    0x7f4f4445580a    ;   {runtime_call}
+[Exception Handler]
+  0x00007f4f4445580f: jmpq    0x7f4f3c9b6480    ;   {runtime_call ExceptionBlob}
+[Deopt Handler Code]
+  0x00007f4f44455814: callq   0x7f4f44455819
+  0x00007f4f44455819: subq    $0x5,(%rsp)
+  0x00007f4f4445581e: jmpq    0x7f4f3c97e5a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007f4f44455823: hlt
+  0x00007f4f44455824: hlt
+  0x00007f4f44455825: hlt
+  0x00007f4f44455826: hlt
+  0x00007f4f44455827: hlt
+
+ImmutableOopMap{[0]=Oop }pc offsets: 196
+ImmutableOopMap{}pc offsets: 232
