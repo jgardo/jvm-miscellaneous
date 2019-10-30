@@ -1,27 +1,32 @@
 package dev.jgardo.jvm.miscellaneous.through;
 
 import org.openjdk.jmh.annotations.*;
+import org.openjdk.jmh.profile.LinuxPerfNormProfiler;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 import org.openjdk.jmh.runner.options.TimeValue;
 
-public class ThrowBenchmark {
+import java.util.concurrent.TimeUnit;
+
+public class SimpleThrowBenchmark {
 
     private static final RuntimeException RUNTIME_EXCEPTION = new RuntimeException();
 
     public static void main(String[] args) throws RunnerException {
         Options opt = new OptionsBuilder()
-                .include(ThrowBenchmark.class.getSimpleName())
+                .include(SimpleThrowBenchmark.class.getSimpleName())
                 .forks(1)
                 .warmupTime(TimeValue.seconds(1))
                 .warmupIterations(2)
                 .measurementIterations(10)
                 .measurementTime(TimeValue.seconds(1))
+                .jvmArgs("-Djava.compiler=NONE")
                 .threads(1)
-                .mode(Mode.Throughput)
-//                .addProfiler(LinuxPerfNormProfiler.class)
+                .mode(Mode.AverageTime)
+                .timeUnit(TimeUnit.NANOSECONDS)
+                .addProfiler(LinuxPerfNormProfiler.class)
                 .build();
 
         new Runner(opt).run();

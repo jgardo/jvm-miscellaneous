@@ -1,0 +1,1037 @@
+/opt/zulu-11/zulu11.35.13-ca-jdk11.0.5-linux_x64/bin/java -javaagent:/opt/idea-IC-182.4323.46/lib/idea_rt.jar=46029:/opt/idea-IC-182.4323.46/bin -Dfile.encoding=UTF-8 -classpath /home/gardziol/repository/jvm-miscellaneous/target/classes:/home/gardziol/.m2/repository/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21.jar:/home/gardziol/.m2/repository/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar:/home/gardziol/.m2/repository/org/apache/commons/commons-math3/3.2/commons-math3-3.2.jar:/home/gardziol/.m2/repository/org/openjdk/jol/jol-core/0.8/jol-core-0.8.jar:/home/gardziol/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.1.2.RELEASE/spring-boot-starter-web-2.1.2.RELEASE.jar:/home/gardziol/.m2/repository/org/springframework/boot/spring-boot-starter/2.1.2.RELEASE/spring-boot-starter-2.1.2.RELEASE.jar:/home/gardziol/.m2/repository/org/springframework/boot/spring-boot/2.1.2.RELEASE/spring-boot-2.1.2.RELEASE.jar:/home/gardziol/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.1.2.RELEASE/spring-boot-autoconfigure-2.1.2.RELEASE.jar:/home/gardziol/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.1.2.RELEASE/spring-boot-starter-logging-2.1.2.RELEASE.jar:/home/gardziol/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/home/gardziol/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/home/gardziol/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/gardziol/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.11.1/log4j-to-slf4j-2.11.1.jar:/home/gardziol/.m2/repository/org/apache/logging/log4j/log4j-api/2.11.1/log4j-api-2.11.1.jar:/home/gardziol/.m2/repository/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.jar:/home/gardziol/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar:/home/gardziol/.m2/repository/org/springframework/spring-core/5.1.4.RELEASE/spring-core-5.1.4.RELEASE.jar:/home/gardziol/.m2/repository/org/springframework/spring-jcl/5.1.4.RELEASE/spring-jcl-5.1.4.RELEASE.jar:/home/gardziol/.m2/repository/org/yaml/snakeyaml/1.23/snakeyaml-1.23.jar:/home/gardziol/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.1.2.RELEASE/spring-boot-starter-json-2.1.2.RELEASE.jar:/home/gardziol/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar:/home/gardziol/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/home/gardziol/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.jar:/home/gardziol/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.8/jackson-datatype-jdk8-2.9.8.jar:/home/gardziol/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.8/jackson-datatype-jsr310-2.9.8.jar:/home/gardziol/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.8/jackson-module-parameter-names-2.9.8.jar:/home/gardziol/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.1.2.RELEASE/spring-boot-starter-tomcat-2.1.2.RELEASE.jar:/home/gardziol/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.14/tomcat-embed-core-9.0.14.jar:/home/gardziol/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/9.0.14/tomcat-embed-el-9.0.14.jar:/home/gardziol/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.14/tomcat-embed-websocket-9.0.14.jar:/home/gardziol/.m2/repository/org/hibernate/validator/hibernate-validator/6.0.14.Final/hibernate-validator-6.0.14.Final.jar:/home/gardziol/.m2/repository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar:/home/gardziol/.m2/repository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar:/home/gardziol/.m2/repository/com/fasterxml/classmate/1.3.4/classmate-1.3.4.jar:/home/gardziol/.m2/repository/org/springframework/spring-web/5.1.4.RELEASE/spring-web-5.1.4.RELEASE.jar:/home/gardziol/.m2/repository/org/springframework/spring-beans/5.1.4.RELEASE/spring-beans-5.1.4.RELEASE.jar:/home/gardziol/.m2/repository/org/springframework/spring-webmvc/5.1.4.RELEASE/spring-webmvc-5.1.4.RELEASE.jar:/home/gardziol/.m2/repository/org/springframework/spring-aop/5.1.4.RELEASE/spring-aop-5.1.4.RELEASE.jar:/home/gardziol/.m2/repository/org/springframework/spring-context/5.1.4.RELEASE/spring-context-5.1.4.RELEASE.jar:/home/gardziol/.m2/repository/org/springframework/spring-expression/5.1.4.RELEASE/spring-expression-5.1.4.RELEASE.jar dev.jgardo.jvm.miscellaneous.through.StacktraceThrowBenchmark
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.openjdk.jmh.util.Utils (file:/home/gardziol/.m2/repository/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21.jar) to field java.io.PrintStream.charOut
+WARNING: Please consider reporting this to the maintainers of org.openjdk.jmh.util.Utils
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+# JMH version: 1.21
+# VM version: JDK 11.0.5, OpenJDK 64-Bit Server VM, 11.0.5+10-LTS
+# VM invoker: /opt/zulu-11/zulu11.35.13-ca-jdk11.0.5-linux_x64/bin/java
+# VM options: -javaagent:/opt/idea-IC-182.4323.46/lib/idea_rt.jar=46029:/opt/idea-IC-182.4323.46/bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: dev.jgardo.jvm.miscellaneous.through.StacktraceThrowBenchmark.throw100Benchmark
+
+# Run progress: 0,00% complete, ETA 00:01:12
+# Fork: 1 of 1
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 12603,379 ns/op
+# Warmup Iteration   2: 7091,067 ns/op
+Iteration   1: 6877,503 ns/op
+Iteration   2: 6717,154 ns/op
+Iteration   3: 6778,853 ns/op
+Iteration   4: 6768,894 ns/op
+Iteration   5: 6871,239 ns/op
+Iteration   6: 6893,238 ns/op
+Iteration   7: 6669,125 ns/op
+Iteration   8: 6826,441 ns/op
+Iteration   9: 6837,776 ns/op
+Iteration  10: 6646,537 ns/op
+
+
+Result "dev.jgardo.jvm.miscellaneous.through.StacktraceThrowBenchmark.throw100Benchmark":
+  6788,676 ±(99.9%) 132,929 ns/op [Average]
+  (min, avg, max) = (6646,537, 6788,676, 6893,238), stdev = 87,924
+  CI (99.9%): [6655,747, 6921,605] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.5, OpenJDK 64-Bit Server VM, 11.0.5+10-LTS
+# VM invoker: /opt/zulu-11/zulu11.35.13-ca-jdk11.0.5-linux_x64/bin/java
+# VM options: -javaagent:/opt/idea-IC-182.4323.46/lib/idea_rt.jar=46029:/opt/idea-IC-182.4323.46/bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: dev.jgardo.jvm.miscellaneous.through.StacktraceThrowBenchmark.throw10Benchmark
+
+# Run progress: 16,67% complete, ETA 00:01:06
+# Fork: 1 of 1
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 755,418 ns/op
+# Warmup Iteration   2: 746,167 ns/op
+Iteration   1: 749,350 ns/op
+Iteration   2: 740,790 ns/op
+Iteration   3: 746,226 ns/op
+Iteration   4: 778,585 ns/op
+Iteration   5: 761,379 ns/op
+Iteration   6: 737,390 ns/op
+Iteration   7: 753,038 ns/op
+Iteration   8: 752,171 ns/op
+Iteration   9: 746,901 ns/op
+Iteration  10: 748,177 ns/op
+
+
+Result "dev.jgardo.jvm.miscellaneous.through.StacktraceThrowBenchmark.throw10Benchmark":
+  751,401 ±(99.9%) 17,547 ns/op [Average]
+  (min, avg, max) = (737,390, 751,401, 778,585), stdev = 11,606
+  CI (99.9%): [733,854, 768,948] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.5, OpenJDK 64-Bit Server VM, 11.0.5+10-LTS
+# VM invoker: /opt/zulu-11/zulu11.35.13-ca-jdk11.0.5-linux_x64/bin/java
+# VM options: -javaagent:/opt/idea-IC-182.4323.46/lib/idea_rt.jar=46029:/opt/idea-IC-182.4323.46/bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: dev.jgardo.jvm.miscellaneous.through.StacktraceThrowBenchmark.throw50Benchmark
+
+# Run progress: 33,33% complete, ETA 00:00:52
+# Fork: 1 of 1
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 3475,298 ns/op
+# Warmup Iteration   2: 3376,112 ns/op
+Iteration   1: 3329,106 ns/op
+Iteration   2: 3417,336 ns/op
+Iteration   3: 3385,303 ns/op
+Iteration   4: 3320,296 ns/op
+Iteration   5: 3335,992 ns/op
+Iteration   6: 3384,708 ns/op
+Iteration   7: 3368,776 ns/op
+Iteration   8: 3318,553 ns/op
+Iteration   9: 3429,736 ns/op
+Iteration  10: 3349,578 ns/op
+
+
+Result "dev.jgardo.jvm.miscellaneous.through.StacktraceThrowBenchmark.throw50Benchmark":
+  3363,938 ±(99.9%) 60,173 ns/op [Average]
+  (min, avg, max) = (3318,553, 3363,938, 3429,736), stdev = 39,801
+  CI (99.9%): [3303,766, 3424,111] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.5, OpenJDK 64-Bit Server VM, 11.0.5+10-LTS
+# VM invoker: /opt/zulu-11/zulu11.35.13-ca-jdk11.0.5-linux_x64/bin/java
+# VM options: -javaagent:/opt/idea-IC-182.4323.46/lib/idea_rt.jar=46029:/opt/idea-IC-182.4323.46/bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: dev.jgardo.jvm.miscellaneous.through.StacktraceThrowBenchmark.without100throwBenchmark
+
+# Run progress: 50,00% complete, ETA 00:00:39
+# Fork: 1 of 1
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 128,254 ns/op
+# Warmup Iteration   2: 128,699 ns/op
+Iteration   1: 124,914 ns/op
+Iteration   2: 125,652 ns/op
+Iteration   3: 126,435 ns/op
+Iteration   4: 127,274 ns/op
+Iteration   5: 125,526 ns/op
+Iteration   6: 124,083 ns/op
+Iteration   7: 124,429 ns/op
+Iteration   8: 124,509 ns/op
+Iteration   9: 123,605 ns/op
+Iteration  10: 125,219 ns/op
+
+
+Result "dev.jgardo.jvm.miscellaneous.through.StacktraceThrowBenchmark.without100throwBenchmark":
+  125,165 ±(99.9%) 1,677 ns/op [Average]
+  (min, avg, max) = (123,605, 125,165, 127,274), stdev = 1,109
+  CI (99.9%): [123,488, 126,841] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.5, OpenJDK 64-Bit Server VM, 11.0.5+10-LTS
+# VM invoker: /opt/zulu-11/zulu11.35.13-ca-jdk11.0.5-linux_x64/bin/java
+# VM options: -javaagent:/opt/idea-IC-182.4323.46/lib/idea_rt.jar=46029:/opt/idea-IC-182.4323.46/bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: dev.jgardo.jvm.miscellaneous.through.StacktraceThrowBenchmark.without10throwBenchmark
+
+# Run progress: 66,67% complete, ETA 00:00:26
+# Fork: 1 of 1
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 15,859 ns/op
+# Warmup Iteration   2: 15,661 ns/op
+Iteration   1: 14,248 ns/op
+Iteration   2: 14,841 ns/op
+Iteration   3: 14,526 ns/op
+Iteration   4: 14,663 ns/op
+Iteration   5: 14,586 ns/op
+Iteration   6: 14,343 ns/op
+Iteration   7: 14,202 ns/op
+Iteration   8: 14,376 ns/op
+Iteration   9: 14,580 ns/op
+Iteration  10: 14,305 ns/op
+
+
+Result "dev.jgardo.jvm.miscellaneous.through.StacktraceThrowBenchmark.without10throwBenchmark":
+  14,467 ±(99.9%) 0,309 ns/op [Average]
+  (min, avg, max) = (14,202, 14,467, 14,841), stdev = 0,205
+  CI (99.9%): [14,158, 14,776] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.5, OpenJDK 64-Bit Server VM, 11.0.5+10-LTS
+# VM invoker: /opt/zulu-11/zulu11.35.13-ca-jdk11.0.5-linux_x64/bin/java
+# VM options: -javaagent:/opt/idea-IC-182.4323.46/lib/idea_rt.jar=46029:/opt/idea-IC-182.4323.46/bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: dev.jgardo.jvm.miscellaneous.through.StacktraceThrowBenchmark.without50throwBenchmark
+
+# Run progress: 83,33% complete, ETA 00:00:13
+# Fork: 1 of 1
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 70,639 ns/op
+# Warmup Iteration   2: 68,846 ns/op
+Iteration   1: 71,032 ns/op
+Iteration   2: 70,320 ns/op
+Iteration   3: 70,359 ns/op
+Iteration   4: 70,779 ns/op
+Iteration   5: 70,305 ns/op
+Iteration   6: 71,149 ns/op
+Iteration   7: 71,451 ns/op
+Iteration   8: 70,967 ns/op
+Iteration   9: 71,741 ns/op
+Iteration  10: 71,755 ns/op
+
+
+Result "dev.jgardo.jvm.miscellaneous.through.StacktraceThrowBenchmark.without50throwBenchmark":
+  70,986 ±(99.9%) 0,836 ns/op [Average]
+  (min, avg, max) = (70,305, 70,986, 71,755), stdev = 0,553
+  CI (99.9%): [70,150, 71,821] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:01:18
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                          Mode  Cnt     Score     Error  Units
+StacktraceThrowBenchmark.throw100Benchmark         avgt   10  6788,676 ± 132,929  ns/op
+StacktraceThrowBenchmark.throw10Benchmark          avgt   10   751,401 ±  17,547  ns/op
+StacktraceThrowBenchmark.throw50Benchmark          avgt   10  3363,938 ±  60,173  ns/op
+StacktraceThrowBenchmark.without100throwBenchmark  avgt   10   125,165 ±   1,677  ns/op
+StacktraceThrowBenchmark.without10throwBenchmark   avgt   10    14,467 ±   0,309  ns/op
+StacktraceThrowBenchmark.without50throwBenchmark   avgt   10    70,986 ±   0,836  ns/op
+
+Process finished with exit code 0
+
+/opt/zulu-11/zulu11.35.13-ca-jdk11.0.5-linux_x64/bin/java -javaagent:/opt/idea-IC-182.4323.46/lib/idea_rt.jar=34213:/opt/idea-IC-182.4323.46/bin -Dfile.encoding=UTF-8 -classpath /home/gardziol/repository/jvm-miscellaneous/target/classes:/home/gardziol/.m2/repository/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21.jar:/home/gardziol/.m2/repository/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar:/home/gardziol/.m2/repository/org/apache/commons/commons-math3/3.2/commons-math3-3.2.jar:/home/gardziol/.m2/repository/org/openjdk/jol/jol-core/0.8/jol-core-0.8.jar:/home/gardziol/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.1.2.RELEASE/spring-boot-starter-web-2.1.2.RELEASE.jar:/home/gardziol/.m2/repository/org/springframework/boot/spring-boot-starter/2.1.2.RELEASE/spring-boot-starter-2.1.2.RELEASE.jar:/home/gardziol/.m2/repository/org/springframework/boot/spring-boot/2.1.2.RELEASE/spring-boot-2.1.2.RELEASE.jar:/home/gardziol/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.1.2.RELEASE/spring-boot-autoconfigure-2.1.2.RELEASE.jar:/home/gardziol/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.1.2.RELEASE/spring-boot-starter-logging-2.1.2.RELEASE.jar:/home/gardziol/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/home/gardziol/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/home/gardziol/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/gardziol/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.11.1/log4j-to-slf4j-2.11.1.jar:/home/gardziol/.m2/repository/org/apache/logging/log4j/log4j-api/2.11.1/log4j-api-2.11.1.jar:/home/gardziol/.m2/repository/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.jar:/home/gardziol/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar:/home/gardziol/.m2/repository/org/springframework/spring-core/5.1.4.RELEASE/spring-core-5.1.4.RELEASE.jar:/home/gardziol/.m2/repository/org/springframework/spring-jcl/5.1.4.RELEASE/spring-jcl-5.1.4.RELEASE.jar:/home/gardziol/.m2/repository/org/yaml/snakeyaml/1.23/snakeyaml-1.23.jar:/home/gardziol/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.1.2.RELEASE/spring-boot-starter-json-2.1.2.RELEASE.jar:/home/gardziol/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar:/home/gardziol/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/home/gardziol/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.jar:/home/gardziol/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.8/jackson-datatype-jdk8-2.9.8.jar:/home/gardziol/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.8/jackson-datatype-jsr310-2.9.8.jar:/home/gardziol/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.8/jackson-module-parameter-names-2.9.8.jar:/home/gardziol/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.1.2.RELEASE/spring-boot-starter-tomcat-2.1.2.RELEASE.jar:/home/gardziol/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.14/tomcat-embed-core-9.0.14.jar:/home/gardziol/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/9.0.14/tomcat-embed-el-9.0.14.jar:/home/gardziol/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.14/tomcat-embed-websocket-9.0.14.jar:/home/gardziol/.m2/repository/org/hibernate/validator/hibernate-validator/6.0.14.Final/hibernate-validator-6.0.14.Final.jar:/home/gardziol/.m2/repository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar:/home/gardziol/.m2/repository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar:/home/gardziol/.m2/repository/com/fasterxml/classmate/1.3.4/classmate-1.3.4.jar:/home/gardziol/.m2/repository/org/springframework/spring-web/5.1.4.RELEASE/spring-web-5.1.4.RELEASE.jar:/home/gardziol/.m2/repository/org/springframework/spring-beans/5.1.4.RELEASE/spring-beans-5.1.4.RELEASE.jar:/home/gardziol/.m2/repository/org/springframework/spring-webmvc/5.1.4.RELEASE/spring-webmvc-5.1.4.RELEASE.jar:/home/gardziol/.m2/repository/org/springframework/spring-aop/5.1.4.RELEASE/spring-aop-5.1.4.RELEASE.jar:/home/gardziol/.m2/repository/org/springframework/spring-context/5.1.4.RELEASE/spring-context-5.1.4.RELEASE.jar:/home/gardziol/.m2/repository/org/springframework/spring-expression/5.1.4.RELEASE/spring-expression-5.1.4.RELEASE.jar dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.openjdk.jmh.util.Utils (file:/home/gardziol/.m2/repository/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21.jar) to field java.io.PrintStream.charOut
+WARNING: Please consider reporting this to the maintainers of org.openjdk.jmh.util.Utils
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+# JMH version: 1.21
+# VM version: JDK 11.0.5, OpenJDK 64-Bit Server VM, 11.0.5+10-LTS
+# VM invoker: /opt/zulu-11/zulu11.35.13-ca-jdk11.0.5-linux_x64/bin/java
+# VM options: -javaagent:/opt/idea-IC-182.4323.46/lib/idea_rt.jar=34213:/opt/idea-IC-182.4323.46/bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark.throwBenchmark
+
+# Run progress: 0,00% complete, ETA 00:00:36
+# Fork: 1 of 1
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: Compiled method (c1)     894  644   !   3       dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::throwBenchmark (12 bytes)
+ total in heap  [0x00007f2bd0d33910,0x00007f2bd0d33d78] = 1128
+ relocation     [0x00007f2bd0d33a88,0x00007f2bd0d33ac8] = 64
+ main code      [0x00007f2bd0d33ae0,0x00007f2bd0d33c00] = 288
+ stub code      [0x00007f2bd0d33c00,0x00007f2bd0d33ca8] = 168
+ oops           [0x00007f2bd0d33ca8,0x00007f2bd0d33cb0] = 8
+ metadata       [0x00007f2bd0d33cb0,0x00007f2bd0d33cb8] = 8
+ scopes data    [0x00007f2bd0d33cb8,0x00007f2bd0d33ce8] = 48
+ scopes pcs     [0x00007f2bd0d33ce8,0x00007f2bd0d33d58] = 112
+ dependencies   [0x00007f2bd0d33d58,0x00007f2bd0d33d60] = 8
+ handler table  [0x00007f2bd0d33d60,0x00007f2bd0d33d78] = 24
+Loaded disassembler from hsdis-amd64.so
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/through/SimpleThrowBenchmark.throwBenchmark()I  [0x00007f2bd0d33ae0, 0x00007f2bd0d33ca8]  456 bytes
+Argument 0 is unknown.RIP: 0x7f2bd0d33ae0 Code size: 0x000001c8
+[Disassembling for mach='amd64']
+[Entry Point]
+[Constants]
+  # {method} {0x00007f2bc13e9820} 'throwBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/through/SimpleThrowBenchmark'
+  #           [sp+0x40]  (sp of caller)
+  0x00007f2bd0d33ae0: mov     0x8(%rsi),%r10d
+  0x00007f2bd0d33ae4: movabs  $0x800000000,%r12
+  0x00007f2bd0d33aee: add     %r12,%r10
+  0x00007f2bd0d33af1: xor     %r12,%r12
+  0x00007f2bd0d33af4: cmp     %rax,%r10
+  0x00007f2bd0d33af7: jne     0x7f2bd06bac00    ;   {runtime_call ic_miss_stub}
+  0x00007f2bd0d33afd: nop
+[Verified Entry Point]
+  0x00007f2bd0d33b00: mov     %eax,0xfffffffffffec000(%rsp)
+  0x00007f2bd0d33b07: push    %rbp
+  0x00007f2bd0d33b08: sub     $0x30,%rsp
+  0x00007f2bd0d33b0c: movabs  $0x7f2b9ae71448,%rdi  ;   {metadata(method data for {method} {0x00007f2bc13e9820} 'throwBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/through/SimpleThrowBenchmark')}
+  0x00007f2bd0d33b16: mov     0x104(%rdi),%ebx
+  0x00007f2bd0d33b1c: add     $0x8,%ebx
+  0x00007f2bd0d33b1f: mov     %ebx,0x104(%rdi)
+  0x00007f2bd0d33b25: and     $0x1ff8,%ebx
+  0x00007f2bd0d33b2b: cmp     $0x0,%ebx
+  0x00007f2bd0d33b2e: je      0x7f2bd0d33ba9    ;*aload_0 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::throwBenchmark@0 (line 37)
+
+  0x00007f2bd0d33b34: mov     %rsi,%rdi
+  0x00007f2bd0d33b37: movabs  $0x7f2b9ae71448,%rbx  ;   {metadata(method data for {method} {0x00007f2bc13e9820} 'throwBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/through/SimpleThrowBenchmark')}
+  0x00007f2bd0d33b41: addq    $0x1,0x140(%rbx)
+  0x00007f2bd0d33b49: nopw    0x0(%rax,%rax)
+  0x00007f2bd0d33b4f: callq   0x7f2bd0d33c05    ; ImmutableOopMap{}
+                                                ;*invokevirtual throwRuntimeException {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::throwBenchmark@1 (line 37)
+                                                ;   {optimized virtual_call}
+  0x00007f2bd0d33b54: movabs  $0x7f2b9ae71448,%rax  ;   {metadata(method data for {method} {0x00007f2bc13e9820} 'throwBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/through/SimpleThrowBenchmark')}
+  0x00007f2bd0d33b5e: incl    0x178(%rax)       ;*goto {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::throwBenchmark@4 (line 40)
+
+  0x00007f2bd0d33b64: mov     $0x1,%eax
+  0x00007f2bd0d33b69: add     $0x30,%rsp
+  0x00007f2bd0d33b6d: pop     %rbp
+  0x00007f2bd0d33b6e: mov     0x108(%r15),%r10
+  0x00007f2bd0d33b75: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f2bd0d33b78: retq                      ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::throwBenchmark@11 (line 41)
+
+  0x00007f2bd0d33b79: mov     0x420(%r15),%rax
+  0x00007f2bd0d33b80: xor     %r10,%r10
+  0x00007f2bd0d33b83: mov     %r10,0x420(%r15)
+  0x00007f2bd0d33b8a: xor     %r10,%r10
+  0x00007f2bd0d33b8d: mov     %r10,0x428(%r15)
+  0x00007f2bd0d33b94: mov     $0x5,%eax
+  0x00007f2bd0d33b99: add     $0x30,%rsp
+  0x00007f2bd0d33b9d: pop     %rbp
+  0x00007f2bd0d33b9e: mov     0x108(%r15),%r10
+  0x00007f2bd0d33ba5: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f2bd0d33ba8: retq
+  0x00007f2bd0d33ba9: movabs  $0x7f2bc13e9820,%r10  ;   {metadata({method} {0x00007f2bc13e9820} 'throwBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/through/SimpleThrowBenchmark')}
+  0x00007f2bd0d33bb3: mov     %r10,0x8(%rsp)
+  0x00007f2bd0d33bb8: movq    $0xffffffffffffffff,(%rsp)
+  0x00007f2bd0d33bc0: callq   0x7f2bd0783880    ; ImmutableOopMap{rsi=Oop }
+                                                ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::throwBenchmark@-1 (line 37)
+                                                ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00007f2bd0d33bc5: jmpq    0x7f2bd0d33b34
+  0x00007f2bd0d33bca: nop
+  0x00007f2bd0d33bcb: nop
+  0x00007f2bd0d33bcc: mov     0x420(%r15),%rax
+  0x00007f2bd0d33bd3: movabs  $0x0,%r10
+  0x00007f2bd0d33bdd: mov     %r10,0x420(%r15)
+  0x00007f2bd0d33be4: movabs  $0x0,%r10
+  0x00007f2bd0d33bee: mov     %r10,0x428(%r15)
+  0x00007f2bd0d33bf5: add     $0x30,%rsp
+  0x00007f2bd0d33bf9: pop     %rbp
+  0x00007f2bd0d33bfa: jmpq    0x7f2bd06f0e80    ;   {runtime_call unwind_exception Runtime1 stub}
+  0x00007f2bd0d33bff: hlt
+[Stub Code]
+  0x00007f2bd0d33c00: nopl    0x0(%rax,%rax)    ;   {no_reloc}
+  0x00007f2bd0d33c05: movabs  $0x7f2bc13e9a08,%rbx  ;   {static_stub}
+  0x00007f2bd0d33c0f: jmpq    0x7f2bd06bbbdc    ;   {runtime_call I2C/C2I adapters}
+[Exception Handler]
+  0x00007f2bd0d33c14: callq   0x7f2bd06f3200    ;   {runtime_call handle_exception_from_callee Runtime1 stub}
+  0x00007f2bd0d33c19: mov     %rsp,0xffffffffffffffd8(%rsp)
+  0x00007f2bd0d33c1e: sub     $0x80,%rsp
+  0x00007f2bd0d33c25: mov     %rax,0x78(%rsp)
+  0x00007f2bd0d33c2a: mov     %rcx,0x70(%rsp)
+  0x00007f2bd0d33c2f: mov     %rdx,0x68(%rsp)
+  0x00007f2bd0d33c34: mov     %rbx,0x60(%rsp)
+  0x00007f2bd0d33c39: mov     %rbp,0x50(%rsp)
+  0x00007f2bd0d33c3e: mov     %rsi,0x48(%rsp)
+  0x00007f2bd0d33c43: mov     %rdi,0x40(%rsp)
+  0x00007f2bd0d33c48: mov     %r8,0x38(%rsp)
+  0x00007f2bd0d33c4d: mov     %r9,0x30(%rsp)
+  0x00007f2bd0d33c52: mov     %r10,0x28(%rsp)
+  0x00007f2bd0d33c57: mov     %r11,0x20(%rsp)
+  0x00007f2bd0d33c5c: mov     %r12,0x18(%rsp)
+  0x00007f2bd0d33c61: mov     %r13,0x10(%rsp)
+  0x00007f2bd0d33c66: mov     %r14,0x8(%rsp)
+  0x00007f2bd0d33c6b: mov     %r15,(%rsp)
+  0x00007f2bd0d33c6f: movabs  $0x7f2befc608b6,%rdi  ;   {external_word}
+  0x00007f2bd0d33c79: movabs  $0x7f2bd0d33c19,%rsi  ;   {internal_word}
+  0x00007f2bd0d33c83: mov     %rsp,%rdx
+  0x00007f2bd0d33c86: and     $0xfffffffffffffff0,%rsp
+  0x00007f2bd0d33c8a: callq   0x7f2bef89fe10    ;   {runtime_call MacroAssembler::debug64(char*, long, long*)}
+  0x00007f2bd0d33c8f: hlt
+[Deopt Handler Code]
+  0x00007f2bd0d33c90: movabs  $0x7f2bd0d33c90,%r10  ;   {section_word}
+  0x00007f2bd0d33c9a: push    %r10
+  0x00007f2bd0d33c9c: jmpq    0x7f2bd06bc4a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007f2bd0d33ca1: hlt
+  0x00007f2bd0d33ca2: hlt
+  0x00007f2bd0d33ca3: hlt
+  0x00007f2bd0d33ca4: hlt
+  0x00007f2bd0d33ca5: hlt
+  0x00007f2bd0d33ca6: hlt
+  0x00007f2bd0d33ca7: hlt
+
+ImmutableOopMap{}pc offsets: 116
+ImmutableOopMap{rsi=Oop }pc offsets: 229 Compiled method (c2)     945  648   !   4       dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::throwBenchmark (12 bytes)
+ total in heap  [0x00007f2bd8193990,0x00007f2bd8193ca0] = 784
+ relocation     [0x00007f2bd8193b08,0x00007f2bd8193b28] = 32
+ main code      [0x00007f2bd8193b40,0x00007f2bd8193be0] = 160
+ stub code      [0x00007f2bd8193be0,0x00007f2bd8193c08] = 40
+ oops           [0x00007f2bd8193c08,0x00007f2bd8193c10] = 8
+ metadata       [0x00007f2bd8193c10,0x00007f2bd8193c18] = 8
+ scopes data    [0x00007f2bd8193c18,0x00007f2bd8193c30] = 24
+ scopes pcs     [0x00007f2bd8193c30,0x00007f2bd8193c80] = 80
+ dependencies   [0x00007f2bd8193c80,0x00007f2bd8193c88] = 8
+ handler table  [0x00007f2bd8193c88,0x00007f2bd8193ca0] = 24
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/through/SimpleThrowBenchmark.throwBenchmark()I  [0x00007f2bd8193b40, 0x00007f2bd8193c08]  200 bytes
+Argument 0 is unknown.RIP: 0x7f2bd8193b40 Code size: 0x000000c8
+[Entry Point]
+[Constants]
+  # {method} {0x00007f2bc13e9820} 'throwBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/through/SimpleThrowBenchmark'
+  #           [sp+0x20]  (sp of caller)
+  0x00007f2bd8193b40: mov     0x8(%rsi),%r10d
+  0x00007f2bd8193b44: movabs  $0x800000000,%r12
+  0x00007f2bd8193b4e: add     %r12,%r10
+  0x00007f2bd8193b51: xor     %r12,%r12
+  0x00007f2bd8193b54: cmp     %r10,%rax
+  0x00007f2bd8193b57: jne     0x7f2bd06bac00    ;   {runtime_call ic_miss_stub}
+  0x00007f2bd8193b5d: nop
+[Verified Entry Point]
+  0x00007f2bd8193b60: mov     %eax,0xfffffffffffec000(%rsp)
+  0x00007f2bd8193b67: push    %rbp
+  0x00007f2bd8193b68: sub     $0x10,%rsp        ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::throwBenchmark@-1 (line 37)
+
+  0x00007f2bd8193b6c: nop
+  0x00007f2bd8193b6f: callq   0x7f2bd0d343e0    ; ImmutableOopMap{}
+                                                ;*invokevirtual throwRuntimeException {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::throwBenchmark@1 (line 37)
+                                                ;   {optimized virtual_call}
+  0x00007f2bd8193b74: mov     $0x1,%eax
+  0x00007f2bd8193b79: add     $0x10,%rsp
+  0x00007f2bd8193b7d: pop     %rbp
+  0x00007f2bd8193b7e: mov     0x108(%r15),%r10
+  0x00007f2bd8193b85: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f2bd8193b88: retq
+  0x00007f2bd8193b89: mov     0x8(%rax),%r10d
+  0x00007f2bd8193b8d: movabs  $0x800000000,%r12
+  0x00007f2bd8193b97: add     %r12,%r10
+  0x00007f2bd8193b9a: xor     %r12,%r12
+  0x00007f2bd8193b9d: mov     0x48(%r10),%r10
+  0x00007f2bd8193ba1: movabs  $0x8000034f0,%r11  ;   {metadata('java/lang/RuntimeException')}
+  0x00007f2bd8193bab: cmp     %r11,%r10
+  0x00007f2bd8193bae: jne     0x7f2bd8193bb7    ;*invokevirtual throwRuntimeException {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::throwBenchmark@1 (line 37)
+
+  0x00007f2bd8193bb0: mov     $0x5,%eax
+  0x00007f2bd8193bb5: jmp     0x7f2bd8193b79
+  0x00007f2bd8193bb7: mov     %rax,%rsi
+  0x00007f2bd8193bba: add     $0x10,%rsp
+  0x00007f2bd8193bbe: pop     %rbp
+  0x00007f2bd8193bbf: jmpq    0x7f2bd0788d80    ;   {runtime_call _rethrow_Java}
+  0x00007f2bd8193bc4: hlt
+  0x00007f2bd8193bc5: hlt
+  0x00007f2bd8193bc6: hlt
+  0x00007f2bd8193bc7: hlt
+  0x00007f2bd8193bc8: hlt
+  0x00007f2bd8193bc9: hlt
+  0x00007f2bd8193bca: hlt
+  0x00007f2bd8193bcb: hlt
+  0x00007f2bd8193bcc: hlt
+  0x00007f2bd8193bcd: hlt
+  0x00007f2bd8193bce: hlt
+  0x00007f2bd8193bcf: hlt
+  0x00007f2bd8193bd0: hlt
+  0x00007f2bd8193bd1: hlt
+  0x00007f2bd8193bd2: hlt
+  0x00007f2bd8193bd3: hlt
+  0x00007f2bd8193bd4: hlt
+  0x00007f2bd8193bd5: hlt
+  0x00007f2bd8193bd6: hlt
+  0x00007f2bd8193bd7: hlt
+  0x00007f2bd8193bd8: hlt
+  0x00007f2bd8193bd9: hlt
+  0x00007f2bd8193bda: hlt
+  0x00007f2bd8193bdb: hlt
+  0x00007f2bd8193bdc: hlt
+  0x00007f2bd8193bdd: hlt
+  0x00007f2bd8193bde: hlt
+  0x00007f2bd8193bdf: hlt
+[Stub Code]
+  0x00007f2bd8193be0: movabs  $0x0,%rbx         ;   {no_reloc}
+  0x00007f2bd8193bea: jmpq    0x7f2bd8193bea    ;   {runtime_call}
+[Exception Handler]
+  0x00007f2bd8193bef: jmpq    0x7f2bd06f1600    ;   {runtime_call ExceptionBlob}
+[Deopt Handler Code]
+  0x00007f2bd8193bf4: callq   0x7f2bd8193bf9
+  0x00007f2bd8193bf9: subq    $0x5,(%rsp)
+  0x00007f2bd8193bfe: jmpq    0x7f2bd06bc4a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007f2bd8193c03: hlt
+  0x00007f2bd8193c04: hlt
+  0x00007f2bd8193c05: hlt
+  0x00007f2bd8193c06: hlt
+  0x00007f2bd8193c07: hlt
+
+ImmutableOopMap{}pc offsets: 52 283,342 ns/op
+# Warmup Iteration   2: 149,909 ns/op
+Iteration   1: 141,596 ns/op
+Iteration   2: 142,710 ns/op
+Iteration   3: 142,350 ns/op
+Iteration   4: 142,530 ns/op
+Iteration   5: 142,226 ns/op
+Iteration   6: 141,987 ns/op
+Iteration   7: 142,715 ns/op
+Iteration   8: 142,659 ns/op
+Iteration   9: 142,589 ns/op
+Iteration  10: 142,696 ns/op
+
+
+Result "dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark.throwBenchmark":
+  142,406 ±(99.9%) 0,564 ns/op [Average]
+  (min, avg, max) = (141,596, 142,406, 142,715), stdev = 0,373
+  CI (99.9%): [141,842, 142,970] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.5, OpenJDK 64-Bit Server VM, 11.0.5+10-LTS
+# VM invoker: /opt/zulu-11/zulu11.35.13-ca-jdk11.0.5-linux_x64/bin/java
+# VM options: -javaagent:/opt/idea-IC-182.4323.46/lib/idea_rt.jar=34213:/opt/idea-IC-182.4323.46/bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark.throwThrowableBenchmark
+
+# Run progress: 33,33% complete, ETA 00:00:26
+# Fork: 1 of 1
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: Compiled method (c1)     516  640   !   3       dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::throwThrowableBenchmark (12 bytes)
+ total in heap  [0x00007f3224d41a90,0x00007f3224d41ef8] = 1128
+ relocation     [0x00007f3224d41c08,0x00007f3224d41c48] = 64
+ main code      [0x00007f3224d41c60,0x00007f3224d41d80] = 288
+ stub code      [0x00007f3224d41d80,0x00007f3224d41e28] = 168
+ oops           [0x00007f3224d41e28,0x00007f3224d41e30] = 8
+ metadata       [0x00007f3224d41e30,0x00007f3224d41e38] = 8
+ scopes data    [0x00007f3224d41e38,0x00007f3224d41e68] = 48
+ scopes pcs     [0x00007f3224d41e68,0x00007f3224d41ed8] = 112
+ dependencies   [0x00007f3224d41ed8,0x00007f3224d41ee0] = 8
+ handler table  [0x00007f3224d41ee0,0x00007f3224d41ef8] = 24
+Loaded disassembler from hsdis-amd64.so
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/through/SimpleThrowBenchmark.throwThrowableBenchmark()I  [0x00007f3224d41c60, 0x00007f3224d41e28]  456 bytes
+Argument 0 is unknown.RIP: 0x7f3224d41c60 Code size: 0x000001c8
+[Disassembling for mach='amd64']
+[Entry Point]
+[Constants]
+  # {method} {0x00007f3215ba9928} 'throwThrowableBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/through/SimpleThrowBenchmark'
+  #           [sp+0x40]  (sp of caller)
+  0x00007f3224d41c60: mov     0x8(%rsi),%r10d
+  0x00007f3224d41c64: movabs  $0x800000000,%r12
+  0x00007f3224d41c6e: add     %r12,%r10
+  0x00007f3224d41c71: xor     %r12,%r12
+  0x00007f3224d41c74: cmp     %rax,%r10
+  0x00007f3224d41c77: jne     0x7f32246bac00    ;   {runtime_call ic_miss_stub}
+  0x00007f3224d41c7d: nop
+[Verified Entry Point]
+  0x00007f3224d41c80: mov     %eax,0xfffffffffffec000(%rsp)
+  0x00007f3224d41c87: push    %rbp
+  0x00007f3224d41c88: sub     $0x30,%rsp
+  0x00007f3224d41c8c: movabs  $0x7f31e7381240,%rdi  ;   {metadata(method data for {method} {0x00007f3215ba9928} 'throwThrowableBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/through/SimpleThrowBenchmark')}
+  0x00007f3224d41c96: mov     0x104(%rdi),%ebx
+  0x00007f3224d41c9c: add     $0x8,%ebx
+  0x00007f3224d41c9f: mov     %ebx,0x104(%rdi)
+  0x00007f3224d41ca5: and     $0x1ff8,%ebx
+  0x00007f3224d41cab: cmp     $0x0,%ebx
+  0x00007f3224d41cae: je      0x7f3224d41d29    ;*aload_0 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::throwThrowableBenchmark@0 (line 48)
+
+  0x00007f3224d41cb4: mov     %rsi,%rdi
+  0x00007f3224d41cb7: movabs  $0x7f31e7381240,%rbx  ;   {metadata(method data for {method} {0x00007f3215ba9928} 'throwThrowableBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/through/SimpleThrowBenchmark')}
+  0x00007f3224d41cc1: addq    $0x1,0x140(%rbx)
+  0x00007f3224d41cc9: nopw    0x0(%rax,%rax)
+  0x00007f3224d41ccf: callq   0x7f3224d41d85    ; ImmutableOopMap{}
+                                                ;*invokevirtual throwRuntimeException {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::throwThrowableBenchmark@1 (line 48)
+                                                ;   {optimized virtual_call}
+  0x00007f3224d41cd4: movabs  $0x7f31e7381240,%rax  ;   {metadata(method data for {method} {0x00007f3215ba9928} 'throwThrowableBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/through/SimpleThrowBenchmark')}
+  0x00007f3224d41cde: incl    0x178(%rax)       ;*goto {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::throwThrowableBenchmark@4 (line 51)
+
+  0x00007f3224d41ce4: mov     $0x1,%eax
+  0x00007f3224d41ce9: add     $0x30,%rsp
+  0x00007f3224d41ced: pop     %rbp
+  0x00007f3224d41cee: mov     0x108(%r15),%r10
+  0x00007f3224d41cf5: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f3224d41cf8: retq                      ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::throwThrowableBenchmark@11 (line 52)
+
+  0x00007f3224d41cf9: mov     0x420(%r15),%rax
+  0x00007f3224d41d00: xor     %r10,%r10
+  0x00007f3224d41d03: mov     %r10,0x420(%r15)
+  0x00007f3224d41d0a: xor     %r10,%r10
+  0x00007f3224d41d0d: mov     %r10,0x428(%r15)
+  0x00007f3224d41d14: mov     $0x5,%eax
+  0x00007f3224d41d19: add     $0x30,%rsp
+  0x00007f3224d41d1d: pop     %rbp
+  0x00007f3224d41d1e: mov     0x108(%r15),%r10
+  0x00007f3224d41d25: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f3224d41d28: retq
+  0x00007f3224d41d29: movabs  $0x7f3215ba9928,%r10  ;   {metadata({method} {0x00007f3215ba9928} 'throwThrowableBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/through/SimpleThrowBenchmark')}
+  0x00007f3224d41d33: mov     %r10,0x8(%rsp)
+  0x00007f3224d41d38: movq    $0xffffffffffffffff,(%rsp)
+  0x00007f3224d41d40: callq   0x7f3224783180    ; ImmutableOopMap{rsi=Oop }
+                                                ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::throwThrowableBenchmark@-1 (line 48)
+                                                ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00007f3224d41d45: jmpq    0x7f3224d41cb4
+  0x00007f3224d41d4a: nop
+  0x00007f3224d41d4b: nop
+  0x00007f3224d41d4c: mov     0x420(%r15),%rax
+  0x00007f3224d41d53: movabs  $0x0,%r10
+  0x00007f3224d41d5d: mov     %r10,0x420(%r15)
+  0x00007f3224d41d64: movabs  $0x0,%r10
+  0x00007f3224d41d6e: mov     %r10,0x428(%r15)
+  0x00007f3224d41d75: add     $0x30,%rsp
+  0x00007f3224d41d79: pop     %rbp
+  0x00007f3224d41d7a: jmpq    0x7f32246f1500    ;   {runtime_call unwind_exception Runtime1 stub}
+  0x00007f3224d41d7f: hlt
+[Stub Code]
+  0x00007f3224d41d80: nopl    0x0(%rax,%rax)    ;   {no_reloc}
+  0x00007f3224d41d85: movabs  $0x7f3215ba9a08,%rbx  ;   {static_stub}
+  0x00007f3224d41d8f: jmpq    0x7f32246bbbdc    ;   {runtime_call I2C/C2I adapters}
+[Exception Handler]
+  0x00007f3224d41d94: callq   0x7f3224780680    ;   {runtime_call handle_exception_from_callee Runtime1 stub}
+  0x00007f3224d41d99: mov     %rsp,0xffffffffffffffd8(%rsp)
+  0x00007f3224d41d9e: sub     $0x80,%rsp
+  0x00007f3224d41da5: mov     %rax,0x78(%rsp)
+  0x00007f3224d41daa: mov     %rcx,0x70(%rsp)
+  0x00007f3224d41daf: mov     %rdx,0x68(%rsp)
+  0x00007f3224d41db4: mov     %rbx,0x60(%rsp)
+  0x00007f3224d41db9: mov     %rbp,0x50(%rsp)
+  0x00007f3224d41dbe: mov     %rsi,0x48(%rsp)
+  0x00007f3224d41dc3: mov     %rdi,0x40(%rsp)
+  0x00007f3224d41dc8: mov     %r8,0x38(%rsp)
+  0x00007f3224d41dcd: mov     %r9,0x30(%rsp)
+  0x00007f3224d41dd2: mov     %r10,0x28(%rsp)
+  0x00007f3224d41dd7: mov     %r11,0x20(%rsp)
+  0x00007f3224d41ddc: mov     %r12,0x18(%rsp)
+  0x00007f3224d41de1: mov     %r13,0x10(%rsp)
+  0x00007f3224d41de6: mov     %r14,0x8(%rsp)
+  0x00007f3224d41deb: mov     %r15,(%rsp)
+  0x00007f3224d41def: movabs  $0x7f324419b8b6,%rdi  ;   {external_word}
+  0x00007f3224d41df9: movabs  $0x7f3224d41d99,%rsi  ;   {internal_word}
+  0x00007f3224d41e03: mov     %rsp,%rdx
+  0x00007f3224d41e06: and     $0xfffffffffffffff0,%rsp
+  0x00007f3224d41e0a: callq   0x7f3243ddae10    ;   {runtime_call MacroAssembler::debug64(char*, long, long*)}
+  0x00007f3224d41e0f: hlt
+[Deopt Handler Code]
+  0x00007f3224d41e10: movabs  $0x7f3224d41e10,%r10  ;   {section_word}
+  0x00007f3224d41e1a: push    %r10
+  0x00007f3224d41e1c: jmpq    0x7f32246bc4a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007f3224d41e21: hlt
+  0x00007f3224d41e22: hlt
+  0x00007f3224d41e23: hlt
+  0x00007f3224d41e24: hlt
+  0x00007f3224d41e25: hlt
+  0x00007f3224d41e26: hlt
+  0x00007f3224d41e27: hlt
+
+ImmutableOopMap{}pc offsets: 116
+ImmutableOopMap{rsi=Oop }pc offsets: 229 Compiled method (c2)     528  644   !   4       dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::throwThrowableBenchmark (12 bytes)
+ total in heap  [0x00007f322c193810,0x00007f322c193ac0] = 688
+ relocation     [0x00007f322c193988,0x00007f322c1939a0] = 24
+ main code      [0x00007f322c1939a0,0x00007f322c193a00] = 96
+ stub code      [0x00007f322c193a00,0x00007f322c193a28] = 40
+ oops           [0x00007f322c193a28,0x00007f322c193a30] = 8
+ metadata       [0x00007f322c193a30,0x00007f322c193a38] = 8
+ scopes data    [0x00007f322c193a38,0x00007f322c193a50] = 24
+ scopes pcs     [0x00007f322c193a50,0x00007f322c193aa0] = 80
+ dependencies   [0x00007f322c193aa0,0x00007f322c193aa8] = 8
+ handler table  [0x00007f322c193aa8,0x00007f322c193ac0] = 24
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/through/SimpleThrowBenchmark.throwThrowableBenchmark()I  [0x00007f322c1939a0, 0x00007f322c193a28]  136 bytes
+Argument 0 is unknown.RIP: 0x7f322c1939a0 Code size: 0x00000088
+[Entry Point]
+[Constants]
+  # {method} {0x00007f3215ba9928} 'throwThrowableBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/through/SimpleThrowBenchmark'
+  #           [sp+0x20]  (sp of caller)
+  0x00007f322c1939a0: mov     0x8(%rsi),%r10d
+  0x00007f322c1939a4: movabs  $0x800000000,%r12
+  0x00007f322c1939ae: add     %r12,%r10
+  0x00007f322c1939b1: xor     %r12,%r12
+  0x00007f322c1939b4: cmp     %r10,%rax
+  0x00007f322c1939b7: jne     0x7f32246bac00    ;   {runtime_call ic_miss_stub}
+  0x00007f322c1939bd: nop
+[Verified Entry Point]
+  0x00007f322c1939c0: mov     %eax,0xfffffffffffec000(%rsp)
+  0x00007f322c1939c7: push    %rbp
+  0x00007f322c1939c8: sub     $0x10,%rsp        ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::throwThrowableBenchmark@-1 (line 48)
+
+  0x00007f322c1939cc: nop
+  0x00007f322c1939cf: callq   0x7f3224d420e0    ; ImmutableOopMap{}
+                                                ;*invokevirtual throwRuntimeException {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::throwThrowableBenchmark@1 (line 48)
+                                                ;   {optimized virtual_call}
+  0x00007f322c1939d4: mov     $0x1,%eax         ;*invokevirtual throwRuntimeException {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::throwThrowableBenchmark@1 (line 48)
+
+  0x00007f322c1939d9: add     $0x10,%rsp
+  0x00007f322c1939dd: pop     %rbp
+  0x00007f322c1939de: mov     0x108(%r15),%r10
+  0x00007f322c1939e5: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f322c1939e8: retq
+  0x00007f322c1939e9: mov     $0x5,%eax
+  0x00007f322c1939ee: jmp     0x7f322c1939d9
+  0x00007f322c1939f0: hlt
+  0x00007f322c1939f1: hlt
+  0x00007f322c1939f2: hlt
+  0x00007f322c1939f3: hlt
+  0x00007f322c1939f4: hlt
+  0x00007f322c1939f5: hlt
+  0x00007f322c1939f6: hlt
+  0x00007f322c1939f7: hlt
+  0x00007f322c1939f8: hlt
+  0x00007f322c1939f9: hlt
+  0x00007f322c1939fa: hlt
+  0x00007f322c1939fb: hlt
+  0x00007f322c1939fc: hlt
+  0x00007f322c1939fd: hlt
+  0x00007f322c1939fe: hlt
+  0x00007f322c1939ff: hlt
+[Stub Code]
+  0x00007f322c193a00: movabs  $0x0,%rbx         ;   {no_reloc}
+  0x00007f322c193a0a: jmpq    0x7f322c193a0a    ;   {runtime_call}
+[Exception Handler]
+  0x00007f322c193a0f: jmpq    0x7f322477e380    ;   {runtime_call ExceptionBlob}
+[Deopt Handler Code]
+  0x00007f322c193a14: callq   0x7f322c193a19
+  0x00007f322c193a19: subq    $0x5,(%rsp)
+  0x00007f322c193a1e: jmpq    0x7f32246bc4a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007f322c193a23: hlt
+  0x00007f322c193a24: hlt
+  0x00007f322c193a25: hlt
+  0x00007f322c193a26: hlt
+  0x00007f322c193a27: hlt
+
+ImmutableOopMap{}pc offsets: 52 149,382 ns/op
+# Warmup Iteration   2: 142,272 ns/op
+Iteration   1: 142,356 ns/op
+Iteration   2: 140,016 ns/op
+Iteration   3: 144,168 ns/op
+Iteration   4: 140,694 ns/op
+Iteration   5: 142,970 ns/op
+Iteration   6: 140,068 ns/op
+Iteration   7: 140,335 ns/op
+Iteration   8: 139,948 ns/op
+Iteration   9: 141,017 ns/op
+Iteration  10: 140,957 ns/op
+
+
+Result "dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark.throwThrowableBenchmark":
+  141,253 ±(99.9%) 2,173 ns/op [Average]
+  (min, avg, max) = (139,948, 141,253, 144,168), stdev = 1,438
+  CI (99.9%): [139,080, 143,427] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.5, OpenJDK 64-Bit Server VM, 11.0.5+10-LTS
+# VM invoker: /opt/zulu-11/zulu11.35.13-ca-jdk11.0.5-linux_x64/bin/java
+# VM options: -javaagent:/opt/idea-IC-182.4323.46/lib/idea_rt.jar=34213:/opt/idea-IC-182.4323.46/bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark.withoutthrowBenchmark
+
+# Run progress: 66,67% complete, ETA 00:00:13
+# Fork: 1 of 1
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: Compiled method (c1)     531  639   !   2       dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::withoutthrowBenchmark (12 bytes)
+ total in heap  [0x00007febdcd46e90,0x00007febdcd472a0] = 1040
+ relocation     [0x00007febdcd47008,0x00007febdcd47040] = 56
+ main code      [0x00007febdcd47040,0x00007febdcd47140] = 256
+ stub code      [0x00007febdcd47140,0x00007febdcd471e8] = 168
+ oops           [0x00007febdcd471e8,0x00007febdcd471f0] = 8
+ metadata       [0x00007febdcd471f0,0x00007febdcd471f8] = 8
+ scopes data    [0x00007febdcd471f8,0x00007febdcd47220] = 40
+ scopes pcs     [0x00007febdcd47220,0x00007febdcd47280] = 96
+ dependencies   [0x00007febdcd47280,0x00007febdcd47288] = 8
+ handler table  [0x00007febdcd47288,0x00007febdcd472a0] = 24
+Loaded disassembler from hsdis-amd64.so
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/through/SimpleThrowBenchmark.withoutthrowBenchmark()I  [0x00007febdcd47040, 0x00007febdcd471e8]  424 bytes
+Argument 0 is unknown.RIP: 0x7febdcd47040 Code size: 0x000001a8
+[Disassembling for mach='amd64']
+[Entry Point]
+[Constants]
+  # {method} {0x00007febc9fe9af8} 'withoutthrowBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/through/SimpleThrowBenchmark'
+  #           [sp+0x40]  (sp of caller)
+  0x00007febdcd47040: mov     0x8(%rsi),%r10d
+  0x00007febdcd47044: movabs  $0x800000000,%r12
+  0x00007febdcd4704e: add     %r12,%r10
+  0x00007febdcd47051: xor     %r12,%r12
+  0x00007febdcd47054: cmp     %rax,%r10
+  0x00007febdcd47057: jne     0x7febdc6bac00    ;   {runtime_call ic_miss_stub}
+  0x00007febdcd4705d: nop
+[Verified Entry Point]
+  0x00007febdcd47060: mov     %eax,0xfffffffffffec000(%rsp)
+  0x00007febdcd47067: push    %rbp
+  0x00007febdcd47068: sub     $0x30,%rsp
+  0x00007febdcd4706c: movabs  $0x7feb8fba1150,%rdi
+  0x00007febdcd47076: mov     0x18(%rdi),%ebx
+  0x00007febdcd47079: add     $0x8,%ebx
+  0x00007febdcd4707c: mov     %ebx,0x18(%rdi)
+  0x00007febdcd4707f: and     $0x3ff8,%ebx
+  0x00007febdcd47085: cmp     $0x0,%ebx
+  0x00007febdcd47088: je      0x7febdcd470d9    ;*aload_0 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::withoutthrowBenchmark@0 (line 64)
+
+  0x00007febdcd4708e: nop
+  0x00007febdcd4708f: callq   0x7febe41942c0    ; ImmutableOopMap{}
+                                                ;*invokevirtual dontThrowRuntimeException {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::withoutthrowBenchmark@1 (line 64)
+                                                ;   {optimized virtual_call}
+  0x00007febdcd47094: mov     $0x1,%eax
+  0x00007febdcd47099: add     $0x30,%rsp
+  0x00007febdcd4709d: pop     %rbp
+  0x00007febdcd4709e: mov     0x108(%r15),%r10
+  0x00007febdcd470a5: test    %eax,(%r10)       ;   {poll_return}
+  0x00007febdcd470a8: retq                      ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::withoutthrowBenchmark@11 (line 68)
+
+  0x00007febdcd470a9: mov     0x420(%r15),%rax
+  0x00007febdcd470b0: xor     %r10,%r10
+  0x00007febdcd470b3: mov     %r10,0x420(%r15)
+  0x00007febdcd470ba: xor     %r10,%r10
+  0x00007febdcd470bd: mov     %r10,0x428(%r15)
+  0x00007febdcd470c4: mov     $0x5,%eax
+  0x00007febdcd470c9: add     $0x30,%rsp
+  0x00007febdcd470cd: pop     %rbp
+  0x00007febdcd470ce: mov     0x108(%r15),%r10
+  0x00007febdcd470d5: test    %eax,(%r10)       ;   {poll_return}
+  0x00007febdcd470d8: retq
+  0x00007febdcd470d9: movabs  $0x7febc9fe9af8,%r10  ;   {metadata({method} {0x00007febc9fe9af8} 'withoutthrowBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/through/SimpleThrowBenchmark')}
+  0x00007febdcd470e3: mov     %r10,0x8(%rsp)
+  0x00007febdcd470e8: movq    $0xffffffffffffffff,(%rsp)
+  0x00007febdcd470f0: callq   0x7febdc783380    ; ImmutableOopMap{rsi=Oop }
+                                                ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::withoutthrowBenchmark@-1 (line 64)
+                                                ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00007febdcd470f5: jmp     0x7febdcd4708e
+  0x00007febdcd470f7: nop
+  0x00007febdcd470f8: nop
+  0x00007febdcd470f9: mov     0x420(%r15),%rax
+  0x00007febdcd47100: movabs  $0x0,%r10
+  0x00007febdcd4710a: mov     %r10,0x420(%r15)
+  0x00007febdcd47111: movabs  $0x0,%r10
+  0x00007febdcd4711b: mov     %r10,0x428(%r15)
+  0x00007febdcd47122: add     $0x30,%rsp
+  0x00007febdcd47126: pop     %rbp
+  0x00007febdcd47127: jmpq    0x7febdc6f1500    ;   {runtime_call unwind_exception Runtime1 stub}
+  0x00007febdcd4712c: hlt
+  0x00007febdcd4712d: hlt
+  0x00007febdcd4712e: hlt
+  0x00007febdcd4712f: hlt
+  0x00007febdcd47130: hlt
+  0x00007febdcd47131: hlt
+  0x00007febdcd47132: hlt
+  0x00007febdcd47133: hlt
+  0x00007febdcd47134: hlt
+  0x00007febdcd47135: hlt
+  0x00007febdcd47136: hlt
+  0x00007febdcd47137: hlt
+  0x00007febdcd47138: hlt
+  0x00007febdcd47139: hlt
+  0x00007febdcd4713a: hlt
+  0x00007febdcd4713b: hlt
+  0x00007febdcd4713c: hlt
+  0x00007febdcd4713d: hlt
+  0x00007febdcd4713e: hlt
+  0x00007febdcd4713f: hlt
+[Stub Code]
+  0x00007febdcd47140: nopl    0x0(%rax,%rax)    ;   {no_reloc}
+  0x00007febdcd47145: movabs  $0x0,%rbx         ;   {static_stub}
+  0x00007febdcd4714f: jmpq    0x7febdcd4714f    ;   {runtime_call}
+[Exception Handler]
+  0x00007febdcd47154: callq   0x7febdc780680    ;   {runtime_call handle_exception_from_callee Runtime1 stub}
+  0x00007febdcd47159: mov     %rsp,0xffffffffffffffd8(%rsp)
+  0x00007febdcd4715e: sub     $0x80,%rsp
+  0x00007febdcd47165: mov     %rax,0x78(%rsp)
+  0x00007febdcd4716a: mov     %rcx,0x70(%rsp)
+  0x00007febdcd4716f: mov     %rdx,0x68(%rsp)
+  0x00007febdcd47174: mov     %rbx,0x60(%rsp)
+  0x00007febdcd47179: mov     %rbp,0x50(%rsp)
+  0x00007febdcd4717e: mov     %rsi,0x48(%rsp)
+  0x00007febdcd47183: mov     %rdi,0x40(%rsp)
+  0x00007febdcd47188: mov     %r8,0x38(%rsp)
+  0x00007febdcd4718d: mov     %r9,0x30(%rsp)
+  0x00007febdcd47192: mov     %r10,0x28(%rsp)
+  0x00007febdcd47197: mov     %r11,0x20(%rsp)
+  0x00007febdcd4719c: mov     %r12,0x18(%rsp)
+  0x00007febdcd471a1: mov     %r13,0x10(%rsp)
+  0x00007febdcd471a6: mov     %r14,0x8(%rsp)
+  0x00007febdcd471ab: mov     %r15,(%rsp)
+  0x00007febdcd471af: movabs  $0x7febfcb9e8b6,%rdi  ;   {external_word}
+  0x00007febdcd471b9: movabs  $0x7febdcd47159,%rsi  ;   {internal_word}
+  0x00007febdcd471c3: mov     %rsp,%rdx
+  0x00007febdcd471c6: and     $0xfffffffffffffff0,%rsp
+  0x00007febdcd471ca: callq   0x7febfc7dde10    ;   {runtime_call MacroAssembler::debug64(char*, long, long*)}
+  0x00007febdcd471cf: hlt
+[Deopt Handler Code]
+  0x00007febdcd471d0: movabs  $0x7febdcd471d0,%r10  ;   {section_word}
+  0x00007febdcd471da: push    %r10
+  0x00007febdcd471dc: jmpq    0x7febdc6bc4a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007febdcd471e1: hlt
+  0x00007febdcd471e2: hlt
+  0x00007febdcd471e3: hlt
+  0x00007febdcd471e4: hlt
+  0x00007febdcd471e5: hlt
+  0x00007febdcd471e6: hlt
+  0x00007febdcd471e7: hlt
+
+ImmutableOopMap{}pc offsets: 84
+ImmutableOopMap{rsi=Oop }pc offsets: 181 Compiled method (c2)     548  644   !   4       dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::withoutthrowBenchmark (12 bytes)
+ total in heap  [0x00007febe4194390,0x00007febe41946a0] = 784
+ relocation     [0x00007febe4194508,0x00007febe4194528] = 32
+ main code      [0x00007febe4194540,0x00007febe41945e0] = 160
+ stub code      [0x00007febe41945e0,0x00007febe4194608] = 40
+ oops           [0x00007febe4194608,0x00007febe4194610] = 8
+ metadata       [0x00007febe4194610,0x00007febe4194618] = 8
+ scopes data    [0x00007febe4194618,0x00007febe4194630] = 24
+ scopes pcs     [0x00007febe4194630,0x00007febe4194680] = 80
+ dependencies   [0x00007febe4194680,0x00007febe4194688] = 8
+ handler table  [0x00007febe4194688,0x00007febe41946a0] = 24
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/through/SimpleThrowBenchmark.withoutthrowBenchmark()I  [0x00007febe4194540, 0x00007febe4194608]  200 bytes
+Argument 0 is unknown.RIP: 0x7febe4194540 Code size: 0x000000c8
+[Entry Point]
+[Constants]
+  # {method} {0x00007febc9fe9af8} 'withoutthrowBenchmark' '()I' in 'dev/jgardo/jvm/miscellaneous/through/SimpleThrowBenchmark'
+  #           [sp+0x20]  (sp of caller)
+  0x00007febe4194540: mov     0x8(%rsi),%r10d
+  0x00007febe4194544: movabs  $0x800000000,%r12
+  0x00007febe419454e: add     %r12,%r10
+  0x00007febe4194551: xor     %r12,%r12
+  0x00007febe4194554: cmp     %r10,%rax
+  0x00007febe4194557: jne     0x7febdc6bac00    ;   {runtime_call ic_miss_stub}
+  0x00007febe419455d: nop
+[Verified Entry Point]
+  0x00007febe4194560: mov     %eax,0xfffffffffffec000(%rsp)
+  0x00007febe4194567: push    %rbp
+  0x00007febe4194568: sub     $0x10,%rsp        ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::withoutthrowBenchmark@-1 (line 64)
+
+  0x00007febe419456c: nop
+  0x00007febe419456f: callq   0x7febe41942c0    ; ImmutableOopMap{}
+                                                ;*invokevirtual dontThrowRuntimeException {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::withoutthrowBenchmark@1 (line 64)
+                                                ;   {optimized virtual_call}
+  0x00007febe4194574: mov     $0x1,%eax
+  0x00007febe4194579: add     $0x10,%rsp
+  0x00007febe419457d: pop     %rbp
+  0x00007febe419457e: mov     0x108(%r15),%r10
+  0x00007febe4194585: test    %eax,(%r10)       ;   {poll_return}
+  0x00007febe4194588: retq
+  0x00007febe4194589: mov     0x8(%rax),%r10d
+  0x00007febe419458d: movabs  $0x800000000,%r12
+  0x00007febe4194597: add     %r12,%r10
+  0x00007febe419459a: xor     %r12,%r12
+  0x00007febe419459d: mov     0x48(%r10),%r10
+  0x00007febe41945a1: movabs  $0x8000034f0,%r11  ;   {metadata('java/lang/RuntimeException')}
+  0x00007febe41945ab: cmp     %r11,%r10
+  0x00007febe41945ae: jne     0x7febe41945b7    ;*invokevirtual dontThrowRuntimeException {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark::withoutthrowBenchmark@1 (line 64)
+
+  0x00007febe41945b0: mov     $0x5,%eax
+  0x00007febe41945b5: jmp     0x7febe4194579
+  0x00007febe41945b7: mov     %rax,%rsi
+  0x00007febe41945ba: add     $0x10,%rsp
+  0x00007febe41945be: pop     %rbp
+  0x00007febe41945bf: jmpq    0x7febdc788e80    ;   {runtime_call _rethrow_Java}
+  0x00007febe41945c4: hlt
+  0x00007febe41945c5: hlt
+  0x00007febe41945c6: hlt
+  0x00007febe41945c7: hlt
+  0x00007febe41945c8: hlt
+  0x00007febe41945c9: hlt
+  0x00007febe41945ca: hlt
+  0x00007febe41945cb: hlt
+  0x00007febe41945cc: hlt
+  0x00007febe41945cd: hlt
+  0x00007febe41945ce: hlt
+  0x00007febe41945cf: hlt
+  0x00007febe41945d0: hlt
+  0x00007febe41945d1: hlt
+  0x00007febe41945d2: hlt
+  0x00007febe41945d3: hlt
+  0x00007febe41945d4: hlt
+  0x00007febe41945d5: hlt
+  0x00007febe41945d6: hlt
+  0x00007febe41945d7: hlt
+  0x00007febe41945d8: hlt
+  0x00007febe41945d9: hlt
+  0x00007febe41945da: hlt
+  0x00007febe41945db: hlt
+  0x00007febe41945dc: hlt
+  0x00007febe41945dd: hlt
+  0x00007febe41945de: hlt
+  0x00007febe41945df: hlt
+[Stub Code]
+  0x00007febe41945e0: movabs  $0x0,%rbx         ;   {no_reloc}
+  0x00007febe41945ea: jmpq    0x7febe41945ea    ;   {runtime_call}
+[Exception Handler]
+  0x00007febe41945ef: jmpq    0x7febdc77e380    ;   {runtime_call ExceptionBlob}
+[Deopt Handler Code]
+  0x00007febe41945f4: callq   0x7febe41945f9
+  0x00007febe41945f9: subq    $0x5,(%rsp)
+  0x00007febe41945fe: jmpq    0x7febdc6bc4a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007febe4194603: hlt
+  0x00007febe4194604: hlt
+  0x00007febe4194605: hlt
+  0x00007febe4194606: hlt
+  0x00007febe4194607: hlt
+
+ImmutableOopMap{}pc offsets: 52 6,686 ns/op
+# Warmup Iteration   2: 6,364 ns/op
+Iteration   1: 5,291 ns/op
+Iteration   2: 5,328 ns/op
+Iteration   3: 5,443 ns/op
+Iteration   4: 5,370 ns/op
+Iteration   5: 5,297 ns/op
+Iteration   6: 5,317 ns/op
+Iteration   7: 5,260 ns/op
+Iteration   8: 5,300 ns/op
+Iteration   9: 5,291 ns/op
+Iteration  10: 5,282 ns/op
+
+
+Result "dev.jgardo.jvm.miscellaneous.through.SimpleThrowBenchmark.withoutthrowBenchmark":
+  5,318 ±(99.9%) 0,080 ns/op [Average]
+  (min, avg, max) = (5,260, 5,318, 5,443), stdev = 0,053
+  CI (99.9%): [5,238, 5,398] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:00:39
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                     Mode  Cnt    Score   Error  Units
+SimpleThrowBenchmark.throwBenchmark           avgt   10  142,406 ± 0,564  ns/op
+SimpleThrowBenchmark.throwThrowableBenchmark  avgt   10  141,253 ± 2,173  ns/op
+SimpleThrowBenchmark.withoutthrowBenchmark    avgt   10    5,318 ± 0,080  ns/op
+
+Process finished with exit code 0

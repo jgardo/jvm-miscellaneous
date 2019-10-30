@@ -13,32 +13,23 @@ import java.util.function.Supplier;
 @RestController
 public class ThrowExceptionSpringApplication {
 
-    public static final String SORRY_NOT_VALID = "Sorry, not valid";
+    private static final String SORRY_NOT_VALID = "Sorry, not valid";
 
-    @GetMapping("/response/with")
-    public void throwException() {
-        throw new ValidationException(SORRY_NOT_VALID);
-    }
-
-    @GetMapping("/response/deep/with")
+    @GetMapping("/response/deep/exception")
     public String throwDeepException() {
         Supplier<String> supplier = () -> {
-            if (true) {
-                throw new ValidationException(SORRY_NOT_VALID);
-            }
-            return "";
+            throw new ValidationException(SORRY_NOT_VALID);
         };
         return deep(100, supplier);
     }
 
-    @GetMapping("/response/notdeep/with")
-    public String throwNotDeepException() {
-        Supplier<String> supplier = () -> SORRY_NOT_VALID;
-        deep(100, supplier);
+    @GetMapping("/response/shallow/exception")
+    public String throwShallowException() {
+        deep(100, () -> SORRY_NOT_VALID);
         throw new ValidationException(SORRY_NOT_VALID);
     }
 
-    @GetMapping("/response/deep/without")
+    @GetMapping("/response/no-exception")
     public ResponseEntity<String> dontThrowDeepException() {
         return ResponseEntity.badRequest()
                 .body(deep(100, () -> SORRY_NOT_VALID));
@@ -49,12 +40,6 @@ public class ThrowExceptionSpringApplication {
             return deep(i-1, producer);
         }
         return producer.get();
-    }
-
-    @GetMapping("/response/without")
-    public ResponseEntity<String> dontThrowException() {
-        return ResponseEntity.badRequest()
-                .body(SORRY_NOT_VALID);
     }
 
     @ResponseStatus(code = HttpStatus.BAD_REQUEST)
