@@ -21,6 +21,7 @@ public class ReflectionBenchmark {
     private static long l1 = 2L;
     private static Object o1 = new Object();
     private static String s1 = "string";
+    private static Object[] valuesToSet = new Object[] {i1, l1, o1, s1};
 
     private static Method[] methods = new Method[4];
     private static CallSite[] callSites = new CallSite[4];
@@ -60,8 +61,9 @@ public class ReflectionBenchmark {
 
     private static void prepareBiConsumerOnlyMethodHandles() {
         try {
-            biConsumerSetters[0] = getBiConsumerObjectSetter(lookup.unreflect(methods[0]));
-            biConsumerSetters[1] = getBiConsumerObjectSetter(lookup.unreflect(methods[1]));
+            // see https://dzone.com/articles/setters-method-handles-and-java-11
+            biConsumerSetters[0] = (a, b) -> ((ObjIntConsumer) setters[0]).accept(a, (int) b);
+            biConsumerSetters[1] = (a, b) -> ((ObjLongConsumer) setters[1]).accept(a, (long) b);
             biConsumerSetters[2] = getBiConsumerObjectSetter(lookup.unreflect(methods[2]));
             biConsumerSetters[3] = getBiConsumerObjectSetter(lookup.unreflect(methods[3]));
         } catch (Throwable e) {
@@ -171,7 +173,7 @@ public class ReflectionBenchmark {
         }
     }
 
-//    @Benchmark
+    @Benchmark
     @CompilerControl(CompilerControl.Mode.PRINT)
     public Pojo directSetters(PojoHolder pojoHolder) {
         Pojo pojo = pojoHolder.pojo;
@@ -182,7 +184,7 @@ public class ReflectionBenchmark {
         return pojo;
     }
 
-//    @Benchmark
+    @Benchmark
     @CompilerControl(CompilerControl.Mode.PRINT)
     public Pojo reflectionSetters(PojoHolder pojoHolder) throws InvocationTargetException, IllegalAccessException {
         Pojo pojo = pojoHolder.pojo;
@@ -193,7 +195,7 @@ public class ReflectionBenchmark {
         return pojo;
     }
 
-//    @Benchmark
+    @Benchmark
     @CompilerControl(CompilerControl.Mode.PRINT)
     public Pojo setter(PojoHolder pojoHolder) throws Throwable {
         Pojo pojo = pojoHolder.pojo;
@@ -208,24 +210,30 @@ public class ReflectionBenchmark {
     @CompilerControl(CompilerControl.Mode.PRINT)
     public Pojo biConsumerOnly(PojoHolder pojoHolder) throws Throwable {
         Pojo pojo = pojoHolder.pojo;
-        ((ObjIntConsumer)setters[0]).accept(pojo, i1);
-        ((ObjLongConsumer)setters[1]).accept(pojo, l1);
-        ((BiConsumer)setters[2]).accept(pojo, o1);
-        ((BiConsumer)setters[3]).accept(pojo, s1);
+        biConsumerSetters[0].accept(pojo, i1);
+        biConsumerSetters[1].accept(pojo, l1);
+        biConsumerSetters[2].accept(pojo, o1);
+        biConsumerSetters[3].accept(pojo, s1);
         return pojo;
     }
 
-//    @Benchmark
-//    @CompilerControl(CompilerControl.Mode.PRINT)
-//    public Pojo setter(PojoHolder pojoHolder) throws Throwable {
-//        Pojo pojo = pojoHolder.pojo;
-//        ((ObjIntConsumer)setters[0]).accept(pojo, i1);
-//        ((ObjLongConsumer)setters[1]).accept(pojo, 1);
-//        ((BiConsumer)setters[2]).accept(pojo, o1);
-//        ((BiConsumer)setters[3]).accept(pojo, s1);
-//        return pojo;
-//    }
+    @Benchmark
+    @CompilerControl(CompilerControl.Mode.PRINT)
+    public Pojo biConsumerOnlyInLoop(PojoHolder pojoHolder) throws Throwable {
+        Pojo pojo = pojoHolder.pojo;
+        for (int i = 0; i < 4; i++) {
+            biConsumerSetters[i].accept(pojo, valuesToSet[i]);
+        }
+        return pojo;
+    }
 
-
-
+    @Benchmark
+    @CompilerControl(CompilerControl.Mode.PRINT)
+    public Pojo reflectionSettersInLoop(PojoHolder pojoHolder) throws InvocationTargetException, IllegalAccessException {
+        Pojo pojo = pojoHolder.pojo;
+        for (int i = 0; i < 4; i++) {
+            methods[i].invoke(pojo, valuesToSet[i]);
+        }
+        return pojo;
+    }
 }
