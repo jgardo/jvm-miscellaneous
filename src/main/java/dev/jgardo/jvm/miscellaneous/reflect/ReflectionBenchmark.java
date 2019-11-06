@@ -27,6 +27,8 @@ public class ReflectionBenchmark {
     private static CallSite[] callSites = new CallSite[4];
     private static Object[] setters = new Object[4];
     private static BiConsumer[] biConsumerSetters = new BiConsumer[4];
+    private static BiConsumer[] biConsumerSettersInnerClasses = new BiConsumer[4];
+    private static AbstractSetter[] abstractSetters = new AbstractSetter[4];
     private static MethodHandles[] methodsHandles = new MethodHandles[4];
     private static MethodHandles.Lookup lookup = MethodHandles.lookup();
 
@@ -35,6 +37,8 @@ public class ReflectionBenchmark {
         prepareMethods();
         prepareMethodHandles();
         prepareBiConsumerOnlyMethodHandles();
+        prepareBiConsumerWithAbstractSetters();
+        prepareAbstractSetters();
     }
 
     private static void prepareMethods() {
@@ -66,6 +70,28 @@ public class ReflectionBenchmark {
             biConsumerSetters[1] = (a, b) -> ((ObjLongConsumer) setters[1]).accept(a, (long) b);
             biConsumerSetters[2] = getBiConsumerObjectSetter(lookup.unreflect(methods[2]));
             biConsumerSetters[3] = getBiConsumerObjectSetter(lookup.unreflect(methods[3]));
+        } catch (Throwable e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private static void prepareBiConsumerWithAbstractSetters() {
+        try {
+            biConsumerSettersInnerClasses[0] = new SetterI1();
+            biConsumerSettersInnerClasses[1] = new SetterL1();
+            biConsumerSettersInnerClasses[2] = new SetterO1();
+            biConsumerSettersInnerClasses[3] = new SetterS1();
+        } catch (Throwable e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private static void prepareAbstractSetters() {
+        try {
+            abstractSetters[0] = new SetterI1();
+            abstractSetters[1] = new SetterL1();
+            abstractSetters[2] = new SetterO1();
+            abstractSetters[3] = new SetterS1();
         } catch (Throwable e) {
             throw new RuntimeException(e);
         }
@@ -157,7 +183,7 @@ public class ReflectionBenchmark {
                 .measurementTime(TimeValue.seconds(1))
                 .threads(1)
                 .mode(Mode.Throughput)
-                .addProfiler(LinuxPerfNormProfiler.class)
+//                .addProfiler(LinuxPerfNormProfiler.class)
                 .build();
 
         new Runner(opt).run();
@@ -229,11 +255,63 @@ public class ReflectionBenchmark {
 
     @Benchmark
     @CompilerControl(CompilerControl.Mode.PRINT)
+    public Pojo innerClassBiConsumerOnlyInLoop(PojoHolder pojoHolder) throws Throwable {
+        Pojo pojo = pojoHolder.pojo;
+        for (int i = 0; i < 4; i++) {
+            biConsumerSettersInnerClasses[i].accept(pojo, valuesToSet[i]);
+        }
+        return pojo;
+    }
+
+    @Benchmark
+    @CompilerControl(CompilerControl.Mode.PRINT)
+    public Pojo abstractClassesInLoop(PojoHolder pojoHolder) throws Throwable {
+        Pojo pojo = pojoHolder.pojo;
+        for (int i = 0; i < 4; i++) {
+            abstractSetters[i].accept(pojo, valuesToSet[i]);
+        }
+        return pojo;
+    }
+
+    @Benchmark
+    @CompilerControl(CompilerControl.Mode.PRINT)
     public Pojo reflectionSettersInLoop(PojoHolder pojoHolder) throws InvocationTargetException, IllegalAccessException {
         Pojo pojo = pojoHolder.pojo;
         for (int i = 0; i < 4; i++) {
             methods[i].invoke(pojo, valuesToSet[i]);
         }
         return pojo;
+    }
+
+    public static abstract class AbstractSetter implements BiConsumer {
+
+    }
+
+    public static class SetterI1 extends AbstractSetter {
+        @Override
+        public void accept(Object o, Object o2) {
+            ((Pojo) o).setI1((Integer) o2);
+        }
+    }
+
+    public static class SetterL1 extends AbstractSetter {
+        @Override
+        public void accept(Object o, Object o2) {
+            ((Pojo) o).setL1((Long) o2);
+        }
+    }
+
+    public static class SetterO1 extends AbstractSetter {
+        @Override
+        public void accept(Object o, Object o2) {
+            ((Pojo) o).setO1(o2);
+        }
+    }
+
+    public static class SetterS1 extends AbstractSetter {
+        @Override
+        public void accept(Object o, Object o2) {
+            ((Pojo) o).setS1((String) o2);
+        }
     }
 }
