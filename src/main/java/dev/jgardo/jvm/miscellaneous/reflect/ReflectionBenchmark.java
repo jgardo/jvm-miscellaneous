@@ -11,6 +11,7 @@ import org.openjdk.jmh.runner.options.TimeValue;
 import java.lang.invoke.*;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.concurrent.TimeUnit;
 import java.util.function.BiConsumer;
 import java.util.function.ObjIntConsumer;
 import java.util.function.ObjLongConsumer;
@@ -24,12 +25,14 @@ public class ReflectionBenchmark {
     private static Object[] valuesToSet = new Object[] {i1, l1, o1, s1};
 
     private static Method[] methods = new Method[4];
-    private static CallSite[] callSites = new CallSite[4];
+    private static Method setter1;
+    private static Method setter2;
+    private static Method setter3;
+    private static Method setter4;
     private static Object[] setters = new Object[4];
     private static BiConsumer[] biConsumerSetters = new BiConsumer[4];
     private static BiConsumer[] biConsumerSettersInnerClasses = new BiConsumer[4];
     private static AbstractSetter[] abstractSetters = new AbstractSetter[4];
-    private static MethodHandles[] methodsHandles = new MethodHandles[4];
     private static MethodHandles.Lookup lookup = MethodHandles.lookup();
 
 
@@ -47,6 +50,10 @@ public class ReflectionBenchmark {
             methods[1] = Pojo.class.getMethod("setL1", long.class);
             methods[2] = Pojo.class.getMethod("setO1", Object.class);
             methods[3] = Pojo.class.getMethod("setS1", String.class);
+            setter1 = methods[0];
+            setter2 = methods[1];
+            setter3 = methods[2];
+            setter4 = methods[3];
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
@@ -182,7 +189,8 @@ public class ReflectionBenchmark {
                 .measurementIterations(10)
                 .measurementTime(TimeValue.seconds(1))
                 .threads(1)
-                .mode(Mode.Throughput)
+                .mode(Mode.AverageTime)
+                .timeUnit(TimeUnit.NANOSECONDS)
 //                .addProfiler(LinuxPerfNormProfiler.class)
                 .build();
 
@@ -193,7 +201,7 @@ public class ReflectionBenchmark {
     public static class PojoHolder {
         Pojo pojo;
 
-        @Setup(Level.Invocation)
+        @Setup(Level.Trial)
         public void prepare(){
             pojo = new Pojo();
         }
@@ -214,16 +222,16 @@ public class ReflectionBenchmark {
     @CompilerControl(CompilerControl.Mode.PRINT)
     public Pojo reflectionSetters(PojoHolder pojoHolder) throws InvocationTargetException, IllegalAccessException {
         Pojo pojo = pojoHolder.pojo;
-        methods[0].invoke(pojo, i1);
-        methods[1].invoke(pojo, l1);
-        methods[2].invoke(pojo, o1);
-        methods[3].invoke(pojo, s1);
+        setter1.invoke(pojo, i1);
+        setter2.invoke(pojo, l1);
+        setter3.invoke(pojo, o1);
+        setter4.invoke(pojo, s1);
         return pojo;
     }
 
     @Benchmark
     @CompilerControl(CompilerControl.Mode.PRINT)
-    public Pojo setter(PojoHolder pojoHolder) throws Throwable {
+    public Pojo generatedSetter(PojoHolder pojoHolder) throws Throwable {
         Pojo pojo = pojoHolder.pojo;
         ((ObjIntConsumer)setters[0]).accept(pojo, i1);
         ((ObjLongConsumer)setters[1]).accept(pojo, l1);
@@ -245,7 +253,7 @@ public class ReflectionBenchmark {
 
     @Benchmark
     @CompilerControl(CompilerControl.Mode.PRINT)
-    public Pojo biConsumerOnlyInLoop(PojoHolder pojoHolder) throws Throwable {
+    public Pojo inLoopBiConsumerOnly(PojoHolder pojoHolder) throws Throwable {
         Pojo pojo = pojoHolder.pojo;
         for (int i = 0; i < 4; i++) {
             biConsumerSetters[i].accept(pojo, valuesToSet[i]);
@@ -255,7 +263,18 @@ public class ReflectionBenchmark {
 
     @Benchmark
     @CompilerControl(CompilerControl.Mode.PRINT)
-    public Pojo innerClassBiConsumerOnlyInLoop(PojoHolder pojoHolder) throws Throwable {
+    public Pojo innerClassBiConsumerOnly(PojoHolder pojoHolder) throws Throwable {
+        Pojo pojo = pojoHolder.pojo;
+        biConsumerSettersInnerClasses[0].accept(pojo, valuesToSet[0]);
+        biConsumerSettersInnerClasses[1].accept(pojo, valuesToSet[1]);
+        biConsumerSettersInnerClasses[2].accept(pojo, valuesToSet[2]);
+        biConsumerSettersInnerClasses[3].accept(pojo, valuesToSet[3]);
+        return pojo;
+    }
+
+    @Benchmark
+    @CompilerControl(CompilerControl.Mode.PRINT)
+    public Pojo inLoopInnerClassBiConsumerOnly(PojoHolder pojoHolder) throws Throwable {
         Pojo pojo = pojoHolder.pojo;
         for (int i = 0; i < 4; i++) {
             biConsumerSettersInnerClasses[i].accept(pojo, valuesToSet[i]);
@@ -265,7 +284,19 @@ public class ReflectionBenchmark {
 
     @Benchmark
     @CompilerControl(CompilerControl.Mode.PRINT)
-    public Pojo abstractClassesInLoop(PojoHolder pojoHolder) throws Throwable {
+    public Pojo abstractClasses(PojoHolder pojoHolder) throws Throwable {
+        Pojo pojo = pojoHolder.pojo;
+        abstractSetters[0].accept(pojo, valuesToSet[0]);
+        abstractSetters[1].accept(pojo, valuesToSet[1]);
+        abstractSetters[2].accept(pojo, valuesToSet[2]);
+        abstractSetters[3].accept(pojo, valuesToSet[3]);
+        return pojo;
+    }
+
+
+    @Benchmark
+    @CompilerControl(CompilerControl.Mode.PRINT)
+    public Pojo inLoopAbstractClasses(PojoHolder pojoHolder) throws Throwable {
         Pojo pojo = pojoHolder.pojo;
         for (int i = 0; i < 4; i++) {
             abstractSetters[i].accept(pojo, valuesToSet[i]);
@@ -275,7 +306,7 @@ public class ReflectionBenchmark {
 
     @Benchmark
     @CompilerControl(CompilerControl.Mode.PRINT)
-    public Pojo reflectionSettersInLoop(PojoHolder pojoHolder) throws InvocationTargetException, IllegalAccessException {
+    public Pojo inLoopReflectionSetters(PojoHolder pojoHolder) throws InvocationTargetException, IllegalAccessException {
         Pojo pojo = pojoHolder.pojo;
         for (int i = 0; i < 4; i++) {
             methods[i].invoke(pojo, valuesToSet[i]);

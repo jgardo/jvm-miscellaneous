@@ -1,0 +1,626 @@
+Compiled method (c1)     494  666       3       dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses (34 bytes)
+ total in heap  [0x00007f58fd00fa10,0x00007f58fd0101d8] = 1992
+ relocation     [0x00007f58fd00fb88,0x00007f58fd00fbe0] = 88
+ main code      [0x00007f58fd00fbe0,0x00007f58fd00fec0] = 736
+ stub code      [0x00007f58fd00fec0,0x00007f58fd00ff68] = 168
+ oops           [0x00007f58fd00ff68,0x00007f58fd00ff70] = 8
+ metadata       [0x00007f58fd00ff70,0x00007f58fd00ff78] = 8
+ scopes data    [0x00007f58fd00ff78,0x00007f58fd010008] = 144
+ scopes pcs     [0x00007f58fd010008,0x00007f58fd010198] = 400
+ dependencies   [0x00007f58fd010198,0x00007f58fd0101a0] = 8
+ nul chk table  [0x00007f58fd0101a0,0x00007f58fd0101d8] = 56
+Loaded disassembler from hsdis-amd64.so
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark.inLoopAbstractClasses(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;  [0x00007f58fd00fbe0, 0x00007f58fd00ff68]  904 bytes
+Argument 0 is unknown.RIP: 0x7f58fd00fbe0 Code size: 0x00000388
+[Disassembling for mach='amd64']
+[Entry Point]
+[Constants]
+  # {method} {0x00007f58ecca0d50} 'inLoopAbstractClasses' '(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;' in 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark'
+  # this:     rsi:rsi   = 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark'
+  # parm0:    rdx:rdx   = 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder'
+  #           [sp+0x50]  (sp of caller)
+  0x00007f58fd00fbe0: mov     0x8(%rsi),%r10d
+  0x00007f58fd00fbe4: shl     $0x3,%r10
+  0x00007f58fd00fbe8: movabs  $0x800000000,%r12
+  0x00007f58fd00fbf2: add     %r12,%r10
+  0x00007f58fd00fbf5: xor     %r12,%r12
+  0x00007f58fd00fbf8: cmp     %rax,%r10
+  0x00007f58fd00fbfb: jne     0x7f58fc97cd00    ;   {runtime_call ic_miss_stub}
+  0x00007f58fd00fc01: nopw    0x0(%rax,%rax)
+  0x00007f58fd00fc0c: nop
+  0x00007f58fd00fc10: nopw    0x0(%rax,%rax)
+  0x00007f58fd00fc1b: nop
+  0x00007f58fd00fc1f: nop
+[Verified Entry Point]
+  0x00007f58fd00fc20: mov     %eax,0xfffffffffffec000(%rsp)
+  0x00007f58fd00fc27: push    %rbp
+  0x00007f58fd00fc28: sub     $0x40,%rsp
+  0x00007f58fd00fc2c: movabs  $0x7f58eccccd08,%rcx  ;   {metadata(method data for {method} {0x00007f58ecca0d50} 'inLoopAbstractClasses' '(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;' in 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark')}
+  0x00007f58fd00fc36: mov     0x104(%rcx),%edi
+  0x00007f58fd00fc3c: add     $0x8,%edi
+  0x00007f58fd00fc3f: mov     %edi,0x104(%rcx)
+  0x00007f58fd00fc45: and     $0x1ff8,%edi
+  0x00007f58fd00fc4b: cmp     $0x0,%edi
+  0x00007f58fd00fc4e: je      0x7f58fd00fe05    ;*aload_1 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@0 (line 293)
+
+  0x00007f58fd00fc54: mov     0xc(%rdx),%edi    ; implicit exception: dispatches to 0x00007f58fd00fe26
+  0x00007f58fd00fc57: shl     $0x3,%rdi         ;*getfield pojo {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@1 (line 293)
+
+  0x00007f58fd00fc5b: mov     %rdi,0x30(%rsp)
+  0x00007f58fd00fc60: mov     $0x0,%ebx
+  0x00007f58fd00fc65: jmpq    0x7f58fd00fdb9    ;*iload_3 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@7 (line 294)
+
+  0x00007f58fd00fc6a: nopw    0x0(%rax,%rax)
+  0x00007f58fd00fc70: movabs  $0x7164a3080,%rdx  ;   {oop(a 'java/lang/Class'{0x00000007164a3080} = 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark')}
+  0x00007f58fd00fc7a: mov     0x90(%rdx),%ecx
+  0x00007f58fd00fc80: shl     $0x3,%rcx         ;*getstatic abstractSetters {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@12 (line 295)
+
+  0x00007f58fd00fc84: cmp     0xc(%rcx),%ebx    ; implicit exception: dispatches to 0x00007f58fd00fe2b
+  0x00007f58fd00fc87: jnb     0x7f58fd00fe35
+  0x00007f58fd00fc8d: movsxd  %ebx,%rsi
+  0x00007f58fd00fc90: mov     0x10(%rcx,%rsi,4),%esi
+  0x00007f58fd00fc94: shl     $0x3,%rsi         ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@16 (line 295)
+
+  0x00007f58fd00fc98: mov     0x78(%rdx),%edx
+  0x00007f58fd00fc9b: shl     $0x3,%rdx         ;*getstatic valuesToSet {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@18 (line 295)
+
+  0x00007f58fd00fc9f: cmp     0xc(%rdx),%ebx    ; implicit exception: dispatches to 0x00007f58fd00fe43
+  0x00007f58fd00fca2: jnb     0x7f58fd00fe4d
+  0x00007f58fd00fca8: movsxd  %ebx,%rcx
+  0x00007f58fd00fcab: mov     0x10(%rdx,%rcx,4),%ecx
+  0x00007f58fd00fcaf: shl     $0x3,%rcx         ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@22 (line 295)
+
+  0x00007f58fd00fcb3: cmp     (%rsi),%rax       ; implicit exception: dispatches to 0x00007f58fd00fe5b
+  0x00007f58fd00fcb6: mov     %rsi,%rdx
+  0x00007f58fd00fcb9: movabs  $0x7f58eccccd08,%rax  ;   {metadata(method data for {method} {0x00007f58ecca0d50} 'inLoopAbstractClasses' '(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;' in 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark')}
+  0x00007f58fd00fcc3: mov     0x8(%rdx),%edx
+  0x00007f58fd00fcc6: shl     $0x3,%rdx
+  0x00007f58fd00fcca: movabs  $0x800000000,%r12
+  0x00007f58fd00fcd4: add     %r12,%rdx
+  0x00007f58fd00fcd7: xor     %r12,%r12
+  0x00007f58fd00fcda: cmp     0x170(%rax),%rdx
+  0x00007f58fd00fce1: jne     0x7f58fd00fcf0
+  0x00007f58fd00fce3: addq    $0x1,0x178(%rax)
+  0x00007f58fd00fceb: jmpq    0x7f58fd00fd56
+  0x00007f58fd00fcf0: cmp     0x180(%rax),%rdx
+  0x00007f58fd00fcf7: jne     0x7f58fd00fd06
+  0x00007f58fd00fcf9: addq    $0x1,0x188(%rax)
+  0x00007f58fd00fd01: jmpq    0x7f58fd00fd56
+  0x00007f58fd00fd06: cmpq    $0x0,0x170(%rax)
+  0x00007f58fd00fd11: jne     0x7f58fd00fd2a
+  0x00007f58fd00fd13: mov     %rdx,0x170(%rax)
+  0x00007f58fd00fd1a: movq    $0x1,0x178(%rax)
+  0x00007f58fd00fd25: jmpq    0x7f58fd00fd56
+  0x00007f58fd00fd2a: cmpq    $0x0,0x180(%rax)
+  0x00007f58fd00fd35: jne     0x7f58fd00fd4e
+  0x00007f58fd00fd37: mov     %rdx,0x180(%rax)
+  0x00007f58fd00fd3e: movq    $0x1,0x188(%rax)
+  0x00007f58fd00fd49: jmpq    0x7f58fd00fd56
+  0x00007f58fd00fd4e: addq    $0x1,0x160(%rax)
+  0x00007f58fd00fd56: mov     %rdi,%rdx         ;*invokevirtual accept {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@23 (line 295)
+
+  0x00007f58fd00fd59: mov     %ebx,0x28(%rsp)
+  0x00007f58fd00fd5d: movabs  $0xffffffffffffffff,%rax
+  0x00007f58fd00fd67: callq   0x7f58fc9933e0    ; ImmutableOopMap{[48]=Oop }
+                                                ;*invokevirtual accept {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@23 (line 295)
+                                                ;   {virtual_call}
+  0x00007f58fd00fd6c: mov     0x28(%rsp),%ebx
+  0x00007f58fd00fd70: incl    %ebx
+  0x00007f58fd00fd72: movabs  $0x7f58eccccd08,%rax  ;   {metadata(method data for {method} {0x00007f58ecca0d50} 'inLoopAbstractClasses' '(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;' in 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark')}
+  0x00007f58fd00fd7c: mov     0x108(%rax),%esi
+  0x00007f58fd00fd82: add     $0x8,%esi
+  0x00007f58fd00fd85: mov     %esi,0x108(%rax)
+  0x00007f58fd00fd8b: and     $0xfff8,%esi
+  0x00007f58fd00fd91: cmp     $0x0,%esi
+  0x00007f58fd00fd94: je      0x7f58fd00fe60    ;*goto {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@29 (line 294)
+
+  0x00007f58fd00fd9a: mov     0x108(%r15),%r10  ; ImmutableOopMap{[48]=Oop }
+                                                ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@29 (line 294)
+
+  0x00007f58fd00fda1: test    %eax,(%r10)       ;   {poll}
+  0x00007f58fd00fda4: movabs  $0x7f58eccccd08,%rax  ;   {metadata(method data for {method} {0x00007f58ecca0d50} 'inLoopAbstractClasses' '(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;' in 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark')}
+  0x00007f58fd00fdae: incl    0x198(%rax)       ;*goto {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@29 (line 294)
+
+  0x00007f58fd00fdb4: mov     0x30(%rsp),%rdi
+  0x00007f58fd00fdb9: cmp     $0x4,%ebx
+  0x00007f58fd00fdbc: movabs  $0x7f58eccccd08,%rdx  ;   {metadata(method data for {method} {0x00007f58ecca0d50} 'inLoopAbstractClasses' '(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;' in 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark')}
+  0x00007f58fd00fdc6: movabs  $0x150,%rcx
+  0x00007f58fd00fdd0: jl      0x7f58fd00fde0
+  0x00007f58fd00fdd6: movabs  $0x140,%rcx
+  0x00007f58fd00fde0: mov     (%rdx,%rcx),%rsi
+  0x00007f58fd00fde4: lea     0x1(%rsi),%rsi
+  0x00007f58fd00fde8: mov     %rsi,(%rdx,%rcx)
+  0x00007f58fd00fdec: jl      0x7f58fd00fc70    ;*if_icmpge {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@9 (line 294)
+
+  0x00007f58fd00fdf2: mov     %rdi,%rax
+  0x00007f58fd00fdf5: add     $0x40,%rsp
+  0x00007f58fd00fdf9: pop     %rbp
+  0x00007f58fd00fdfa: mov     0x108(%r15),%r10
+  0x00007f58fd00fe01: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f58fd00fe04: retq
+  0x00007f58fd00fe05: movabs  $0x7f58ecca0d50,%r10  ;   {metadata({method} {0x00007f58ecca0d50} 'inLoopAbstractClasses' '(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;' in 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark')}
+  0x00007f58fd00fe0f: mov     %r10,0x8(%rsp)
+  0x00007f58fd00fe14: movq    $0xffffffffffffffff,(%rsp)
+  0x00007f58fd00fe1c: callq   0x7f58fca48600    ; ImmutableOopMap{rsi=Oop rdx=Oop }
+                                                ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@-1 (line 293)
+                                                ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00007f58fd00fe21: jmpq    0x7f58fd00fc54
+  0x00007f58fd00fe26: callq   0x7f58fca43920    ; ImmutableOopMap{}
+                                                ;*getfield pojo {reexecute=1 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@1 (line 293)
+                                                ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00007f58fd00fe2b: callq   0x7f58fca43920    ; ImmutableOopMap{rdi=Oop [48]=Oop rdx=Oop rcx=Oop }
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@16 (line 295)
+                                                ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00007f58fd00fe30: callq   0x7f58fca43920    ; ImmutableOopMap{rdi=Oop [48]=Oop rdx=Oop rcx=Oop }
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@16 (line 295)
+                                                ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00007f58fd00fe35: mov     %rbx,(%rsp)
+  0x00007f58fd00fe39: mov     %rcx,0x8(%rsp)
+  0x00007f58fd00fe3e: callq   0x7f58fca428a0    ; ImmutableOopMap{rdi=Oop [48]=Oop rdx=Oop rcx=Oop }
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@16 (line 295)
+                                                ;   {runtime_call throw_range_check_failed Runtime1 stub}
+  0x00007f58fd00fe43: callq   0x7f58fca43920    ; ImmutableOopMap{rdi=Oop [48]=Oop rsi=Oop rdx=Oop }
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@22 (line 295)
+                                                ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00007f58fd00fe48: callq   0x7f58fca43920    ; ImmutableOopMap{rdi=Oop [48]=Oop rsi=Oop rdx=Oop }
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@22 (line 295)
+                                                ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00007f58fd00fe4d: mov     %rbx,(%rsp)
+  0x00007f58fd00fe51: mov     %rdx,0x8(%rsp)
+  0x00007f58fd00fe56: callq   0x7f58fca428a0    ; ImmutableOopMap{rdi=Oop [48]=Oop rsi=Oop rdx=Oop }
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@22 (line 295)
+                                                ;   {runtime_call throw_range_check_failed Runtime1 stub}
+  0x00007f58fd00fe5b: callq   0x7f58fca43920    ; ImmutableOopMap{rdi=Oop [48]=Oop rsi=Oop rcx=Oop }
+                                                ;*invokevirtual accept {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@23 (line 295)
+                                                ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00007f58fd00fe60: movabs  $0x7f58ecca0d50,%r10  ;   {metadata({method} {0x00007f58ecca0d50} 'inLoopAbstractClasses' '(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;' in 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark')}
+  0x00007f58fd00fe6a: mov     %r10,0x8(%rsp)
+  0x00007f58fd00fe6f: movq    $0x1d,(%rsp)
+  0x00007f58fd00fe77: callq   0x7f58fca48600    ; ImmutableOopMap{[48]=Oop }
+                                                ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@29 (line 294)
+                                                ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00007f58fd00fe7c: jmpq    0x7f58fd00fd9a
+  0x00007f58fd00fe81: nop
+  0x00007f58fd00fe82: nop
+  0x00007f58fd00fe83: mov     0x420(%r15),%rax
+  0x00007f58fd00fe8a: movabs  $0x0,%r10
+  0x00007f58fd00fe94: mov     %r10,0x420(%r15)
+  0x00007f58fd00fe9b: movabs  $0x0,%r10
+  0x00007f58fd00fea5: mov     %r10,0x428(%r15)
+  0x00007f58fd00feac: add     $0x40,%rsp
+  0x00007f58fd00feb0: pop     %rbp
+  0x00007f58fd00feb1: jmpq    0x7f58fca42e80    ;   {runtime_call unwind_exception Runtime1 stub}
+  0x00007f58fd00feb6: hlt
+  0x00007f58fd00feb7: hlt
+  0x00007f58fd00feb8: hlt
+  0x00007f58fd00feb9: hlt
+  0x00007f58fd00feba: hlt
+  0x00007f58fd00febb: hlt
+  0x00007f58fd00febc: hlt
+  0x00007f58fd00febd: hlt
+  0x00007f58fd00febe: hlt
+  0x00007f58fd00febf: hlt
+[Stub Code]
+  0x00007f58fd00fec0: nopl    0x0(%rax,%rax)    ;   {no_reloc}
+  0x00007f58fd00fec5: movabs  $0x0,%rbx         ;   {static_stub}
+  0x00007f58fd00fecf: jmpq    0x7f58fd00fecf    ;   {runtime_call}
+[Exception Handler]
+  0x00007f58fd00fed4: callq   0x7f58fca45500    ;   {runtime_call handle_exception_from_callee Runtime1 stub}
+  0x00007f58fd00fed9: mov     %rsp,0xffffffffffffffd8(%rsp)
+  0x00007f58fd00fede: sub     $0x80,%rsp
+  0x00007f58fd00fee5: mov     %rax,0x78(%rsp)
+  0x00007f58fd00feea: mov     %rcx,0x70(%rsp)
+  0x00007f58fd00feef: mov     %rdx,0x68(%rsp)
+  0x00007f58fd00fef4: mov     %rbx,0x60(%rsp)
+  0x00007f58fd00fef9: mov     %rbp,0x50(%rsp)
+  0x00007f58fd00fefe: mov     %rsi,0x48(%rsp)
+  0x00007f58fd00ff03: mov     %rdi,0x40(%rsp)
+  0x00007f58fd00ff08: mov     %r8,0x38(%rsp)
+  0x00007f58fd00ff0d: mov     %r9,0x30(%rsp)
+  0x00007f58fd00ff12: mov     %r10,0x28(%rsp)
+  0x00007f58fd00ff17: mov     %r11,0x20(%rsp)
+  0x00007f58fd00ff1c: mov     %r12,0x18(%rsp)
+  0x00007f58fd00ff21: mov     %r13,0x10(%rsp)
+  0x00007f58fd00ff26: mov     %r14,0x8(%rsp)
+  0x00007f58fd00ff2b: mov     %r15,(%rsp)
+  0x00007f58fd00ff2f: movabs  $0x7f591b6545e2,%rdi  ;   {external_word}
+  0x00007f58fd00ff39: movabs  $0x7f58fd00fed9,%rsi  ;   {internal_word}
+  0x00007f58fd00ff43: mov     %rsp,%rdx
+  0x00007f58fd00ff46: and     $0xfffffffffffffff0,%rsp
+  0x00007f58fd00ff4a: callq   0x7f591b270aa0    ;   {runtime_call}
+  0x00007f58fd00ff4f: hlt
+[Deopt Handler Code]
+  0x00007f58fd00ff50: movabs  $0x7f58fd00ff50,%r10  ;   {section_word}
+  0x00007f58fd00ff5a: push    %r10
+  0x00007f58fd00ff5c: jmpq    0x7f58fc97e5a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007f58fd00ff61: hlt
+  0x00007f58fd00ff62: hlt
+  0x00007f58fd00ff63: hlt
+  0x00007f58fd00ff64: hlt
+  0x00007f58fd00ff65: hlt
+  0x00007f58fd00ff66: hlt
+  0x00007f58fd00ff67: hlt
+
+ImmutableOopMap{[48]=Oop }pc offsets: 396 449
+ImmutableOopMap{rsi=Oop rdx=Oop }pc offsets: 577
+ImmutableOopMap{}pc offsets: 587
+ImmutableOopMap{rdi=Oop [48]=Oop rdx=Oop rcx=Oop }pc offsets: 592 597 611
+ImmutableOopMap{rdi=Oop [48]=Oop rsi=Oop rdx=Oop }pc offsets: 616 621 635
+ImmutableOopMap{rdi=Oop [48]=Oop rsi=Oop rcx=Oop }pc offsets: 640
+ImmutableOopMap{[48]=Oop }pc offsets: 668 Compiled method (c2)     518  674       4       dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses (34 bytes)
+ total in heap  [0x00007f590445cc90,0x00007f590445d200] = 1392
+ relocation     [0x00007f590445ce08,0x00007f590445ce28] = 32
+ main code      [0x00007f590445ce40,0x00007f590445cfa0] = 352
+ stub code      [0x00007f590445cfa0,0x00007f590445cfb8] = 24
+ oops           [0x00007f590445cfb8,0x00007f590445cfc0] = 8
+ metadata       [0x00007f590445cfc0,0x00007f590445cfc8] = 8
+ scopes data    [0x00007f590445cfc8,0x00007f590445d070] = 168
+ scopes pcs     [0x00007f590445d070,0x00007f590445d1c0] = 336
+ dependencies   [0x00007f590445d1c0,0x00007f590445d1c8] = 8
+ handler table  [0x00007f590445d1c8,0x00007f590445d1e0] = 24
+ nul chk table  [0x00007f590445d1e0,0x00007f590445d200] = 32
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark.inLoopAbstractClasses(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;  [0x00007f590445ce40, 0x00007f590445cfb8]  376 bytes
+Argument 0 is unknown.RIP: 0x7f590445ce40 Code size: 0x00000178
+[Entry Point]
+[Constants]
+  # {method} {0x00007f58ecca0d50} 'inLoopAbstractClasses' '(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;' in 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark'
+  # this:     rsi:rsi   = 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark'
+  # parm0:    rdx:rdx   = 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder'
+  #           [sp+0x40]  (sp of caller)
+  0x00007f590445ce40: mov     0x8(%rsi),%r10d
+  0x00007f590445ce44: shl     $0x3,%r10
+  0x00007f590445ce48: movabs  $0x800000000,%r12
+  0x00007f590445ce52: add     %r12,%r10
+  0x00007f590445ce55: xor     %r12,%r12
+  0x00007f590445ce58: cmp     %r10,%rax
+  0x00007f590445ce5b: jne     0x7f58fc97cd00    ;   {runtime_call ic_miss_stub}
+  0x00007f590445ce61: nop
+  0x00007f590445ce64: nopl    0x0(%rax,%rax)
+  0x00007f590445ce6c: nop
+[Verified Entry Point]
+  0x00007f590445ce70: mov     %eax,0xfffffffffffec000(%rsp)
+  0x00007f590445ce77: push    %rbp
+  0x00007f590445ce78: sub     $0x30,%rsp        ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@-1 (line 293)
+
+  0x00007f590445ce7c: mov     0xc(%rdx),%ecx    ; implicit exception: dispatches to 0x00007f590445cf82
+  0x00007f590445ce7f: mov     %rcx,%r9
+  0x00007f590445ce82: shl     $0x3,%r9          ;*getfield pojo {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@1 (line 293)
+
+  0x00007f590445ce86: xor     %r11d,%r11d
+  0x00007f590445ce89: jmp     0x7f590445ce98
+  0x00007f590445ce8b: nopl    0x0(%rax,%rax)
+  0x00007f590445ce90: mov     (%rsp),%ecx
+  0x00007f590445ce93: mov     0x8(%rsp),%r9
+  0x00007f590445ce98: movabs  $0x7164a3080,%r10  ;   {oop(a 'java/lang/Class'{0x00000007164a3080} = 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark')}
+  0x00007f590445cea2: mov     0x90(%r10),%ebx   ;*getstatic abstractSetters {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@12 (line 295)
+
+  0x00007f590445cea9: mov     0xc(%r12,%rbx,8),%r8d  ; implicit exception: dispatches to 0x00007f590445cf63
+  0x00007f590445ceae: cmp     %r8d,%r11d
+  0x00007f590445ceb1: jnb     0x7f590445cf21
+  0x00007f590445ceb3: mov     0x78(%r10),%edx   ;*getstatic valuesToSet {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@18 (line 295)
+
+  0x00007f590445ceb7: mov     0xc(%r12,%rdx,8),%r8d  ; implicit exception: dispatches to 0x00007f590445cf72
+  0x00007f590445cebc: lea     (%r12,%rbx,8),%r10
+  0x00007f590445cec0: mov     0x10(%r10,%r11,4),%ebp
+  0x00007f590445cec5: cmp     %r8d,%r11d
+  0x00007f590445cec8: jnb     0x7f590445cf3a
+  0x00007f590445ceca: mov     %r9,0x8(%rsp)
+  0x00007f590445cecf: mov     %ecx,(%rsp)
+  0x00007f590445ced2: mov     %rbp,%rsi
+  0x00007f590445ced5: shl     $0x3,%rsi         ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@16 (line 295)
+
+  0x00007f590445ced9: lea     (%r12,%rdx,8),%r10
+  0x00007f590445cedd: mov     0x10(%r10,%r11,4),%r10d
+  0x00007f590445cee2: mov     %r11d,%ebp
+  0x00007f590445cee5: mov     %r10,%rcx
+  0x00007f590445cee8: shl     $0x3,%rcx         ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@22 (line 295)
+
+  0x00007f590445ceec: mov     %r9,%rdx
+  0x00007f590445ceef: nop
+  0x00007f590445cef1: movabs  $0x8400943b0,%rax
+  0x00007f590445cefb: callq   0x7f58fc993420    ; ImmutableOopMap{[0]=NarrowOop [8]=Oop }
+                                                ;*invokevirtual accept {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@23 (line 295)
+                                                ;   {virtual_call}
+  0x00007f590445cf00: mov     %ebp,%r11d
+  0x00007f590445cf03: incl    %r11d             ;*iinc {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@26 (line 294)
+
+  0x00007f590445cf06: cmp     $0x4,%r11d
+  0x00007f590445cf0a: jl      0x7f590445ce90    ;*if_icmpge {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@9 (line 294)
+
+  0x00007f590445cf0c: mov     0x8(%rsp),%rax
+  0x00007f590445cf11: add     $0x30,%rsp
+  0x00007f590445cf15: pop     %rbp
+  0x00007f590445cf16: mov     0x108(%r15),%r10
+  0x00007f590445cf1d: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f590445cf20: retq
+  0x00007f590445cf21: mov     $0xffffffe4,%esi
+  0x00007f590445cf26: mov     %ecx,%ebp
+  0x00007f590445cf28: mov     %ebx,0x4(%rsp)
+  0x00007f590445cf2c: mov     %r11d,0x8(%rsp)
+  0x00007f590445cf31: nop
+  0x00007f590445cf33: callq   0x7f58fc97e980    ; ImmutableOopMap{rbp=NarrowOop [4]=NarrowOop }
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@16 (line 295)
+                                                ;   {runtime_call UncommonTrapBlob}
+  0x00007f590445cf38: ud2                       ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@16 (line 295)
+
+  0x00007f590445cf3a: mov     $0xffffffe4,%esi
+  0x00007f590445cf3f: mov     %ecx,0x8(%rsp)
+  0x00007f590445cf43: mov     %edx,0xc(%rsp)
+  0x00007f590445cf47: mov     %r11d,0x10(%rsp)
+  0x00007f590445cf4c: nop
+  0x00007f590445cf4f: callq   0x7f58fc97e980    ; ImmutableOopMap{rbp=NarrowOop [8]=NarrowOop [12]=NarrowOop }
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@22 (line 295)
+                                                ;   {runtime_call UncommonTrapBlob}
+  0x00007f590445cf54: ud2                       ;*invokevirtual accept {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@23 (line 295)
+
+  0x00007f590445cf56: mov     %rax,%rsi
+  0x00007f590445cf59: add     $0x30,%rsp
+  0x00007f590445cf5d: pop     %rbp
+  0x00007f590445cf5e: jmpq    0x7f58fca4ac00    ;   {runtime_call _rethrow_Java}
+  0x00007f590445cf63: mov     $0xfffffff6,%esi
+  0x00007f590445cf68: mov     %r11d,%ebp
+  0x00007f590445cf6b: callq   0x7f58fc97e980    ; ImmutableOopMap{}
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@16 (line 295)
+                                                ;   {runtime_call UncommonTrapBlob}
+  0x00007f590445cf70: ud2                       ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@16 (line 295)
+
+  0x00007f590445cf72: mov     $0xfffffff6,%esi
+  0x00007f590445cf77: mov     %r11d,%ebp
+  0x00007f590445cf7a: nop
+  0x00007f590445cf7b: callq   0x7f58fc97e980    ; ImmutableOopMap{}
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@22 (line 295)
+                                                ;   {runtime_call UncommonTrapBlob}
+  0x00007f590445cf80: ud2                       ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@22 (line 295)
+
+  0x00007f590445cf82: mov     $0xfffffff6,%esi
+  0x00007f590445cf87: callq   0x7f58fc97e980    ; ImmutableOopMap{}
+                                                ;*getfield pojo {reexecute=1 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@1 (line 293)
+                                                ;   {runtime_call UncommonTrapBlob}
+  0x00007f590445cf8c: ud2                       ;*getfield pojo {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@1 (line 293)
+
+  0x00007f590445cf8e: hlt
+  0x00007f590445cf8f: hlt
+  0x00007f590445cf90: hlt
+  0x00007f590445cf91: hlt
+  0x00007f590445cf92: hlt
+  0x00007f590445cf93: hlt
+  0x00007f590445cf94: hlt
+  0x00007f590445cf95: hlt
+  0x00007f590445cf96: hlt
+  0x00007f590445cf97: hlt
+  0x00007f590445cf98: hlt
+  0x00007f590445cf99: hlt
+  0x00007f590445cf9a: hlt
+  0x00007f590445cf9b: hlt
+  0x00007f590445cf9c: hlt
+  0x00007f590445cf9d: hlt
+  0x00007f590445cf9e: hlt
+  0x00007f590445cf9f: hlt
+[Exception Handler]
+[Stub Code]
+  0x00007f590445cfa0: jmpq    0x7f58fca43200    ;   {no_reloc}
+[Deopt Handler Code]
+  0x00007f590445cfa5: callq   0x7f590445cfaa
+  0x00007f590445cfaa: subq    $0x5,(%rsp)
+  0x00007f590445cfaf: jmpq    0x7f58fc97e5a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007f590445cfb4: hlt
+  0x00007f590445cfb5: hlt
+  0x00007f590445cfb6: hlt
+  0x00007f590445cfb7: hlt
+
+ImmutableOopMap{[0]=NarrowOop [8]=Oop }pc offsets: 192
+ImmutableOopMap{rbp=NarrowOop [4]=NarrowOop }pc offsets: 248
+ImmutableOopMap{rbp=NarrowOop [8]=NarrowOop [12]=NarrowOop }pc offsets: 276
+ImmutableOopMap{}pc offsets: 304 320 332 Compiled method (c2)     561  684 %     4       dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses @ 7 (34 bytes)
+ total in heap  [0x00007f590445f610,0x00007f590445fb70] = 1376
+ relocation     [0x00007f590445f788,0x00007f590445f7b0] = 40
+ main code      [0x00007f590445f7c0,0x00007f590445f920] = 352
+ stub code      [0x00007f590445f920,0x00007f590445f938] = 24
+ oops           [0x00007f590445f938,0x00007f590445f940] = 8
+ metadata       [0x00007f590445f940,0x00007f590445f950] = 16
+ scopes data    [0x00007f590445f950,0x00007f590445f9f8] = 168
+ scopes pcs     [0x00007f590445f9f8,0x00007f590445fb38] = 320
+ dependencies   [0x00007f590445fb38,0x00007f590445fb40] = 8
+ handler table  [0x00007f590445fb40,0x00007f590445fb58] = 24
+ nul chk table  [0x00007f590445fb58,0x00007f590445fb70] = 24
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark.inLoopAbstractClasses(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;  [0x00007f590445f7c0, 0x00007f590445f938]  376 bytes
+Argument 0 is unknown.RIP: 0x7f590445f7c0 Code size: 0x00000178
+[Entry Point]
+[Verified Entry Point]
+[Constants]
+  # {method} {0x00007f58ecca0d50} 'inLoopAbstractClasses' '(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;' in 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark'
+  0x00007f590445f7c0: callq   0x7f591b398490    ;   {runtime_call}
+  0x00007f590445f7c5: nopw    0x0(%rax,%rax)
+  0x00007f590445f7d0: mov     %eax,0xfffffffffffec000(%rsp)
+  0x00007f590445f7d7: push    %rbp
+  0x00007f590445f7d8: sub     $0x30,%rsp
+  0x00007f590445f7dc: mov     0x8(%rsi),%rbx
+  0x00007f590445f7e0: mov     (%rsi),%r13d
+  0x00007f590445f7e3: mov     %rsi,%rdi
+  0x00007f590445f7e6: movabs  $0x7f591b47b8a0,%r10
+  0x00007f590445f7f0: callq   %r10
+  0x00007f590445f7f3: test    %rbx,%rbx
+  0x00007f590445f7f6: je      0x7f590445f8bd
+  0x00007f590445f7fc: mov     0x8(%rbx),%r10d
+  0x00007f590445f800: cmp     $0x801282c,%r10d  ;   {metadata('dev/jgardo/jvm/miscellaneous/reflect/Pojo')}
+  0x00007f590445f807: jne     0x7f590445f8da
+  0x00007f590445f80d: jmp     0x7f590445f84a
+  0x00007f590445f80f: nop
+  0x00007f590445f810: mov     %rbx,(%rsp)       ;*iload_3 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@7 (line 294)
+
+  0x00007f590445f814: mov     %rbp,%rsi
+  0x00007f590445f817: shl     $0x3,%rsi         ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@16 (line 295)
+
+  0x00007f590445f81b: lea     (%r12,%r9,8),%r10
+  0x00007f590445f81f: mov     0x10(%r10,%r13,4),%r11d
+  0x00007f590445f824: mov     %r13d,%ebp
+  0x00007f590445f827: mov     %r11,%rcx
+  0x00007f590445f82a: shl     $0x3,%rcx         ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@22 (line 295)
+
+  0x00007f590445f82e: mov     %rbx,%rdx
+  0x00007f590445f831: movabs  $0xffffffffffffffff,%rax
+  0x00007f590445f83b: callq   0x7f58fc97d200    ; ImmutableOopMap{[0]=Oop }
+                                                ;*invokevirtual accept {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@23 (line 295)
+                                                ;   {virtual_call}
+  0x00007f590445f840: mov     %ebp,%r13d
+  0x00007f590445f843: incl    %r13d             ;*iinc {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@26 (line 294)
+
+  0x00007f590445f846: mov     (%rsp),%rbx       ;*iload_3 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@7 (line 294)
+
+  0x00007f590445f84a: cmp     $0x4,%r13d
+  0x00007f590445f84e: jnl     0x7f590445f8aa    ;*if_icmpge {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@9 (line 294)
+
+  0x00007f590445f850: movabs  $0x7164a3080,%r10  ;   {oop(a 'java/lang/Class'{0x00000007164a3080} = 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark')}
+  0x00007f590445f85a: mov     0x90(%r10),%r8d   ;*getstatic abstractSetters {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@12 (line 295)
+
+  0x00007f590445f861: mov     0xc(%r12,%r8,8),%r10d  ; implicit exception: dispatches to 0x00007f590445f8fb
+  0x00007f590445f866: cmp     %r10d,%r13d
+  0x00007f590445f869: jnb     0x7f590445f8c1
+  0x00007f590445f86b: movabs  $0x7164a3080,%r10  ;   {oop(a 'java/lang/Class'{0x00000007164a3080} = 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark')}
+  0x00007f590445f875: mov     0x78(%r10),%r9d   ;*getstatic valuesToSet {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@18 (line 295)
+
+  0x00007f590445f879: mov     0xc(%r12,%r9,8),%r10d  ; implicit exception: dispatches to 0x00007f590445f90a
+  0x00007f590445f87e: lea     (%r12,%r8,8),%r11
+  0x00007f590445f882: mov     0x10(%r11,%r13,4),%ebp  ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@16 (line 295)
+
+  0x00007f590445f887: cmp     %r10d,%r13d
+  0x00007f590445f88a: jb      0x7f590445f810
+  0x00007f590445f88c: mov     $0xffffffe4,%esi
+  0x00007f590445f891: mov     %rbx,0x10(%rsp)
+  0x00007f590445f896: mov     %r9d,0xc(%rsp)
+  0x00007f590445f89b: mov     %r13d,0x18(%rsp)
+  0x00007f590445f8a0: nop
+  0x00007f590445f8a3: callq   0x7f58fc97e980    ; ImmutableOopMap{rbp=NarrowOop [12]=NarrowOop [16]=Oop }
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@22 (line 295)
+                                                ;   {runtime_call UncommonTrapBlob}
+  0x00007f590445f8a8: ud2                       ;*iload_3 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@7 (line 294)
+
+  0x00007f590445f8aa: mov     %rbx,%rax
+  0x00007f590445f8ad: add     $0x30,%rsp
+  0x00007f590445f8b1: pop     %rbp
+  0x00007f590445f8b2: mov     0x108(%r15),%r10
+  0x00007f590445f8b9: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f590445f8bc: retq
+  0x00007f590445f8bd: xor     %ebx,%ebx
+  0x00007f590445f8bf: jmp     0x7f590445f84a
+  0x00007f590445f8c1: mov     $0xffffffe4,%esi
+  0x00007f590445f8c6: mov     %rbx,%rbp
+  0x00007f590445f8c9: mov     %r8d,0x4(%rsp)
+  0x00007f590445f8ce: mov     %r13d,0x8(%rsp)
+  0x00007f590445f8d3: callq   0x7f58fc97e980    ; ImmutableOopMap{rbp=Oop [4]=NarrowOop }
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@16 (line 295)
+                                                ;   {runtime_call UncommonTrapBlob}
+  0x00007f590445f8d8: ud2
+  0x00007f590445f8da: mov     $0xffffff95,%esi
+  0x00007f590445f8df: mov     %rbx,%rbp
+  0x00007f590445f8e2: mov     %r13d,(%rsp)
+  0x00007f590445f8e6: nop
+  0x00007f590445f8e7: callq   0x7f58fc97e980    ; ImmutableOopMap{rbp=Oop }
+                                                ;*iload_3 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@7 (line 294)
+                                                ;   {runtime_call UncommonTrapBlob}
+  0x00007f590445f8ec: ud2                       ;*invokevirtual accept {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@23 (line 295)
+
+  0x00007f590445f8ee: mov     %rax,%rsi
+  0x00007f590445f8f1: add     $0x30,%rsp
+  0x00007f590445f8f5: pop     %rbp
+  0x00007f590445f8f6: jmpq    0x7f58fca4ac00    ;   {runtime_call _rethrow_Java}
+  0x00007f590445f8fb: mov     $0xfffffff6,%esi
+  0x00007f590445f900: mov     %r13d,%ebp
+  0x00007f590445f903: callq   0x7f58fc97e980    ; ImmutableOopMap{}
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@16 (line 295)
+                                                ;   {runtime_call UncommonTrapBlob}
+  0x00007f590445f908: ud2
+  0x00007f590445f90a: mov     $0xfffffff6,%esi
+  0x00007f590445f90f: mov     %r13d,%ebp
+  0x00007f590445f912: nop
+  0x00007f590445f913: callq   0x7f58fc97e980    ; ImmutableOopMap{}
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@22 (line 295)
+                                                ;   {runtime_call UncommonTrapBlob}
+  0x00007f590445f918: ud2                       ;*iload_3 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopAbstractClasses@7 (line 294)
+
+  0x00007f590445f91a: hlt
+  0x00007f590445f91b: hlt
+  0x00007f590445f91c: hlt
+  0x00007f590445f91d: hlt
+  0x00007f590445f91e: hlt
+  0x00007f590445f91f: hlt
+[Exception Handler]
+[Stub Code]
+  0x00007f590445f920: jmpq    0x7f58fca43200    ;   {no_reloc}
+[Deopt Handler Code]
+  0x00007f590445f925: callq   0x7f590445f92a
+  0x00007f590445f92a: subq    $0x5,(%rsp)
+  0x00007f590445f92f: jmpq    0x7f58fc97e5a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007f590445f934: hlt
+  0x00007f590445f935: hlt
+  0x00007f590445f936: hlt
+  0x00007f590445f937: hlt
+
+ImmutableOopMap{[0]=Oop }pc offsets: 128
+ImmutableOopMap{rbp=NarrowOop [12]=NarrowOop [16]=Oop }pc offsets: 232
+ImmutableOopMap{rbp=Oop [4]=NarrowOop }pc offsets: 280
+ImmutableOopMap{rbp=Oop }pc offsets: 300
+ImmutableOopMap{}pc offsets: 328 344

@@ -1,0 +1,458 @@
+Compiled method (c1)     484  664       3       dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly (36 bytes)
+ total in heap  [0x00007f872fd6e990,0x00007f872fd6f158] = 1992
+ relocation     [0x00007f872fd6eb08,0x00007f872fd6eb60] = 88
+ main code      [0x00007f872fd6eb60,0x00007f872fd6ee40] = 736
+ stub code      [0x00007f872fd6ee40,0x00007f872fd6eee8] = 168
+ oops           [0x00007f872fd6eee8,0x00007f872fd6eef0] = 8
+ metadata       [0x00007f872fd6eef0,0x00007f872fd6eef8] = 8
+ scopes data    [0x00007f872fd6eef8,0x00007f872fd6ef88] = 144
+ scopes pcs     [0x00007f872fd6ef88,0x00007f872fd6f118] = 400
+ dependencies   [0x00007f872fd6f118,0x00007f872fd6f120] = 8
+ nul chk table  [0x00007f872fd6f120,0x00007f872fd6f158] = 56
+Loaded disassembler from hsdis-amd64.so
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark.inLoopInnerClassBiConsumerOnly(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;  [0x00007f872fd6eb60, 0x00007f872fd6eee8]  904 bytes
+Argument 0 is unknown.RIP: 0x7f872fd6eb60 Code size: 0x00000388
+[Disassembling for mach='amd64']
+[Entry Point]
+[Constants]
+  # {method} {0x00007f872ce10af8} 'inLoopInnerClassBiConsumerOnly' '(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;' in 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark'
+  # this:     rsi:rsi   = 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark'
+  # parm0:    rdx:rdx   = 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder'
+  #           [sp+0x50]  (sp of caller)
+  0x00007f872fd6eb60: mov     0x8(%rsi),%r10d
+  0x00007f872fd6eb64: shl     $0x3,%r10
+  0x00007f872fd6eb68: movabs  $0x800000000,%r12
+  0x00007f872fd6eb72: add     %r12,%r10
+  0x00007f872fd6eb75: xor     %r12,%r12
+  0x00007f872fd6eb78: cmp     %rax,%r10
+  0x00007f872fd6eb7b: jne     0x7f872f6e7d00    ;   {runtime_call ic_miss_stub}
+  0x00007f872fd6eb81: nopw    0x0(%rax,%rax)
+  0x00007f872fd6eb8c: nop
+  0x00007f872fd6eb90: nopw    0x0(%rax,%rax)
+  0x00007f872fd6eb9b: nop
+  0x00007f872fd6eb9f: nop
+[Verified Entry Point]
+  0x00007f872fd6eba0: mov     %eax,0xfffffffffffec000(%rsp)
+  0x00007f872fd6eba7: push    %rbp
+  0x00007f872fd6eba8: sub     $0x40,%rsp
+  0x00007f872fd6ebac: movabs  $0x7f872ce3cff8,%rcx  ;   {metadata(method data for {method} {0x00007f872ce10af8} 'inLoopInnerClassBiConsumerOnly' '(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;' in 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark')}
+  0x00007f872fd6ebb6: mov     0x104(%rcx),%edi
+  0x00007f872fd6ebbc: add     $0x8,%edi
+  0x00007f872fd6ebbf: mov     %edi,0x104(%rcx)
+  0x00007f872fd6ebc5: and     $0x1ff8,%edi
+  0x00007f872fd6ebcb: cmp     $0x0,%edi
+  0x00007f872fd6ebce: je      0x7f872fd6ed85    ;*aload_1 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@0 (line 271)
+
+  0x00007f872fd6ebd4: mov     0xc(%rdx),%edi    ; implicit exception: dispatches to 0x00007f872fd6eda6
+  0x00007f872fd6ebd7: shl     $0x3,%rdi         ;*getfield pojo {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@1 (line 271)
+
+  0x00007f872fd6ebdb: mov     %rdi,0x30(%rsp)
+  0x00007f872fd6ebe0: mov     $0x0,%ebx
+  0x00007f872fd6ebe5: jmpq    0x7f872fd6ed39    ;*iload_3 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@7 (line 272)
+
+  0x00007f872fd6ebea: nopw    0x0(%rax,%rax)
+  0x00007f872fd6ebf0: movabs  $0x7164ad438,%rdx  ;   {oop(a 'java/lang/Class'{0x00000007164ad438} = 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark')}
+  0x00007f872fd6ebfa: mov     0x8c(%rdx),%ecx
+  0x00007f872fd6ec00: shl     $0x3,%rcx         ;*getstatic biConsumerSettersInnerClasses {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@12 (line 273)
+
+  0x00007f872fd6ec04: cmp     0xc(%rcx),%ebx    ; implicit exception: dispatches to 0x00007f872fd6edab
+  0x00007f872fd6ec07: jnb     0x7f872fd6edb5
+  0x00007f872fd6ec0d: movsxd  %ebx,%rsi
+  0x00007f872fd6ec10: mov     0x10(%rcx,%rsi,4),%esi
+  0x00007f872fd6ec14: shl     $0x3,%rsi         ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@16 (line 273)
+
+  0x00007f872fd6ec18: mov     0x78(%rdx),%edx
+  0x00007f872fd6ec1b: shl     $0x3,%rdx         ;*getstatic valuesToSet {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@18 (line 273)
+
+  0x00007f872fd6ec1f: cmp     0xc(%rdx),%ebx    ; implicit exception: dispatches to 0x00007f872fd6edc3
+  0x00007f872fd6ec22: jnb     0x7f872fd6edcd
+  0x00007f872fd6ec28: movsxd  %ebx,%rcx
+  0x00007f872fd6ec2b: mov     0x10(%rdx,%rcx,4),%ecx
+  0x00007f872fd6ec2f: shl     $0x3,%rcx         ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@22 (line 273)
+
+  0x00007f872fd6ec33: cmp     (%rsi),%rax       ; implicit exception: dispatches to 0x00007f872fd6eddb
+  0x00007f872fd6ec36: mov     %rsi,%rdx
+  0x00007f872fd6ec39: movabs  $0x7f872ce3cff8,%rax  ;   {metadata(method data for {method} {0x00007f872ce10af8} 'inLoopInnerClassBiConsumerOnly' '(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;' in 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark')}
+  0x00007f872fd6ec43: mov     0x8(%rdx),%edx
+  0x00007f872fd6ec46: shl     $0x3,%rdx
+  0x00007f872fd6ec4a: movabs  $0x800000000,%r12
+  0x00007f872fd6ec54: add     %r12,%rdx
+  0x00007f872fd6ec57: xor     %r12,%r12
+  0x00007f872fd6ec5a: cmp     0x170(%rax),%rdx
+  0x00007f872fd6ec61: jne     0x7f872fd6ec70
+  0x00007f872fd6ec63: addq    $0x1,0x178(%rax)
+  0x00007f872fd6ec6b: jmpq    0x7f872fd6ecd6
+  0x00007f872fd6ec70: cmp     0x180(%rax),%rdx
+  0x00007f872fd6ec77: jne     0x7f872fd6ec86
+  0x00007f872fd6ec79: addq    $0x1,0x188(%rax)
+  0x00007f872fd6ec81: jmpq    0x7f872fd6ecd6
+  0x00007f872fd6ec86: cmpq    $0x0,0x170(%rax)
+  0x00007f872fd6ec91: jne     0x7f872fd6ecaa
+  0x00007f872fd6ec93: mov     %rdx,0x170(%rax)
+  0x00007f872fd6ec9a: movq    $0x1,0x178(%rax)
+  0x00007f872fd6eca5: jmpq    0x7f872fd6ecd6
+  0x00007f872fd6ecaa: cmpq    $0x0,0x180(%rax)
+  0x00007f872fd6ecb5: jne     0x7f872fd6ecce
+  0x00007f872fd6ecb7: mov     %rdx,0x180(%rax)
+  0x00007f872fd6ecbe: movq    $0x1,0x188(%rax)
+  0x00007f872fd6ecc9: jmpq    0x7f872fd6ecd6
+  0x00007f872fd6ecce: addq    $0x1,0x160(%rax)
+  0x00007f872fd6ecd6: mov     %rdi,%rdx         ;*invokeinterface accept {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@23 (line 273)
+
+  0x00007f872fd6ecd9: mov     %ebx,0x28(%rsp)
+  0x00007f872fd6ecdd: movabs  $0xffffffffffffffff,%rax
+  0x00007f872fd6ece7: callq   0x7f872f6fe3a0    ; ImmutableOopMap{[48]=Oop }
+                                                ;*invokeinterface accept {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@23 (line 273)
+                                                ;   {virtual_call}
+  0x00007f872fd6ecec: mov     0x28(%rsp),%ebx
+  0x00007f872fd6ecf0: incl    %ebx
+  0x00007f872fd6ecf2: movabs  $0x7f872ce3cff8,%rax  ;   {metadata(method data for {method} {0x00007f872ce10af8} 'inLoopInnerClassBiConsumerOnly' '(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;' in 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark')}
+  0x00007f872fd6ecfc: mov     0x108(%rax),%esi
+  0x00007f872fd6ed02: add     $0x8,%esi
+  0x00007f872fd6ed05: mov     %esi,0x108(%rax)
+  0x00007f872fd6ed0b: and     $0xfff8,%esi
+  0x00007f872fd6ed11: cmp     $0x0,%esi
+  0x00007f872fd6ed14: je      0x7f872fd6ede0    ;*goto {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@31 (line 272)
+
+  0x00007f872fd6ed1a: mov     0x108(%r15),%r10  ; ImmutableOopMap{[48]=Oop }
+                                                ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@31 (line 272)
+
+  0x00007f872fd6ed21: test    %eax,(%r10)       ;   {poll}
+  0x00007f872fd6ed24: movabs  $0x7f872ce3cff8,%rax  ;   {metadata(method data for {method} {0x00007f872ce10af8} 'inLoopInnerClassBiConsumerOnly' '(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;' in 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark')}
+  0x00007f872fd6ed2e: incl    0x198(%rax)       ;*goto {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@31 (line 272)
+
+  0x00007f872fd6ed34: mov     0x30(%rsp),%rdi
+  0x00007f872fd6ed39: cmp     $0x4,%ebx
+  0x00007f872fd6ed3c: movabs  $0x7f872ce3cff8,%rdx  ;   {metadata(method data for {method} {0x00007f872ce10af8} 'inLoopInnerClassBiConsumerOnly' '(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;' in 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark')}
+  0x00007f872fd6ed46: movabs  $0x150,%rcx
+  0x00007f872fd6ed50: jl      0x7f872fd6ed60
+  0x00007f872fd6ed56: movabs  $0x140,%rcx
+  0x00007f872fd6ed60: mov     (%rdx,%rcx),%rsi
+  0x00007f872fd6ed64: lea     0x1(%rsi),%rsi
+  0x00007f872fd6ed68: mov     %rsi,(%rdx,%rcx)
+  0x00007f872fd6ed6c: jl      0x7f872fd6ebf0    ;*if_icmpge {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@9 (line 272)
+
+  0x00007f872fd6ed72: mov     %rdi,%rax
+  0x00007f872fd6ed75: add     $0x40,%rsp
+  0x00007f872fd6ed79: pop     %rbp
+  0x00007f872fd6ed7a: mov     0x108(%r15),%r10
+  0x00007f872fd6ed81: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f872fd6ed84: retq
+  0x00007f872fd6ed85: movabs  $0x7f872ce10af8,%r10  ;   {metadata({method} {0x00007f872ce10af8} 'inLoopInnerClassBiConsumerOnly' '(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;' in 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark')}
+  0x00007f872fd6ed8f: mov     %r10,0x8(%rsp)
+  0x00007f872fd6ed94: movq    $0xffffffffffffffff,(%rsp)
+  0x00007f872fd6ed9c: callq   0x7f872f7b3600    ; ImmutableOopMap{rsi=Oop rdx=Oop }
+                                                ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@-1 (line 271)
+                                                ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00007f872fd6eda1: jmpq    0x7f872fd6ebd4
+  0x00007f872fd6eda6: callq   0x7f872f7ae920    ; ImmutableOopMap{}
+                                                ;*getfield pojo {reexecute=1 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@1 (line 271)
+                                                ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00007f872fd6edab: callq   0x7f872f7ae920    ; ImmutableOopMap{rdi=Oop [48]=Oop rdx=Oop rcx=Oop }
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@16 (line 273)
+                                                ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00007f872fd6edb0: callq   0x7f872f7ae920    ; ImmutableOopMap{rdi=Oop [48]=Oop rdx=Oop rcx=Oop }
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@16 (line 273)
+                                                ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00007f872fd6edb5: mov     %rbx,(%rsp)
+  0x00007f872fd6edb9: mov     %rcx,0x8(%rsp)
+  0x00007f872fd6edbe: callq   0x7f872f720b20    ; ImmutableOopMap{rdi=Oop [48]=Oop rdx=Oop rcx=Oop }
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@16 (line 273)
+                                                ;   {runtime_call throw_range_check_failed Runtime1 stub}
+  0x00007f872fd6edc3: callq   0x7f872f7ae920    ; ImmutableOopMap{rdi=Oop [48]=Oop rsi=Oop rdx=Oop }
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@22 (line 273)
+                                                ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00007f872fd6edc8: callq   0x7f872f7ae920    ; ImmutableOopMap{rdi=Oop [48]=Oop rsi=Oop rdx=Oop }
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@22 (line 273)
+                                                ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00007f872fd6edcd: mov     %rbx,(%rsp)
+  0x00007f872fd6edd1: mov     %rdx,0x8(%rsp)
+  0x00007f872fd6edd6: callq   0x7f872f720b20    ; ImmutableOopMap{rdi=Oop [48]=Oop rsi=Oop rdx=Oop }
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@22 (line 273)
+                                                ;   {runtime_call throw_range_check_failed Runtime1 stub}
+  0x00007f872fd6eddb: callq   0x7f872f7ae920    ; ImmutableOopMap{rdi=Oop [48]=Oop rsi=Oop rcx=Oop }
+                                                ;*invokeinterface accept {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@23 (line 273)
+                                                ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00007f872fd6ede0: movabs  $0x7f872ce10af8,%r10  ;   {metadata({method} {0x00007f872ce10af8} 'inLoopInnerClassBiConsumerOnly' '(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;' in 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark')}
+  0x00007f872fd6edea: mov     %r10,0x8(%rsp)
+  0x00007f872fd6edef: movq    $0x1f,(%rsp)
+  0x00007f872fd6edf7: callq   0x7f872f7b3600    ; ImmutableOopMap{[48]=Oop }
+                                                ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@31 (line 272)
+                                                ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00007f872fd6edfc: jmpq    0x7f872fd6ed1a
+  0x00007f872fd6ee01: nop
+  0x00007f872fd6ee02: nop
+  0x00007f872fd6ee03: mov     0x420(%r15),%rax
+  0x00007f872fd6ee0a: movabs  $0x0,%r10
+  0x00007f872fd6ee14: mov     %r10,0x420(%r15)
+  0x00007f872fd6ee1b: movabs  $0x0,%r10
+  0x00007f872fd6ee25: mov     %r10,0x428(%r15)
+  0x00007f872fd6ee2c: add     $0x40,%rsp
+  0x00007f872fd6ee30: pop     %rbp
+  0x00007f872fd6ee31: jmpq    0x7f872f721100    ;   {runtime_call unwind_exception Runtime1 stub}
+  0x00007f872fd6ee36: hlt
+  0x00007f872fd6ee37: hlt
+  0x00007f872fd6ee38: hlt
+  0x00007f872fd6ee39: hlt
+  0x00007f872fd6ee3a: hlt
+  0x00007f872fd6ee3b: hlt
+  0x00007f872fd6ee3c: hlt
+  0x00007f872fd6ee3d: hlt
+  0x00007f872fd6ee3e: hlt
+  0x00007f872fd6ee3f: hlt
+[Stub Code]
+  0x00007f872fd6ee40: nopl    0x0(%rax,%rax)    ;   {no_reloc}
+  0x00007f872fd6ee45: movabs  $0x0,%rbx         ;   {static_stub}
+  0x00007f872fd6ee4f: jmpq    0x7f872fd6ee4f    ;   {runtime_call}
+[Exception Handler]
+  0x00007f872fd6ee54: callq   0x7f872f7b0500    ;   {runtime_call handle_exception_from_callee Runtime1 stub}
+  0x00007f872fd6ee59: mov     %rsp,0xffffffffffffffd8(%rsp)
+  0x00007f872fd6ee5e: sub     $0x80,%rsp
+  0x00007f872fd6ee65: mov     %rax,0x78(%rsp)
+  0x00007f872fd6ee6a: mov     %rcx,0x70(%rsp)
+  0x00007f872fd6ee6f: mov     %rdx,0x68(%rsp)
+  0x00007f872fd6ee74: mov     %rbx,0x60(%rsp)
+  0x00007f872fd6ee79: mov     %rbp,0x50(%rsp)
+  0x00007f872fd6ee7e: mov     %rsi,0x48(%rsp)
+  0x00007f872fd6ee83: mov     %rdi,0x40(%rsp)
+  0x00007f872fd6ee88: mov     %r8,0x38(%rsp)
+  0x00007f872fd6ee8d: mov     %r9,0x30(%rsp)
+  0x00007f872fd6ee92: mov     %r10,0x28(%rsp)
+  0x00007f872fd6ee97: mov     %r11,0x20(%rsp)
+  0x00007f872fd6ee9c: mov     %r12,0x18(%rsp)
+  0x00007f872fd6eea1: mov     %r13,0x10(%rsp)
+  0x00007f872fd6eea6: mov     %r14,0x8(%rsp)
+  0x00007f872fd6eeab: mov     %r15,(%rsp)
+  0x00007f872fd6eeaf: movabs  $0x7f874db155e2,%rdi  ;   {external_word}
+  0x00007f872fd6eeb9: movabs  $0x7f872fd6ee59,%rsi  ;   {internal_word}
+  0x00007f872fd6eec3: mov     %rsp,%rdx
+  0x00007f872fd6eec6: and     $0xfffffffffffffff0,%rsp
+  0x00007f872fd6eeca: callq   0x7f874d731aa0    ;   {runtime_call}
+  0x00007f872fd6eecf: hlt
+[Deopt Handler Code]
+  0x00007f872fd6eed0: movabs  $0x7f872fd6eed0,%r10  ;   {section_word}
+  0x00007f872fd6eeda: push    %r10
+  0x00007f872fd6eedc: jmpq    0x7f872f6e95a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007f872fd6eee1: hlt
+  0x00007f872fd6eee2: hlt
+  0x00007f872fd6eee3: hlt
+  0x00007f872fd6eee4: hlt
+  0x00007f872fd6eee5: hlt
+  0x00007f872fd6eee6: hlt
+  0x00007f872fd6eee7: hlt
+
+ImmutableOopMap{[48]=Oop }pc offsets: 396 449
+ImmutableOopMap{rsi=Oop rdx=Oop }pc offsets: 577
+ImmutableOopMap{}pc offsets: 587
+ImmutableOopMap{rdi=Oop [48]=Oop rdx=Oop rcx=Oop }pc offsets: 592 597 611
+ImmutableOopMap{rdi=Oop [48]=Oop rsi=Oop rdx=Oop }pc offsets: 616 621 635
+ImmutableOopMap{rdi=Oop [48]=Oop rsi=Oop rcx=Oop }pc offsets: 640
+ImmutableOopMap{[48]=Oop }pc offsets: 668 Compiled method (c2)     501  672       4       dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly (36 bytes)
+ total in heap  [0x00007f87371ca910,0x00007f87371cae80] = 1392
+ relocation     [0x00007f87371caa88,0x00007f87371caaa8] = 32
+ main code      [0x00007f87371caac0,0x00007f87371cac20] = 352
+ stub code      [0x00007f87371cac20,0x00007f87371cac38] = 24
+ oops           [0x00007f87371cac38,0x00007f87371cac40] = 8
+ metadata       [0x00007f87371cac40,0x00007f87371cac48] = 8
+ scopes data    [0x00007f87371cac48,0x00007f87371cacf0] = 168
+ scopes pcs     [0x00007f87371cacf0,0x00007f87371cae40] = 336
+ dependencies   [0x00007f87371cae40,0x00007f87371cae48] = 8
+ handler table  [0x00007f87371cae48,0x00007f87371cae60] = 24
+ nul chk table  [0x00007f87371cae60,0x00007f87371cae80] = 32
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark.inLoopInnerClassBiConsumerOnly(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;  [0x00007f87371caac0, 0x00007f87371cac38]  376 bytes
+Argument 0 is unknown.RIP: 0x7f87371caac0 Code size: 0x00000178
+[Entry Point]
+[Constants]
+  # {method} {0x00007f872ce10af8} 'inLoopInnerClassBiConsumerOnly' '(Ldev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder;)Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;' in 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark'
+  # this:     rsi:rsi   = 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark'
+  # parm0:    rdx:rdx   = 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark$PojoHolder'
+  #           [sp+0x40]  (sp of caller)
+  0x00007f87371caac0: mov     0x8(%rsi),%r10d
+  0x00007f87371caac4: shl     $0x3,%r10
+  0x00007f87371caac8: movabs  $0x800000000,%r12
+  0x00007f87371caad2: add     %r12,%r10
+  0x00007f87371caad5: xor     %r12,%r12
+  0x00007f87371caad8: cmp     %r10,%rax
+  0x00007f87371caadb: jne     0x7f872f6e7d00    ;   {runtime_call ic_miss_stub}
+  0x00007f87371caae1: nop
+  0x00007f87371caae4: nopl    0x0(%rax,%rax)
+  0x00007f87371caaec: nop
+[Verified Entry Point]
+  0x00007f87371caaf0: mov     %eax,0xfffffffffffec000(%rsp)
+  0x00007f87371caaf7: push    %rbp
+  0x00007f87371caaf8: sub     $0x30,%rsp        ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@-1 (line 271)
+
+  0x00007f87371caafc: mov     0xc(%rdx),%ecx    ; implicit exception: dispatches to 0x00007f87371cac02
+  0x00007f87371caaff: mov     %rcx,%r9
+  0x00007f87371cab02: shl     $0x3,%r9          ;*getfield pojo {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@1 (line 271)
+
+  0x00007f87371cab06: xor     %r11d,%r11d
+  0x00007f87371cab09: jmp     0x7f87371cab18
+  0x00007f87371cab0b: nopl    0x0(%rax,%rax)
+  0x00007f87371cab10: mov     (%rsp),%ecx
+  0x00007f87371cab13: mov     0x8(%rsp),%r9
+  0x00007f87371cab18: movabs  $0x7164ad438,%r10  ;   {oop(a 'java/lang/Class'{0x00000007164ad438} = 'dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark')}
+  0x00007f87371cab22: mov     0x8c(%r10),%ebx   ;*getstatic biConsumerSettersInnerClasses {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@12 (line 273)
+
+  0x00007f87371cab29: mov     0xc(%r12,%rbx,8),%r8d  ; implicit exception: dispatches to 0x00007f87371cabe3
+  0x00007f87371cab2e: cmp     %r8d,%r11d
+  0x00007f87371cab31: jnb     0x7f87371caba1
+  0x00007f87371cab33: mov     0x78(%r10),%edx   ;*getstatic valuesToSet {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@18 (line 273)
+
+  0x00007f87371cab37: mov     0xc(%r12,%rdx,8),%r8d  ; implicit exception: dispatches to 0x00007f87371cabf2
+  0x00007f87371cab3c: lea     (%r12,%rbx,8),%r10
+  0x00007f87371cab40: mov     0x10(%r10,%r11,4),%ebp
+  0x00007f87371cab45: cmp     %r8d,%r11d
+  0x00007f87371cab48: jnb     0x7f87371cabba
+  0x00007f87371cab4a: mov     %r9,0x8(%rsp)
+  0x00007f87371cab4f: mov     %ecx,(%rsp)
+  0x00007f87371cab52: mov     %rbp,%rsi
+  0x00007f87371cab55: shl     $0x3,%rsi         ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@16 (line 273)
+
+  0x00007f87371cab59: lea     (%r12,%rdx,8),%r10
+  0x00007f87371cab5d: mov     0x10(%r10,%r11,4),%r10d
+  0x00007f87371cab62: mov     %r11d,%ebp
+  0x00007f87371cab65: mov     %r10,%rcx
+  0x00007f87371cab68: shl     $0x3,%rcx         ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@22 (line 273)
+
+  0x00007f87371cab6c: mov     %r9,%rdx
+  0x00007f87371cab6f: nop
+  0x00007f87371cab71: movabs  $0x8400943b0,%rax
+  0x00007f87371cab7b: callq   0x7f872f6fe3e0    ; ImmutableOopMap{[0]=NarrowOop [8]=Oop }
+                                                ;*invokeinterface accept {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@23 (line 273)
+                                                ;   {virtual_call}
+  0x00007f87371cab80: mov     %ebp,%r11d
+  0x00007f87371cab83: incl    %r11d             ;*iinc {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@28 (line 272)
+
+  0x00007f87371cab86: cmp     $0x4,%r11d
+  0x00007f87371cab8a: jl      0x7f87371cab10    ;*if_icmpge {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@9 (line 272)
+
+  0x00007f87371cab8c: mov     0x8(%rsp),%rax
+  0x00007f87371cab91: add     $0x30,%rsp
+  0x00007f87371cab95: pop     %rbp
+  0x00007f87371cab96: mov     0x108(%r15),%r10
+  0x00007f87371cab9d: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f87371caba0: retq
+  0x00007f87371caba1: mov     $0xffffffe4,%esi
+  0x00007f87371caba6: mov     %ecx,%ebp
+  0x00007f87371caba8: mov     %ebx,0x4(%rsp)
+  0x00007f87371cabac: mov     %r11d,0x8(%rsp)
+  0x00007f87371cabb1: nop
+  0x00007f87371cabb3: callq   0x7f872f6e9980    ; ImmutableOopMap{rbp=NarrowOop [4]=NarrowOop }
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@16 (line 273)
+                                                ;   {runtime_call UncommonTrapBlob}
+  0x00007f87371cabb8: ud2                       ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@16 (line 273)
+
+  0x00007f87371cabba: mov     $0xffffffe4,%esi
+  0x00007f87371cabbf: mov     %ecx,0x8(%rsp)
+  0x00007f87371cabc3: mov     %edx,0xc(%rsp)
+  0x00007f87371cabc7: mov     %r11d,0x10(%rsp)
+  0x00007f87371cabcc: nop
+  0x00007f87371cabcf: callq   0x7f872f6e9980    ; ImmutableOopMap{rbp=NarrowOop [8]=NarrowOop [12]=NarrowOop }
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@22 (line 273)
+                                                ;   {runtime_call UncommonTrapBlob}
+  0x00007f87371cabd4: ud2                       ;*invokeinterface accept {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@23 (line 273)
+
+  0x00007f87371cabd6: mov     %rax,%rsi
+  0x00007f87371cabd9: add     $0x30,%rsp
+  0x00007f87371cabdd: pop     %rbp
+  0x00007f87371cabde: jmpq    0x7f872f7b6100    ;   {runtime_call _rethrow_Java}
+  0x00007f87371cabe3: mov     $0xfffffff6,%esi
+  0x00007f87371cabe8: mov     %r11d,%ebp
+  0x00007f87371cabeb: callq   0x7f872f6e9980    ; ImmutableOopMap{}
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@16 (line 273)
+                                                ;   {runtime_call UncommonTrapBlob}
+  0x00007f87371cabf0: ud2                       ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@16 (line 273)
+
+  0x00007f87371cabf2: mov     $0xfffffff6,%esi
+  0x00007f87371cabf7: mov     %r11d,%ebp
+  0x00007f87371cabfa: nop
+  0x00007f87371cabfb: callq   0x7f872f6e9980    ; ImmutableOopMap{}
+                                                ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@22 (line 273)
+                                                ;   {runtime_call UncommonTrapBlob}
+  0x00007f87371cac00: ud2                       ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@22 (line 273)
+
+  0x00007f87371cac02: mov     $0xfffffff6,%esi
+  0x00007f87371cac07: callq   0x7f872f6e9980    ; ImmutableOopMap{}
+                                                ;*getfield pojo {reexecute=1 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@1 (line 271)
+                                                ;   {runtime_call UncommonTrapBlob}
+  0x00007f87371cac0c: ud2                       ;*getfield pojo {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopInnerClassBiConsumerOnly@1 (line 271)
+
+  0x00007f87371cac0e: hlt
+  0x00007f87371cac0f: hlt
+  0x00007f87371cac10: hlt
+  0x00007f87371cac11: hlt
+  0x00007f87371cac12: hlt
+  0x00007f87371cac13: hlt
+  0x00007f87371cac14: hlt
+  0x00007f87371cac15: hlt
+  0x00007f87371cac16: hlt
+  0x00007f87371cac17: hlt
+  0x00007f87371cac18: hlt
+  0x00007f87371cac19: hlt
+  0x00007f87371cac1a: hlt
+  0x00007f87371cac1b: hlt
+  0x00007f87371cac1c: hlt
+  0x00007f87371cac1d: hlt
+  0x00007f87371cac1e: hlt
+  0x00007f87371cac1f: hlt
+[Exception Handler]
+[Stub Code]
+  0x00007f87371cac20: jmpq    0x7f872f7ae200    ;   {no_reloc}
+[Deopt Handler Code]
+  0x00007f87371cac25: callq   0x7f87371cac2a
+  0x00007f87371cac2a: subq    $0x5,(%rsp)
+  0x00007f87371cac2f: jmpq    0x7f872f6e95a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007f87371cac34: hlt
+  0x00007f87371cac35: hlt
+  0x00007f87371cac36: hlt
+  0x00007f87371cac37: hlt
+
+ImmutableOopMap{[0]=NarrowOop [8]=Oop }pc offsets: 192
+ImmutableOopMap{rbp=NarrowOop [4]=NarrowOop }pc offsets: 248
+ImmutableOopMap{rbp=NarrowOop [8]=NarrowOop [12]=NarrowOop }pc offsets: 276
+ImmutableOopMap{}pc offsets: 304 320 332
