@@ -1,0 +1,300 @@
+# JMH version: 1.21
+# VM version: JDK 11.0.5, OpenJDK 64-Bit Server VM, 11.0.5+10-post-Ubuntu-0ubuntu1.118.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -javaagent:/opt/idea-IC-182.4323.46/lib/idea_rt.jar=46167:/opt/idea-IC-182.4323.46/bin -Dfile.encoding=UTF-8
+# Warmup: 7 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark.inLoopMethodHandles
+
+# Run progress: 58,33% complete, ETA 00:02:34
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfAsmProfiler
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 6311,097 ns/op
+# Warmup Iteration   2: 53,411 ns/op
+# Warmup Iteration   3: 52,938 ns/op
+# Warmup Iteration   4: 45,604 ns/op
+# Warmup Iteration   5: 45,590 ns/op
+# Warmup Iteration   6: 47,799 ns/op
+# Warmup Iteration   7: 45,613 ns/op
+Iteration   1: 45,413 ns/op
+Iteration   2: 46,402 ns/op
+Iteration   3: 47,089 ns/op
+Iteration   4: 46,868 ns/op
+Iteration   5: 45,852 ns/op
+Iteration   6: 45,376 ns/op
+Iteration   7: 45,543 ns/op
+Iteration   8: 50,365 ns/op
+Iteration   9: 45,638 ns/op
+Iteration  10: 45,291 ns/op
+# Processing profiler results: LinuxPerfAsmProfiler
+
+
+Result "dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark.inLoopMethodHandles":
+  46,384 ±(99.9%) 2,325 ns/op [Average]
+  (min, avg, max) = (45,291, 46,384, 50,365), stdev = 1,538
+  CI (99.9%): [44,059, 48,709] (assumes normal distribution)
+
+Secondary result "dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark.inLoopMethodHandles:·asm":
+PrintAssembly processed: 149878 total address lines.
+Perf output processed (skipped 19,023 seconds):
+ Column 1: cycles (10550 events)
+
+Hottest code regions (>10,00% "cycles" events):
+
+....[Hottest Region 1]..............................................................................
+c2, level 4, dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub, version 789 (305 bytes)
+
+                0x00007feb9afa5c38: mov     0x60(%rsp),%rax
+                0x00007feb9afa5c3d: movzbl  0x94(%rax),%r11d  ;*getfield isDone {reexecute=0 rethrow=0 return_oop=0}
+                                                              ; - dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub@32 (line 239)
+                                                              ; implicit exception: dispatches to 0x00007feb9afa6082
+                0x00007feb9afa5c45: test    %r11d,%r11d
+                0x00007feb9afa5c48: jne     0x7feb9afa5e8e    ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                                              ; - dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub@35 (line 239)
+                0x00007feb9afa5c4e: mov     $0x1,%ebx
+         ╭      0x00007feb9afa5c53: jmpq    0x7feb9afa5d11
+         │      0x00007feb9afa5c58: nopl    0x0(%rax,%rax)
+  0,85%  │      0x00007feb9afa5c60: lea     (%r12,%r8,8),%rdx  ;*invokevirtual asType {reexecute=0 rethrow=0 return_oop=0}
+         │                                                    ; - java.lang.invoke.Invokers::checkGenericType@2 (line 495)
+         │                                                    ; - java.lang.invoke.LambdaForm$MH/0x0000000840080840::invoke_MT@8
+         │                                                    ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopMethodHandles@23 (line 334)
+         │                                                    ; - dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub@19 (line 237)
+  0,91%  │   ↗  0x00007feb9afa5c64: mov     0x14(%rdx),%r10d  ;*getfield form {reexecute=0 rethrow=0 return_oop=0}
+         │   │                                                ; - java.lang.invoke.Invokers::checkCustomized@9 (line 572)
+         │   │                                                ; - java.lang.invoke.LambdaForm$MH/0x0000000840080840::invoke_MT@15
+         │   │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopMethodHandles@23 (line 334)
+         │   │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub@19 (line 237)
+  0,66%  │   │  0x00007feb9afa5c68: mov     0x1c(%r12,%r10,8),%r8d  ; implicit exception: dispatches to 0x00007feb9afa5fb2
+  1,00%  │   │  0x00007feb9afa5c6d: test    %r8d,%r8d
+         │   │  0x00007feb9afa5c70: je      0x7feb9afa5dd2    ;*ifnonnull {reexecute=0 rethrow=0 return_oop=0}
+         │   │                                                ; - java.lang.invoke.Invokers::checkCustomized@15 (line 572)
+         │   │                                                ; - java.lang.invoke.LambdaForm$MH/0x0000000840080840::invoke_MT@15
+         │   │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopMethodHandles@23 (line 334)
+         │   │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub@19 (line 237)
+  0,92%  │   │  0x00007feb9afa5c76: mov     %r9,0x70(%rsp)
+  0,84%  │   │  0x00007feb9afa5c7b: mov     %rax,0x60(%rsp)
+  0,49%  │   │  0x00007feb9afa5c80: mov     %rbx,0x78(%rsp)
+  0,75%  │   │  0x00007feb9afa5c85: mov     %ecx,0x8(%rsp)
+  1,21%  │   │  0x00007feb9afa5c89: mov     %rdi,0x18(%rsp)
+  0,89%  │   │  0x00007feb9afa5c8e: mov     %r11d,0xc(%rsp)
+  0,52%  │   │  0x00007feb9afa5c93: mov     %rdx,0x20(%rsp)   ;*return {reexecute=0 rethrow=0 return_oop=0}
+         │   │                                                ; - java.lang.invoke.Invokers::checkCustomized@22 (line 575)
+         │   │                                                ; - java.lang.invoke.LambdaForm$MH/0x0000000840080840::invoke_MT@15
+         │   │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopMethodHandles@23 (line 334)
+         │   │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub@19 (line 237)
+  0,99%  │   │  0x00007feb9afa5c98: mov     %rbp,%rcx
+  0,88%  │   │  0x00007feb9afa5c9b: shl     $0x3,%rcx         ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+         │   │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopMethodHandles@22 (line 334)
+         │   │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub@19 (line 237)
+  0,69%  │   │  0x00007feb9afa5c9f: mov     0x20(%rsp),%rsi
+  0,46%  │   │  0x00007feb9afa5ca4: mov     0x18(%rsp),%rdx
+  0,94%  │   │  0x00007feb9afa5ca9: nop
+  1,13%  │   │  0x00007feb9afa5cab: callq   0x7feb934c7f80    ; ImmutableOopMap{[96]=Oop [104]=Oop [112]=Oop [0]=Oop [8]=NarrowOop [16]=Oop [24]=Oop }
+         │   │                                                ;*invokevirtual invokeBasic {reexecute=0 rethrow=0 return_oop=0}
+         │   │                                                ; - java.lang.invoke.LambdaForm$MH/0x0000000840080840::invoke_MT@22
+         │   │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopMethodHandles@23 (line 334)
+         │   │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub@19 (line 237)
+         │   │                                                ;   {optimized virtual_call}
+  0,17%  │   │  0x00007feb9afa5cb0: mov     0xc(%rsp),%r11d
+  2,71%  │   │  0x00007feb9afa5cb5: incl    %r11d             ;*iinc {reexecute=0 rethrow=0 return_oop=0}
+         │   │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopMethodHandles@26 (line 333)
+         │   │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub@19 (line 237)
+  0,24%  │   │  0x00007feb9afa5cb8: cmp     $0x4,%r11d
+         │╭  │  0x00007feb9afa5cbc: jnl     0x7feb9afa5cd8    ;*if_icmpge {reexecute=0 rethrow=0 return_oop=0}
+         ││  │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopMethodHandles@9 (line 333)
+         ││  │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub@19 (line 237)
+  0,01%  ││  │  0x00007feb9afa5cbe: mov     0x70(%rsp),%r9
+  0,46%  ││  │  0x00007feb9afa5cc3: mov     0x60(%rsp),%rax
+  1,73%  ││  │  0x00007feb9afa5cc8: mov     0x78(%rsp),%rbx
+  0,23%  ││  │  0x00007feb9afa5ccd: mov     0x8(%rsp),%ecx
+  0,03%  ││  │  0x00007feb9afa5cd1: mov     0x18(%rsp),%rdi
+  0,64%  ││╭ │  0x00007feb9afa5cd6: jmp     0x7feb9afa5d24
+         │↘│ │  0x00007feb9afa5cd8: mov     0x10(%rsp),%rsi
+         │ │ │  0x00007feb9afa5cdd: mov     0x18(%rsp),%rdx
+  0,67%  │ │ │  0x00007feb9afa5ce2: nop
+  0,01%  │ │ │  0x00007feb9afa5ce3: callq   0x7feb934c7f80    ; ImmutableOopMap{[96]=Oop [104]=Oop [112]=Oop [0]=Oop [16]=Oop }
+         │ │ │                                                ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+         │ │ │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub@22 (line 237)
+         │ │ │                                                ;   {optimized virtual_call}
+  0,03%  │ │ │  0x00007feb9afa5ce8: mov     0x60(%rsp),%rax
+         │ │ │  0x00007feb9afa5ced: movzbl  0x94(%rax),%r10d  ;*goto {reexecute=0 rethrow=0 return_oop=0}
+         │ │ │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopMethodHandles@29 (line 333)
+         │ │ │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub@19 (line 237)
+  0,79%  │ │ │  0x00007feb9afa5cf5: mov     0x108(%r15),%r11
+         │ │ │  0x00007feb9afa5cfc: mov     0x78(%rsp),%rbx
+         │ │ │  0x00007feb9afa5d01: add     $0x1,%rbx         ; ImmutableOopMap{rax=Oop [96]=Oop [104]=Oop [112]=Oop [0]=Oop [16]=Oop }
+         │ │ │                                                ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+         │ │ │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub@35 (line 239)
+         │ │ │  0x00007feb9afa5d05: test    %eax,(%r11)       ;   {poll}
+  0,82%  │ │ │  0x00007feb9afa5d08: test    %r10d,%r10d
+         │ │ │  0x00007feb9afa5d0b: jne     0x7feb9afa5e93    ;*aload_1 {reexecute=0 rethrow=0 return_oop=0}
+         │ │ │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub@38 (line 240)
+         ↘ │ │  0x00007feb9afa5d11: mov     0x70(%rsp),%r9
+  0,01%    │ │  0x00007feb9afa5d16: mov     0xc(%r9),%ecx
+           │ │  0x00007feb9afa5d1a: mov     %rcx,%rdi
+  0,77%    │ │  0x00007feb9afa5d1d: shl     $0x3,%rdi         ;*getfield pojo {reexecute=0 rethrow=0 return_oop=0}
+           │ │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopMethodHandles@1 (line 332)
+           │ │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub@19 (line 237)
+  0,01%    │ │  0x00007feb9afa5d21: xor     %r11d,%r11d
+  1,58%    ↘ │  0x00007feb9afa5d24: movabs  $0x7164d3468,%r10  ;   {oop(a &apos;java/lang/Class&apos;{0x00000007164d3468} = &apos;dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark&apos;)}
+  0,13%      │  0x00007feb9afa5d2e: mov     0x90(%r10),%r10d  ;*getstatic methodHandles {reexecute=0 rethrow=0 return_oop=0}
+             │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopMethodHandles@12 (line 334)
+             │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub@19 (line 237)
+  0,87%      │  0x00007feb9afa5d35: mov     0xc(%r12,%r10,8),%edx  ; implicit exception: dispatches to 0x00007feb9afa5f86
+  0,59%      │  0x00007feb9afa5d3a: cmp     %edx,%r11d
+             │  0x00007feb9afa5d3d: jnb     0x7feb9afa5e01
+  1,66%      │  0x00007feb9afa5d43: movabs  $0x7164d3468,%r8  ;   {oop(a &apos;java/lang/Class&apos;{0x00000007164d3468} = &apos;dev/jgardo/jvm/miscellaneous/reflect/ReflectionBenchmark&apos;)}
+  0,19%      │  0x00007feb9afa5d4d: mov     0x78(%r8),%r8d    ;*getstatic valuesToSet {reexecute=0 rethrow=0 return_oop=0}
+             │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopMethodHandles@18 (line 334)
+             │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub@19 (line 237)
+  0,97%      │  0x00007feb9afa5d51: mov     0xc(%r12,%r8,8),%esi  ; implicit exception: dispatches to 0x00007feb9afa5f96
+  0,65%      │  0x00007feb9afa5d56: shl     $0x3,%r10
+  1,67%      │  0x00007feb9afa5d5a: mov     0x10(%r10,%r11,4),%r10d  ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+             │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopMethodHandles@16 (line 334)
+             │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub@19 (line 237)
+  0,27%      │  0x00007feb9afa5d5f: cmp     %esi,%r11d
+             │  0x00007feb9afa5d62: jnb     0x7feb9afa5e46
+  0,90%      │  0x00007feb9afa5d68: mov     0x10(%r12,%r10,8),%esi  ; implicit exception: dispatches to 0x00007feb9afa5fa6
+  0,59%      │  0x00007feb9afa5d6d: shl     $0x3,%r8
+  1,75%      │  0x00007feb9afa5d71: mov     0x10(%r8,%r11,4),%ebp  ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+             │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopMethodHandles@22 (line 334)
+             │                                                ; - dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub@19 (line 237)
+  0,27%      │  0x00007feb9afa5d76: cmp     $0xe2c2ed43,%esi  ;   {oop(a &apos;java/lang/invoke/MethodType&apos;{0x0000000716176a18} = (Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;Ljava/lang/Object;)V)}
+            ╭│  0x00007feb9afa5d7c: jne     0x7feb9afa5d87    ;*if_acmpne {reexecute=0 rethrow=0 return_oop=0}
+            ││                                                ; - java.lang.invoke.MethodHandle::asType@5 (line 839)
+            ││                                                ; - java.lang.invoke.Invokers::checkGenericType@2 (line 495)
+            ││                                                ; - java.lang.invoke.LambdaForm$MH/0x0000000840080840::invoke_MT@8
+            ││                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopMethodHandles@23 (line 334)
+            ││                                                ; - dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub@19 (line 237)
+  0,02%     ││  0x00007feb9afa5d7e: lea     (%r12,%r10,8),%rdx  ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+            ││                                                ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopMethodHandles@16 (line 334)
+            ││                                                ; - dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub@19 (line 237)
+            │╰  0x00007feb9afa5d82: jmpq    0x7feb9afa5c64
+  0,75%     ↘   0x00007feb9afa5d87: mov     0x18(%r12,%r10,8),%r8d  ;*getfield asTypeCache {reexecute=0 rethrow=0 return_oop=0}
+                                                              ; - java.lang.invoke.MethodHandle::asTypeCached@1 (line 851)
+                                                              ; - java.lang.invoke.MethodHandle::asType@12 (line 843)
+                                                              ; - java.lang.invoke.Invokers::checkGenericType@2 (line 495)
+                                                              ; - java.lang.invoke.LambdaForm$MH/0x0000000840080840::invoke_MT@8
+                                                              ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopMethodHandles@23 (line 334)
+                                                              ; - dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub@19 (line 237)
+  0,66%         0x00007feb9afa5d8c: mov     0x10(%r12,%r8,8),%edx  ;*getfield type {reexecute=0 rethrow=0 return_oop=0}
+                                                              ; - java.lang.invoke.MethodHandle::asTypeCached@11 (line 852)
+                                                              ; - java.lang.invoke.MethodHandle::asType@12 (line 843)
+                                                              ; - java.lang.invoke.Invokers::checkGenericType@2 (line 495)
+                                                              ; - java.lang.invoke.LambdaForm$MH/0x0000000840080840::invoke_MT@8
+                                                              ; - dev.jgardo.jvm.miscellaneous.reflect.ReflectionBenchmark::inLoopMethodHandles@23 (line 334)
+                                                              ; - dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub@19 (line 237)
+                                                              ; implicit exception: dispatches to 0x00007feb9afa5fbe
+  0,91%         0x00007feb9afa5d91: cmp     $0xe2c2ed43,%edx  ;   {oop(a &apos;java/lang/invoke/MethodType&apos;{0x0000000716176a18} = (Ldev/jgardo/jvm/miscellaneous/reflect/Pojo;Ljava/lang/Object;)V)}
+                0x00007feb9afa5d97: je      0x7feb9afa5c60    ;*if_acmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                              ; - java.lang.invoke.MethodHandle::asTypeCached@14 (line 852)
+                                                              ; - java.lang.invoke.MethodHandle::asType@12 (line 843)
+....................................................................................................
+ 37,91%  <total for region 1>
+
+....[Hottest Region 2]..............................................................................
+Unknown, level 0, java.lang.invoke.MethodHandle::invokeBasic, version 662 (34 bytes)
+
+          ----------------------------------------------------------------------
+          java/lang/invoke/MethodHandle.invokeBasic(Ljava/lang/Object;Ljava/lang/Object;)V  [0x00007feb9af98ca0, 0x00007feb9af98cd0]  48 bytes
+          Argument 0 is unknown.RIP: 0x7feb9af98ca0 Code size: 0x00000030
+          [Entry Point]
+          [Verified Entry Point]
+            # {method} {0x00007feb9044c390} &apos;invokeBasic&apos; &apos;(Ljava/lang/Object;Ljava/lang/Object;)V&apos; in &apos;java/lang/invoke/MethodHandle&apos;
+            # this:     rsi:rsi   = &apos;java/lang/invoke/MethodHandle&apos;
+            # parm0:    rdx:rdx   = &apos;java/lang/Object&apos;
+            # parm1:    rcx:rcx   = &apos;java/lang/Object&apos;
+            #           [sp+0x0]  (sp of caller)
+  1,36%     0x00007feb9af98ca0: mov     0x14(%rsi),%ebx
+  0,92%     0x00007feb9af98ca3: shl     $0x3,%rbx
+  1,18%     0x00007feb9af98ca7: mov     0x28(%rbx),%ebx
+  1,10%     0x00007feb9af98caa: shl     $0x3,%rbx
+  0,63%     0x00007feb9af98cae: mov     0x24(%rbx),%ebx
+  3,28%     0x00007feb9af98cb1: shl     $0x3,%rbx
+  1,60%     0x00007feb9af98cb5: mov     0x10(%rbx),%rbx
+ 11,36%     0x00007feb9af98cb9: test    %rbx,%rbx
+         ╭  0x00007feb9af98cbc: je      0x7feb9af98cc5
+  2,63%  │  0x00007feb9af98cc2: jmpq    *0x38(%rbx)
+         ↘  0x00007feb9af98cc5: jmpq    0x7feb934ebb00    ;   {runtime_call AbstractMethodError throw_exception}
+            0x00007feb9af98cca: hlt
+            0x00007feb9af98ccb: hlt
+            0x00007feb9af98ccc: hlt
+            0x00007feb9af98ccd: hlt
+            0x00007feb9af98cce: hlt
+            0x00007feb9af98ccf: hlt
+          <print_nmethod stamp='11,645'>
+          Compiled method (c1)   11644  660       3       java.lang.reflect.Field::&lt;init&gt; (44 bytes)
+           total in heap  [0x00007feb93af7210,0x00007feb93af79a8] = 1944
+....................................................................................................
+ 24,04%  <total for region 2>
+
+....[Hottest Regions]...............................................................................
+ 37,91%         c2, level 4  dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub, version 789 (305 bytes)
+ 24,04%    Unknown, level 0  java.lang.invoke.MethodHandle::invokeBasic, version 662 (34 bytes)
+  8,32%         c2, level 4  java.lang.invoke.LambdaForm$MH.0x00000008400a4040::invoke, version 783 (88 bytes)
+  6,69%         c2, level 4  java.lang.invoke.LambdaForm$MH.0x00000008400a3840::invoke, version 754 (48 bytes)
+  6,14%         c2, level 4  java.lang.invoke.LambdaForm$MH.0x00000008400a3440::invoke, version 749 (43 bytes)
+  4,85%         c2, level 4  java.lang.invoke.LambdaForm$DMH.0x00000008400a3c40::invokeVirtual, version 758 (58 bytes)
+  4,04%         c2, level 4  org.openjdk.jmh.infra.Blackhole::consume, version 751 (68 bytes)
+  1,03%         c2, level 4  java.lang.invoke.LambdaForm$DMH.0x00000008400a3c40::invokeVirtual, version 758 (15 bytes)
+  0,56%         c2, level 4  java.lang.invoke.LambdaForm$MH.0x00000008400a4040::invoke, version 783 (0 bytes)
+  0,32%   [kernel.kallsyms]  [unknown] (1 bytes)
+  0,26%   [kernel.kallsyms]  [unknown] (1 bytes)
+  0,19%        libc-2.27.so  malloc (41 bytes)
+  0,18%        libc-2.27.so  malloc_consolidate (126 bytes)
+  0,15%        libc-2.27.so  cfree@GLIBC_2.2.5 (24 bytes)
+  0,13%                      <unknown> (42 bytes)
+  0,12%   [kernel.kallsyms]  [unknown] (37 bytes)
+  0,12%        libc-2.27.so  malloc_consolidate (53 bytes)
+  0,08%   [kernel.kallsyms]  [unknown] (74 bytes)
+  0,06%   [kernel.kallsyms]  [unknown] (45 bytes)
+  0,06%   [kernel.kallsyms]  [unknown] (58 bytes)
+  4,73%  <...other 350 warm regions...>
+....................................................................................................
+ 99,99%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+ 37,91%         c2, level 4  dev.jgardo.jvm.miscellaneous.reflect.generated.ReflectionBenchmark_inLoopMethodHandles_jmhTest::inLoopMethodHandles_avgt_jmhStub, version 789
+ 24,04%    Unknown, level 0  java.lang.invoke.MethodHandle::invokeBasic, version 662
+  8,88%         c2, level 4  java.lang.invoke.LambdaForm$MH.0x00000008400a4040::invoke, version 783
+  6,69%         c2, level 4  java.lang.invoke.LambdaForm$MH.0x00000008400a3840::invoke, version 754
+  6,14%         c2, level 4  java.lang.invoke.LambdaForm$MH.0x00000008400a3440::invoke, version 749
+  5,89%         c2, level 4  java.lang.invoke.LambdaForm$DMH.0x00000008400a3c40::invokeVirtual, version 758
+  4,04%         c2, level 4  org.openjdk.jmh.infra.Blackhole::consume, version 751
+  2,52%   [kernel.kallsyms]  [unknown]
+  0,85%                      <unknown>
+  0,74%           libjvm.so  [unknown]
+  0,41%        libc-2.27.so  _int_malloc
+  0,35%        libc-2.27.so  malloc
+  0,33%        libc-2.27.so  malloc_consolidate
+  0,31%        libc-2.27.so  cfree@GLIBC_2.2.5
+  0,15%        libc-2.27.so  vfprintf
+  0,06%        libc-2.27.so  _IO_fwrite
+  0,05%        libc-2.27.so  __memset_sse2_unaligned_erms
+  0,04%        libc-2.27.so  _IO_default_xsputn
+  0,03%        libc-2.27.so  __libc_disable_asynccancel
+  0,03%        libc-2.27.so  __GI___strlen_sse2
+  0,53%  <...other 38 warm methods...>
+....................................................................................................
+ 99,99%  <totals>
+
+....[Distribution by Source]........................................................................
+ 69,55%         c2, level 4
+ 24,05%    Unknown, level 0
+  2,52%   [kernel.kallsyms]
+  2,07%        libc-2.27.so
+  0,85%
+  0,77%           libjvm.so
+  0,11%         interpreter
+  0,04%  libpthread-2.27.so
+  0,02%          ld-2.27.so
+  0,01%         c1, level 3
+....................................................................................................
+ 99,99%  <totals>
+
+
+

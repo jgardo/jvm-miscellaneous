@@ -1,6 +1,7 @@
 package dev.jgardo.jvm.miscellaneous.reflect;
 
 import org.openjdk.jmh.annotations.*;
+import org.openjdk.jmh.profile.LinuxPerfAsmProfiler;
 import org.openjdk.jmh.profile.LinuxPerfNormProfiler;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
@@ -29,6 +30,11 @@ public class ReflectionBenchmark {
     private static Method setter2;
     private static Method setter3;
     private static Method setter4;
+    private static MethodHandle[] methodHandles = new MethodHandle[4];
+    private static MethodHandle methodHandles1;
+    private static MethodHandle methodHandles2;
+    private static MethodHandle methodHandles3;
+    private static MethodHandle methodHandles4;
     private static Object[] setters = new Object[4];
     private static BiConsumer[] biConsumerSetters = new BiConsumer[4];
     private static BiConsumer[] biConsumerSettersInnerClasses = new BiConsumer[4];
@@ -61,10 +67,14 @@ public class ReflectionBenchmark {
 
     private static void prepareMethodHandles() {
         try {
-            setters[0] = getIntSetter(lookup.unreflect(methods[0]));
-            setters[1] = getLongSetter(lookup.unreflect(methods[1]));
-            setters[2] = getObjectSetter(lookup.unreflect(methods[2]));
-            setters[3] = getObjectSetter(lookup.unreflect(methods[3]));
+            methodHandles[0] = lookup.unreflect(methods[0]);
+            methodHandles[1] = lookup.unreflect(methods[1]);
+            methodHandles[2] = lookup.unreflect(methods[2]);
+            methodHandles[3] = lookup.unreflect(methods[3]);
+            setters[0] = getIntSetter(methodHandles[0]);
+            setters[1] = getLongSetter(methodHandles[1]);
+            setters[2] = getObjectSetter(methodHandles[2]);
+            setters[3] = getObjectSetter(methodHandles[3]);
         } catch (Throwable e) {
             throw new RuntimeException(e);
         }
@@ -185,13 +195,14 @@ public class ReflectionBenchmark {
                 .include(ReflectionBenchmark.class.getSimpleName())
                 .forks(1)
                 .warmupTime(TimeValue.seconds(1))
-                .warmupIterations(2)
+                .warmupIterations(7)
                 .measurementIterations(10)
                 .measurementTime(TimeValue.seconds(1))
                 .threads(1)
                 .mode(Mode.AverageTime)
                 .timeUnit(TimeUnit.NANOSECONDS)
 //                .addProfiler(LinuxPerfNormProfiler.class)
+                .addProfiler(LinuxPerfAsmProfiler.class)
                 .build();
 
         new Runner(opt).run();
@@ -226,6 +237,17 @@ public class ReflectionBenchmark {
         setter2.invoke(pojo, l1);
         setter3.invoke(pojo, o1);
         setter4.invoke(pojo, s1);
+        return pojo;
+    }
+
+    @Benchmark
+    @CompilerControl(CompilerControl.Mode.PRINT)
+    public Pojo methodHandles(PojoHolder pojoHolder) throws Throwable {
+        Pojo pojo = pojoHolder.pojo;
+        methodHandles[0].invokeExact(pojo, i1);
+        methodHandles[1].invokeExact(pojo, l1);
+        methodHandles[2].invokeExact(pojo, o1);
+        methodHandles[3].invokeExact(pojo, s1);;
         return pojo;
     }
 
@@ -300,6 +322,16 @@ public class ReflectionBenchmark {
         Pojo pojo = pojoHolder.pojo;
         for (int i = 0; i < 4; i++) {
             abstractSetters[i].accept(pojo, valuesToSet[i]);
+        }
+        return pojo;
+    }
+
+    @Benchmark
+    @CompilerControl(CompilerControl.Mode.PRINT)
+    public Pojo inLoopMethodHandles(PojoHolder pojoHolder) throws Throwable {
+        Pojo pojo = pojoHolder.pojo;
+        for (int i = 0; i < 4; i++) {
+            methodHandles[i].invoke(pojo, valuesToSet[i]);
         }
         return pojo;
     }
