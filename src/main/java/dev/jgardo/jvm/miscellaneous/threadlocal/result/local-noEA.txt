@@ -1,0 +1,232 @@
+Compiled method (c1)     819  533       2       dev.jgardo.jvm.miscellaneous.threadlocal.ThreadLocalBenchmark::local (11 bytes)
+ total in heap  [0x00007f3e5128cf90,0x00007f3e5128d3a0] = 1040
+ relocation     [0x00007f3e5128d108,0x00007f3e5128d138] = 48
+ main code      [0x00007f3e5128d140,0x00007f3e5128d260] = 288
+ stub code      [0x00007f3e5128d260,0x00007f3e5128d2f0] = 144
+ oops           [0x00007f3e5128d2f0,0x00007f3e5128d2f8] = 8
+ metadata       [0x00007f3e5128d2f8,0x00007f3e5128d308] = 16
+ scopes data    [0x00007f3e5128d308,0x00007f3e5128d338] = 48
+ scopes pcs     [0x00007f3e5128d338,0x00007f3e5128d398] = 96
+ dependencies   [0x00007f3e5128d398,0x00007f3e5128d3a0] = 8
+Loaded disassembler from hsdis-amd64.so
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/threadlocal/ThreadLocalBenchmark.local()Ljava/lang/Integer;  [0x00007f3e5128d140, 0x00007f3e5128d2f0]  432 bytes
+Argument 0 is unknown.RIP: 0x7f3e5128d140 Code size: 0x000001b0
+[Disassembling for mach='amd64']
+[Entry Point]
+[Constants]
+  # {method} {0x00007f3e3dfa7c98} 'local' '()Ljava/lang/Integer;' in 'dev/jgardo/jvm/miscellaneous/threadlocal/ThreadLocalBenchmark'
+  #           [sp+0x70]  (sp of caller)
+  0x00007f3e5128d140: mov     0x8(%rsi),%r10d
+  0x00007f3e5128d144: movabs  $0x800000000,%r12
+  0x00007f3e5128d14e: add     %r12,%r10
+  0x00007f3e5128d151: xor     %r12,%r12
+  0x00007f3e5128d154: cmp     %rax,%r10
+  0x00007f3e5128d157: jne     0x7f3e50c2ec00    ;   {runtime_call ic_miss_stub}
+  0x00007f3e5128d15d: nop
+[Verified Entry Point]
+  0x00007f3e5128d160: mov     %eax,0xfffffffffffec000(%rsp)
+  0x00007f3e5128d167: push    %rbp
+  0x00007f3e5128d168: sub     $0x60,%rsp
+  0x00007f3e5128d16c: movabs  $0x7f3e3dfcf1a8,%rdx
+  0x00007f3e5128d176: mov     0x18(%rdx),%edi
+  0x00007f3e5128d179: add     $0x8,%edi
+  0x00007f3e5128d17c: mov     %edi,0x18(%rdx)
+  0x00007f3e5128d17f: and     $0x3ff8,%edi
+  0x00007f3e5128d185: cmp     $0x0,%edi
+  0x00007f3e5128d188: je      0x7f3e5128d1f7
+  0x00007f3e5128d18e: movabs  $0x800013a68,%rdx  ;   {metadata('java/lang/Integer')}
+  0x00007f3e5128d198: mov     0x118(%r15),%rax
+  0x00007f3e5128d19f: lea     0x10(%rax),%rdi
+  0x00007f3e5128d1a3: cmp     0x128(%r15),%rdi
+  0x00007f3e5128d1aa: jnbe    0x7f3e5128d218
+  0x00007f3e5128d1b0: mov     %rdi,0x118(%r15)
+  0x00007f3e5128d1b7: mov     0xb8(%rdx),%rcx
+  0x00007f3e5128d1be: mov     %rcx,(%rax)
+  0x00007f3e5128d1c1: mov     %rdx,%rcx
+  0x00007f3e5128d1c4: movabs  $0x800000000,%r12
+  0x00007f3e5128d1ce: sub     %r12,%rcx
+  0x00007f3e5128d1d1: xor     %r12,%r12
+  0x00007f3e5128d1d4: mov     %ecx,0x8(%rax)
+  0x00007f3e5128d1d7: xor     %rcx,%rcx
+  0x00007f3e5128d1da: mov     %ecx,0xc(%rax)
+  0x00007f3e5128d1dd: xor     %rcx,%rcx         ;*new {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.threadlocal.ThreadLocalBenchmark::local@0 (line 38)
+
+  0x00007f3e5128d1e0: movl    $0x1,0xc(%rax)    ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - java.lang.Integer::<init>@6 (line 1074)
+                                                ; - dev.jgardo.jvm.miscellaneous.threadlocal.ThreadLocalBenchmark::local@5 (line 38)
+
+  0x00007f3e5128d1e7: add     $0x60,%rsp
+  0x00007f3e5128d1eb: pop     %rbp
+  0x00007f3e5128d1ec: mov     0x108(%r15),%r10
+  0x00007f3e5128d1f3: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f3e5128d1f6: retq
+  0x00007f3e5128d1f7: movabs  $0x7f3e3dfa7c98,%r10  ;   {metadata({method} {0x00007f3e3dfa7c98} 'local' '()Ljava/lang/Integer;' in 'dev/jgardo/jvm/miscellaneous/threadlocal/ThreadLocalBenchmark')}
+  0x00007f3e5128d201: mov     %r10,0x8(%rsp)
+  0x00007f3e5128d206: movq    $0xffffffffffffffff,(%rsp)
+  0x00007f3e5128d20e: callq   0x7f3e50cf7380    ; ImmutableOopMap{rsi=Oop }
+                                                ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.threadlocal.ThreadLocalBenchmark::local@-1 (line 38)
+                                                ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00007f3e5128d213: jmpq    0x7f3e5128d18e
+  0x00007f3e5128d218: mov     %rdx,%rdx
+  0x00007f3e5128d21b: callq   0x7f3e50cf3300    ; ImmutableOopMap{}
+                                                ;*new {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.threadlocal.ThreadLocalBenchmark::local@0 (line 38)
+                                                ;   {runtime_call fast_new_instance Runtime1 stub}
+  0x00007f3e5128d220: jmp     0x7f3e5128d1e0
+  0x00007f3e5128d222: nop
+  0x00007f3e5128d223: nop
+  0x00007f3e5128d224: mov     0x420(%r15),%rax
+  0x00007f3e5128d22b: movabs  $0x0,%r10
+  0x00007f3e5128d235: mov     %r10,0x420(%r15)
+  0x00007f3e5128d23c: movabs  $0x0,%r10
+  0x00007f3e5128d246: mov     %r10,0x428(%r15)
+  0x00007f3e5128d24d: add     $0x60,%rsp
+  0x00007f3e5128d251: pop     %rbp
+  0x00007f3e5128d252: jmpq    0x7f3e50c65280    ;   {runtime_call unwind_exception Runtime1 stub}
+  0x00007f3e5128d257: hlt
+  0x00007f3e5128d258: hlt
+  0x00007f3e5128d259: hlt
+  0x00007f3e5128d25a: hlt
+  0x00007f3e5128d25b: hlt
+  0x00007f3e5128d25c: hlt
+  0x00007f3e5128d25d: hlt
+  0x00007f3e5128d25e: hlt
+  0x00007f3e5128d25f: hlt
+[Exception Handler]
+[Stub Code]
+  0x00007f3e5128d260: callq   0x7f3e50cf4680    ;   {no_reloc}
+  0x00007f3e5128d265: mov     %rsp,0xffffffffffffffd8(%rsp)
+  0x00007f3e5128d26a: sub     $0x80,%rsp
+  0x00007f3e5128d271: mov     %rax,0x78(%rsp)
+  0x00007f3e5128d276: mov     %rcx,0x70(%rsp)
+  0x00007f3e5128d27b: mov     %rdx,0x68(%rsp)
+  0x00007f3e5128d280: mov     %rbx,0x60(%rsp)
+  0x00007f3e5128d285: mov     %rbp,0x50(%rsp)
+  0x00007f3e5128d28a: mov     %rsi,0x48(%rsp)
+  0x00007f3e5128d28f: mov     %rdi,0x40(%rsp)
+  0x00007f3e5128d294: mov     %r8,0x38(%rsp)
+  0x00007f3e5128d299: mov     %r9,0x30(%rsp)
+  0x00007f3e5128d29e: mov     %r10,0x28(%rsp)
+  0x00007f3e5128d2a3: mov     %r11,0x20(%rsp)
+  0x00007f3e5128d2a8: mov     %r12,0x18(%rsp)
+  0x00007f3e5128d2ad: mov     %r13,0x10(%rsp)
+  0x00007f3e5128d2b2: mov     %r14,0x8(%rsp)
+  0x00007f3e5128d2b7: mov     %r15,(%rsp)
+  0x00007f3e5128d2bb: movabs  $0x7f3e7011e54e,%rdi  ;   {external_word}
+  0x00007f3e5128d2c5: movabs  $0x7f3e5128d265,%rsi  ;   {internal_word}
+  0x00007f3e5128d2cf: mov     %rsp,%rdx
+  0x00007f3e5128d2d2: and     $0xfffffffffffffff0,%rsp
+  0x00007f3e5128d2d6: callq   0x7f3e6fd25970    ;   {runtime_call MacroAssembler::debug64(char*, long, long*)}
+  0x00007f3e5128d2db: hlt
+[Deopt Handler Code]
+  0x00007f3e5128d2dc: movabs  $0x7f3e5128d2dc,%r10  ;   {section_word}
+  0x00007f3e5128d2e6: push    %r10
+  0x00007f3e5128d2e8: jmpq    0x7f3e50c304a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007f3e5128d2ed: hlt
+  0x00007f3e5128d2ee: hlt
+  0x00007f3e5128d2ef: hlt
+
+ImmutableOopMap{rsi=Oop }pc offsets: 211 
+ImmutableOopMap{}pc offsets: 224 Compiled method (c2)     868  540       4       dev.jgardo.jvm.miscellaneous.threadlocal.ThreadLocalBenchmark::local (11 bytes)
+ total in heap  [0x00007f3e586ff690,0x00007f3e586ff9b8] = 808
+ relocation     [0x00007f3e586ff808,0x00007f3e586ff820] = 24
+ main code      [0x00007f3e586ff820,0x00007f3e586ff8e0] = 192
+ stub code      [0x00007f3e586ff8e0,0x00007f3e586ff8f8] = 24
+ oops           [0x00007f3e586ff8f8,0x00007f3e586ff900] = 8
+ metadata       [0x00007f3e586ff900,0x00007f3e586ff910] = 16
+ scopes data    [0x00007f3e586ff910,0x00007f3e586ff928] = 24
+ scopes pcs     [0x00007f3e586ff928,0x00007f3e586ff998] = 112
+ dependencies   [0x00007f3e586ff998,0x00007f3e586ff9a0] = 8
+ handler table  [0x00007f3e586ff9a0,0x00007f3e586ff9b8] = 24
+----------------------------------------------------------------------
+dev/jgardo/jvm/miscellaneous/threadlocal/ThreadLocalBenchmark.local()Ljava/lang/Integer;  [0x00007f3e586ff820, 0x00007f3e586ff8f8]  216 bytes
+Argument 0 is unknown.RIP: 0x7f3e586ff820 Code size: 0x000000d8
+[Entry Point]
+[Constants]
+  # {method} {0x00007f3e3dfa7c98} 'local' '()Ljava/lang/Integer;' in 'dev/jgardo/jvm/miscellaneous/threadlocal/ThreadLocalBenchmark'
+  #           [sp+0x20]  (sp of caller)
+  0x00007f3e586ff820: mov     0x8(%rsi),%r10d
+  0x00007f3e586ff824: movabs  $0x800000000,%r12
+  0x00007f3e586ff82e: add     %r12,%r10
+  0x00007f3e586ff831: xor     %r12,%r12
+  0x00007f3e586ff834: cmp     %r10,%rax
+  0x00007f3e586ff837: jne     0x7f3e50c2ec00    ;   {runtime_call ic_miss_stub}
+  0x00007f3e586ff83d: nop
+[Verified Entry Point]
+  0x00007f3e586ff840: mov     %eax,0xfffffffffffec000(%rsp)
+  0x00007f3e586ff847: push    %rbp
+  0x00007f3e586ff848: sub     $0x10,%rsp        ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.threadlocal.ThreadLocalBenchmark::local@-1 (line 38)
+
+  0x00007f3e586ff84c: mov     0x118(%r15),%rax
+  0x00007f3e586ff853: mov     %rax,%r10
+  0x00007f3e586ff856: add     $0x10,%r10
+  0x00007f3e586ff85a: cmp     0x128(%r15),%r10
+  0x00007f3e586ff861: jnb     0x7f3e586ff8ad
+  0x00007f3e586ff863: mov     %r10,0x118(%r15)
+  0x00007f3e586ff86a: prefetchnta 0xc0(%r10)
+  0x00007f3e586ff872: mov     $0x13a68,%r11d    ;   {metadata('java/lang/Integer')}
+  0x00007f3e586ff878: movabs  $0x800000000,%r10
+  0x00007f3e586ff882: add     %r11,%r10
+  0x00007f3e586ff885: mov     0xb8(%r10),%r10
+  0x00007f3e586ff88c: mov     %r10,(%rax)
+  0x00007f3e586ff88f: movl    $0x13a68,0x8(%rax)  ;*new {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.threadlocal.ThreadLocalBenchmark::local@0 (line 38)
+                                                ;   {metadata('java/lang/Integer')}
+  0x00007f3e586ff896: movl    $0x1,0xc(%rax)    ;*synchronization entry
+                                                ; - dev.jgardo.jvm.miscellaneous.threadlocal.ThreadLocalBenchmark::local@-1 (line 38)
+
+  0x00007f3e586ff89d: add     $0x10,%rsp
+  0x00007f3e586ff8a1: pop     %rbp
+  0x00007f3e586ff8a2: mov     0x108(%r15),%r10
+  0x00007f3e586ff8a9: test    %eax,(%r10)       ;   {poll_return}
+  0x00007f3e586ff8ac: retq
+  0x00007f3e586ff8ad: movabs  $0x800013a68,%rsi  ;   {metadata('java/lang/Integer')}
+  0x00007f3e586ff8b7: callq   0x7f3e50cfac80    ; ImmutableOopMap{}
+                                                ;*new {reexecute=0 rethrow=0 return_oop=1}
+                                                ; - dev.jgardo.jvm.miscellaneous.threadlocal.ThreadLocalBenchmark::local@0 (line 38)
+                                                ;   {runtime_call _new_instance_Java}
+  0x00007f3e586ff8bc: jmp     0x7f3e586ff896    ;*new {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - dev.jgardo.jvm.miscellaneous.threadlocal.ThreadLocalBenchmark::local@0 (line 38)
+
+  0x00007f3e586ff8be: mov     %rax,%rsi
+  0x00007f3e586ff8c1: add     $0x10,%rsp
+  0x00007f3e586ff8c5: pop     %rbp
+  0x00007f3e586ff8c6: jmpq    0x7f3e50cfce80    ;   {runtime_call _rethrow_Java}
+  0x00007f3e586ff8cb: hlt
+  0x00007f3e586ff8cc: hlt
+  0x00007f3e586ff8cd: hlt
+  0x00007f3e586ff8ce: hlt
+  0x00007f3e586ff8cf: hlt
+  0x00007f3e586ff8d0: hlt
+  0x00007f3e586ff8d1: hlt
+  0x00007f3e586ff8d2: hlt
+  0x00007f3e586ff8d3: hlt
+  0x00007f3e586ff8d4: hlt
+  0x00007f3e586ff8d5: hlt
+  0x00007f3e586ff8d6: hlt
+  0x00007f3e586ff8d7: hlt
+  0x00007f3e586ff8d8: hlt
+  0x00007f3e586ff8d9: hlt
+  0x00007f3e586ff8da: hlt
+  0x00007f3e586ff8db: hlt
+  0x00007f3e586ff8dc: hlt
+  0x00007f3e586ff8dd: hlt
+  0x00007f3e586ff8de: hlt
+  0x00007f3e586ff8df: hlt
+[Exception Handler]
+[Stub Code]
+  0x00007f3e586ff8e0: jmpq    0x7f3e50cf2380    ;   {no_reloc}
+[Deopt Handler Code]
+  0x00007f3e586ff8e5: callq   0x7f3e586ff8ea
+  0x00007f3e586ff8ea: subq    $0x5,(%rsp)
+  0x00007f3e586ff8ef: jmpq    0x7f3e50c304a0    ;   {runtime_call DeoptimizationBlob}
+  0x00007f3e586ff8f4: hlt
+  0x00007f3e586ff8f5: hlt
+  0x00007f3e586ff8f6: hlt
+  0x00007f3e586ff8f7: hlt
+
+ImmutableOopMap{}pc offsets: 156
