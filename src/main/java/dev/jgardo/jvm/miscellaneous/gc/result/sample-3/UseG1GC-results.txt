@@ -1,0 +1,168 @@
+# JMH version: 1.21
+# VM version: JDK 13.0.2, OpenJDK 64-Bit Server VM, 13.0.2+8
+# VM invoker: /home/gardziol/.sdkman/candidates/java/13.0.2.hs-adpt/bin/java
+# VM options: -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:-DoEscapeAnalysis -Xms8192m -Xmx8192m -XX:+AlwaysPreTouch -XX:CompileThreshold=100
+# Warmup: 5 iterations, 150 ms each
+# Measurement: 5 iterations, 150 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.jgardo.jvm.miscellaneous.gc.GcBenchmark.method
+
+# Run progress: 0,00% complete, ETA 00:00:15
+# Fork: 1 of 10
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 272525796,674 ops/s
+# Warmup Iteration   2: 281120114,361 ops/s
+# Warmup Iteration   3: 307705586,233 ops/s
+# Warmup Iteration   4: 286738206,751 ops/s
+# Warmup Iteration   5: 305868488,658 ops/s
+Iteration   1: 297509493,345 ops/s
+Iteration   2: 320001637,655 ops/s
+Iteration   3: 304377925,522 ops/s
+Iteration   4: 336185183,264 ops/s
+Iteration   5: 303086882,375 ops/s
+
+# Run progress: 10,00% complete, ETA 00:00:48
+# Fork: 2 of 10
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 258905149,597 ops/s
+# Warmup Iteration   2: 272721505,303 ops/s
+# Warmup Iteration   3: 298988215,181 ops/s
+# Warmup Iteration   4: 292291633,291 ops/s
+# Warmup Iteration   5: 300200929,816 ops/s
+Iteration   1: 299671238,553 ops/s
+Iteration   2: 303378589,245 ops/s
+Iteration   3: 303309745,057 ops/s
+Iteration   4: 320319188,945 ops/s
+Iteration   5: 309809504,705 ops/s
+
+# Run progress: 20,00% complete, ETA 00:00:43
+# Fork: 3 of 10
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 251281556,525 ops/s
+# Warmup Iteration   2: 269384612,660 ops/s
+# Warmup Iteration   3: 273150808,375 ops/s
+# Warmup Iteration   4: 313437909,991 ops/s
+# Warmup Iteration   5: 293271179,194 ops/s
+Iteration   1: 313431302,767 ops/s
+Iteration   2: 290798965,091 ops/s
+Iteration   3: 314922492,304 ops/s
+Iteration   4: 301145901,341 ops/s
+Iteration   5: 303267533,543 ops/s
+
+# Run progress: 30,00% complete, ETA 00:00:37
+# Fork: 4 of 10
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 269818570,594 ops/s
+# Warmup Iteration   2: 261819464,276 ops/s
+# Warmup Iteration   3: 317197446,784 ops/s
+# Warmup Iteration   4: 296099079,556 ops/s
+# Warmup Iteration   5: 307908197,582 ops/s
+Iteration   1: 268871463,305 ops/s
+Iteration   2: 275588077,195 ops/s
+Iteration   3: 312870235,094 ops/s
+Iteration   4: 299409915,822 ops/s
+Iteration   5: 318230692,101 ops/s
+
+# Run progress: 40,00% complete, ETA 00:00:32
+# Fork: 5 of 10
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 284169286,987 ops/s
+# Warmup Iteration   2: 278769777,557 ops/s
+# Warmup Iteration   3: 311927036,192 ops/s
+# Warmup Iteration   4: 291799632,144 ops/s
+# Warmup Iteration   5: 302446226,183 ops/s
+Iteration   1: 320845931,849 ops/s
+Iteration   2: 299786895,004 ops/s
+Iteration   3: 322625283,439 ops/s
+Iteration   4: 335998990,932 ops/s
+Iteration   5: 321180256,584 ops/s
+
+# Run progress: 50,00% complete, ETA 00:00:26
+# Fork: 6 of 10
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 258348399,833 ops/s
+# Warmup Iteration   2: 283164090,124 ops/s
+# Warmup Iteration   3: 314522511,987 ops/s
+# Warmup Iteration   4: 289513042,638 ops/s
+# Warmup Iteration   5: 298948759,282 ops/s
+Iteration   1: 315693841,461 ops/s
+Iteration   2: 296713749,362 ops/s
+Iteration   3: 306057786,706 ops/s
+Iteration   4: 311401031,997 ops/s
+Iteration   5: 301001099,708 ops/s
+
+# Run progress: 60,00% complete, ETA 00:00:21
+# Fork: 7 of 10
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 269529776,672 ops/s
+# Warmup Iteration   2: 280521350,149 ops/s
+# Warmup Iteration   3: 316643244,461 ops/s
+# Warmup Iteration   4: 270187877,113 ops/s
+# Warmup Iteration   5: 306523539,044 ops/s
+Iteration   1: 300676586,540 ops/s
+Iteration   2: 320777737,550 ops/s
+Iteration   3: 318858820,492 ops/s
+Iteration   4: 311816523,119 ops/s
+Iteration   5: 287559840,620 ops/s
+
+# Run progress: 70,00% complete, ETA 00:00:16
+# Fork: 8 of 10
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 272049761,849 ops/s
+# Warmup Iteration   2: 270720567,698 ops/s
+# Warmup Iteration   3: 318335506,532 ops/s
+# Warmup Iteration   4: 292135382,342 ops/s
+# Warmup Iteration   5: 302486790,860 ops/s
+Iteration   1: 289344184,162 ops/s
+Iteration   2: 315045218,087 ops/s
+Iteration   3: 314951763,700 ops/s
+Iteration   4: 301637896,591 ops/s
+Iteration   5: 294136894,251 ops/s
+
+# Run progress: 80,00% complete, ETA 00:00:10
+# Fork: 9 of 10
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 259727748,686 ops/s
+# Warmup Iteration   2: 281185596,793 ops/s
+# Warmup Iteration   3: 317002755,172 ops/s
+# Warmup Iteration   4: 291680278,272 ops/s
+# Warmup Iteration   5: 309243532,816 ops/s
+Iteration   1: 295167406,951 ops/s
+Iteration   2: 310201520,967 ops/s
+Iteration   3: 314028793,782 ops/s
+Iteration   4: 306708641,732 ops/s
+Iteration   5: 301505771,763 ops/s
+
+# Run progress: 90,00% complete, ETA 00:00:05
+# Fork: 10 of 10
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 269028737,336 ops/s
+# Warmup Iteration   2: 260566561,371 ops/s
+# Warmup Iteration   3: 301008673,275 ops/s
+# Warmup Iteration   4: 289889867,649 ops/s
+# Warmup Iteration   5: 318483598,490 ops/s
+Iteration   1: 302776301,961 ops/s
+Iteration   2: 316479383,943 ops/s
+Iteration   3: 315961514,066 ops/s
+Iteration   4: 293984248,242 ops/s
+Iteration   5: 311959918,992 ops/s
+
+
+Result "dev.jgardo.jvm.miscellaneous.gc.GcBenchmark.method":
+  307021396,036 ±(99.9%) 6426245,917 ops/s [Average]
+  (min, avg, max) = (268871463,305, 307021396,036, 336185183,264), stdev = 12981334,666
+  CI (99.9%): [300595150,119, 313447641,952] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:00:53
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark            Mode  Cnt          Score         Error  Units
+GcBenchmark.method  thrpt   50  307021396,036 ± 6426245,917  ops/s

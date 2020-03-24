@@ -1,0 +1,178 @@
+# JMH version: 1.21
+# VM version: JDK 13.0.2, OpenJDK 64-Bit Server VM, 13.0.2+8
+# VM invoker: /home/gardziol/.sdkman/candidates/java/13.0.2.hs-adpt/bin/java
+# VM options: -XX:+UnlockExperimentalVMOptions -XX:+UseConcMarkSweepGC -XX:-DoEscapeAnalysis -Xms8192m -Xmx8192m -XX:+AlwaysPreTouch -XX:CompileThreshold=100
+# Warmup: 5 iterations, 150 ms each
+# Measurement: 5 iterations, 150 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.jgardo.jvm.miscellaneous.gc.GcBenchmark.method
+
+# Run progress: 0,00% complete, ETA 00:00:15
+# Fork: 1 of 10
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 198798338,700 ops/s
+# Warmup Iteration   2: 140099854,378 ops/s
+# Warmup Iteration   3: 194976953,711 ops/s
+# Warmup Iteration   4: 181537075,307 ops/s
+# Warmup Iteration   5: 197658790,400 ops/s
+Iteration   1: 197449068,677 ops/s
+Iteration   2: 197878045,812 ops/s
+Iteration   3: 198315086,289 ops/s
+Iteration   4: 192379391,353 ops/s
+Iteration   5: 196914605,900 ops/s
+
+# Run progress: 10,00% complete, ETA 00:00:49
+# Fork: 2 of 10
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 210828197,636 ops/s
+# Warmup Iteration   2: 147329846,286 ops/s
+# Warmup Iteration   3: 179084142,968 ops/s
+# Warmup Iteration   4: 178962894,159 ops/s
+# Warmup Iteration   5: 199061901,157 ops/s
+Iteration   1: 198912419,610 ops/s
+Iteration   2: 198441897,340 ops/s
+Iteration   3: 198829483,830 ops/s
+Iteration   4: 199782636,939 ops/s
+Iteration   5: 192101308,538 ops/s
+
+# Run progress: 20,00% complete, ETA 00:00:44
+# Fork: 3 of 10
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 180622144,854 ops/s
+# Warmup Iteration   2: 187812009,290 ops/s
+# Warmup Iteration   3: 196224813,002 ops/s
+# Warmup Iteration   4: 227608906,772 ops/s
+# Warmup Iteration   5: 173266184,816 ops/s
+Iteration   1: 176730821,087 ops/s
+Iteration   2: 196154598,340 ops/s
+Iteration   3: 197766533,569 ops/s
+Iteration   4: 198937263,359 ops/s
+Iteration   5: 197186709,118 ops/s
+
+# Run progress: 30,00% complete, ETA 00:00:38
+# Fork: 4 of 10
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 215279340,806 ops/s
+# Warmup Iteration   2: 148754443,169 ops/s
+# Warmup Iteration   3: 181886050,230 ops/s
+# Warmup Iteration   4: 226491486,954 ops/s
+# Warmup Iteration   5: 142119494,301 ops/s
+Iteration   1: 181717042,381 ops/s
+Iteration   2: 196103266,983 ops/s
+Iteration   3: 196980686,867 ops/s
+Iteration   4: 195936096,200 ops/s
+Iteration   5: 190343375,870 ops/s
+
+# Run progress: 40,00% complete, ETA 00:00:33
+# Fork: 5 of 10
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 221708421,253 ops/s
+# Warmup Iteration   2: 145265043,505 ops/s
+# Warmup Iteration   3: 181403364,660 ops/s
+# Warmup Iteration   4: 185456261,057 ops/s
+# Warmup Iteration   5: 199056993,532 ops/s
+Iteration   1: 197985708,354 ops/s
+Iteration   2: 198399145,467 ops/s
+Iteration   3: 200481811,680 ops/s
+Iteration   4: 199680332,831 ops/s
+Iteration   5: 199988860,660 ops/s
+
+# Run progress: 50,00% complete, ETA 00:00:27
+# Fork: 6 of 10
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 215430505,068 ops/s
+# Warmup Iteration   2: 147981315,339 ops/s
+# Warmup Iteration   3: 182816637,710 ops/s
+# Warmup Iteration   4: 177332035,027 ops/s
+# Warmup Iteration   5: 194674749,779 ops/s
+Iteration   1: 195082152,225 ops/s
+Iteration   2: 199035939,313 ops/s
+Iteration   3: 197692939,317 ops/s
+Iteration   4: 198739424,788 ops/s
+Iteration   5: 194876646,012 ops/s
+
+# Run progress: 60,00% complete, ETA 00:00:22
+# Fork: 7 of 10
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 177747057,705 ops/s
+# Warmup Iteration   2: 225214418,853 ops/s
+# Warmup Iteration   3: 157473303,537 ops/s
+# Warmup Iteration   4: 165883338,216 ops/s
+# Warmup Iteration   5: 202569283,402 ops/s
+Iteration   1: 198869914,224 ops/s
+Iteration   2: 197392230,546 ops/s
+Iteration   3: 201760113,262 ops/s
+Iteration   4: 200819317,712 ops/s
+Iteration   5: 200260339,917 ops/s
+
+# Run progress: 70,00% complete, ETA 00:00:16
+# Fork: 8 of 10
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 197117158,265 ops/s
+# Warmup Iteration   2: 153775450,104 ops/s
+# Warmup Iteration   3: 187945809,251 ops/s
+# Warmup Iteration   4: 181811470,073 ops/s
+# Warmup Iteration   5: 190723252,453 ops/s
+Iteration   1: 195331321,947 ops/s
+Iteration   2: 196080276,912 ops/s
+Iteration   3: 194779294,989 ops/s
+Iteration   4: 196659660,374 ops/s
+Iteration   5: 195683605,353 ops/s
+
+# Run progress: 80,00% complete, ETA 00:00:11
+# Fork: 9 of 10
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 217272265,907 ops/s
+# Warmup Iteration   2: 151306289,515 ops/s
+# Warmup Iteration   3: 184359655,287 ops/s
+# Warmup Iteration   4: 185493138,697 ops/s
+# Warmup Iteration   5: 200691512,140 ops/s
+Iteration   1: 199214163,207 ops/s
+Iteration   2: 198138060,627 ops/s
+Iteration   3: 200426995,941 ops/s
+Iteration   4: 200799195,937 ops/s
+Iteration   5: 200854974,704 ops/s
+
+# Run progress: 90,00% complete, ETA 00:00:05
+# Fork: 10 of 10
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+OpenJDK 64-Bit Server VM warning: printing of assembly code is enabled; turning on DebugNonSafepoints to gain additional output
+# Warmup Iteration   1: 208995243,175 ops/s
+# Warmup Iteration   2: 137382489,541 ops/s
+# Warmup Iteration   3: 188056151,720 ops/s
+# Warmup Iteration   4: 177961541,576 ops/s
+# Warmup Iteration   5: 197352209,055 ops/s
+Iteration   1: 197256402,863 ops/s
+Iteration   2: 197248863,350 ops/s
+Iteration   3: 197203087,528 ops/s
+Iteration   4: 194189295,065 ops/s
+Iteration   5: 192720992,489 ops/s
+
+
+Result "dev.jgardo.jvm.miscellaneous.gc.GcBenchmark.method":
+  196730228,113 ±(99.9%) 2167702,983 ops/s [Average]
+  (min, avg, max) = (176730821,087, 196730228,113, 201760113,262), stdev = 4378867,265
+  CI (99.9%): [194562525,130, 198897931,096] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:00:55
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark            Mode  Cnt          Score         Error  Units
+GcBenchmark.method  thrpt   50  196730228,113 ± 2167702,983  ops/s
